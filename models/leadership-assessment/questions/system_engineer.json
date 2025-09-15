@@ -1,0 +1,518 @@
+[
+  {
+    "id": "se_comm_1",
+    "trait": "communication",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How should you communicate system upgrade schedules to users?",
+    "options": [
+      "Send clear notifications with time, impact, and duration",
+      "Only tell your immediate team",
+      "Wait until users complain about downtime",
+      "Avoid communication until after the upgrade"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Clarity & Transparency)",
+    "justification": "Assesses ability to provide proactive and clear communication."
+  },
+  {
+    "id": "se_comm_2",
+    "trait": "communication",
+    "career": "System Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A manager says: 'I don’t understand your technical diagram.' How do you respond?",
+    "options": [
+      "Simplify the explanation with visuals and analogies",
+      "Tell them it’s too technical for them",
+      "Ignore their concern",
+      "Ask them to figure it out themselves"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy & Support)",
+    "justification": "Evaluates ability to adapt technical communication for non-technical audiences."
+  },
+  {
+    "id": "se_comm_3",
+    "trait": "communication",
+    "career": "System Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: A client asks for a system status update. What’s the best response?",
+    "options": [
+      "Give a short summary of uptime and ongoing tasks",
+      "Send raw log files without context",
+      "Say 'everything is fine' without evidence",
+      "Avoid answering until later"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Clarity under Pressure)",
+    "justification": "Tests ability to summarize and communicate effectively under time constraints."
+  },
+  {
+    "id": "se_comm_4",
+    "trait": "communication",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How do you ensure users follow system security guidelines?",
+    "options": [
+      "Provide simple guides and reminders",
+      "Use only complex technical manuals",
+      "Assume users already know",
+      "Ignore when they don’t comply"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Instruction & Clarity)",
+    "justification": "Assesses ability to create accessible communication for compliance."
+  },
+  {
+    "id": "se_comm_5",
+    "trait": "communication",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which is an example of effective internal team communication?",
+    "options": [
+      "Regular system status meetings and documentation",
+      "Keeping updates to yourself",
+      "Blaming teammates for outages",
+      "Sharing incomplete data"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Transparency & Collaboration)",
+    "justification": "Assesses teamwork-oriented communication in IT operations."
+  },
+  {
+    "id": "se_adapt_1",
+    "trait": "adaptability",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A new operating system update is released for all servers. What’s your response?",
+    "options": [
+      "Test the update in staging before applying widely",
+      "Install it everywhere immediately",
+      "Ignore the update completely",
+      "Wait until users complain"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Learning Agility)",
+    "justification": "Assesses adaptability in adopting new technologies responsibly."
+  },
+  {
+    "id": "se_adapt_2",
+    "trait": "adaptability",
+    "career": "System Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A manager says: 'We need to migrate to cloud services earlier than planned.' How do you respond?",
+    "options": [
+      "Adjust the plan and discuss risks with the team",
+      "Refuse and stick to the old plan",
+      "Complain about the change",
+      "Ignore the instruction"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Flexibility & Conflict Handling)",
+    "justification": "Assesses openness and professionalism in responding to sudden changes."
+  },
+  {
+    "id": "se_adapt_3",
+    "trait": "adaptability",
+    "career": "System Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "During a live deployment, a new bug appears. You have 20 seconds: what’s your best move?",
+    "options": [
+      "Roll back safely and document the issue",
+      "Ignore it and push forward",
+      "Blame developers immediately",
+      "Wait for someone else to fix it"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Composure under stress)",
+    "justification": "Tests adaptability in real-time deployment challenges."
+  },
+  {
+    "id": "se_adapt_4",
+    "trait": "adaptability",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How should you handle conflicting requests from different project teams?",
+    "options": [
+      "Clarify priorities and negotiate with both teams",
+      "Pick whichever request is easiest",
+      "Ignore one team completely",
+      "Complain without addressing the conflict"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Conflict Resolution)",
+    "justification": "Assesses ability to manage conflicts constructively."
+  },
+  {
+    "id": "se_adapt_5",
+    "trait": "adaptability",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which behavior shows adaptability in system engineering?",
+    "options": [
+      "Learning new tools quickly and applying them",
+      "Refusing to update skills",
+      "Avoiding responsibility during changes",
+      "Insisting old methods are always best"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Change Acceptance)",
+    "justification": "Evaluates willingness to grow and adjust in evolving environments."
+  },
+  {
+    "id": "se_decision_1",
+    "trait": "decision-making",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A user requests admin rights to install software. What’s your best response?",
+    "options": [
+      "Check policy and provide alternatives",
+      "Grant access immediately to save time",
+      "Ignore the request completely",
+      "Tell them to ask another team"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Policy-Adaptive Judgment)",
+    "justification": "Assesses judgment in balancing security with user needs."
+  },
+  {
+    "id": "se_decision_2",
+    "trait": "decision-making",
+    "career": "System Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "A critical database server shows overheating alerts. You have 20 seconds: what’s your decision?",
+    "options": [
+      "Shut it down safely and notify stakeholders",
+      "Ignore the alert",
+      "Restart without checking cause",
+      "Wait until maintenance"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Crisis Prioritization)",
+    "justification": "Evaluates decision-making speed and responsibility under pressure."
+  },
+  {
+    "id": "se_decision_3",
+    "trait": "decision-making",
+    "career": "System Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Management insists on deploying an update today, but the testing isn’t finished. How do you respond?",
+    "options": [
+      "Explain risks and propose a compromise deployment plan",
+      "Deploy immediately without warning",
+      "Ignore the instruction",
+      "Blame the QA team for delays"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Balanced Decision-Making)",
+    "justification": "Assesses ability to balance deadlines, risks, and communication."
+  },
+  {
+    "id": "se_decision_4",
+    "trait": "decision-making",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How should you prioritize system tickets?",
+    "options": [
+      "By severity and business impact",
+      "By whichever is easiest",
+      "By who shouts the loudest",
+      "Random selection"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Task Prioritization)",
+    "justification": "Evaluates structured decision-making in workload management."
+  },
+  {
+    "id": "se_decision_5",
+    "trait": "decision-making",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which habit improves decision-making as a System Engineer?",
+    "options": [
+      "Reviewing logs and incident reports",
+      "Relying only on instincts",
+      "Avoiding responsibility",
+      "Letting others always decide"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Learning-Oriented Decision-Making)",
+    "justification": "Assesses improvement through reflection and data analysis."
+  },
+  {
+    "id": "se_delegation_1",
+    "trait": "delegation",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You need to delegate routine system checks to a junior engineer. What’s the best first step?",
+    "options": [
+      "Explain the steps clearly and confirm understanding",
+      "Assign the task without instructions",
+      "Do it yourself instead",
+      "Wait for them to volunteer"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Delegation Readiness)",
+    "justification": "Assesses ability to delegate tasks clearly and responsibly."
+  },
+  {
+    "id": "se_delegation_2",
+    "trait": "delegation",
+    "career": "System Engineer",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Rank these delegation practices from most to least effective:",
+    "options": [
+      "Assign tasks based on skill levels",
+      "Provide clear goals and deadlines",
+      "Micromanage every detail",
+      "Avoid progress checks"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Effective Delegation Practices)",
+    "justification": "Evaluates structured prioritization of delegation steps."
+  },
+  {
+    "id": "se_delegation_3",
+    "trait": "delegation",
+    "career": "System Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A teammate says: 'I’m not sure how to perform the task you assigned.' What’s your response?",
+    "options": [
+      "Guide them through the process and provide support if needed",
+      "Tell them to figure it out alone",
+      "Take the task back immediately",
+      "Criticize them for asking questions"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Supportive Delegation)",
+    "justification": "Assesses leadership in providing guidance without micromanaging."
+  },
+  {
+    "id": "se_delegation_4",
+    "trait": "delegation",
+    "career": "System Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You are overloaded with patching tasks, and a peer offers help. What’s your best quick action? (15 seconds)",
+    "options": [
+      "Delegate appropriate tasks they can handle immediately",
+      "Refuse and continue working alone",
+      "Let them pick tasks at random",
+      "Complain about the workload instead"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Quick Delegation)",
+    "justification": "Assesses fast and effective delegation under workload pressure."
+  },
+  {
+    "id": "se_delegation_5",
+    "trait": "delegation",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "What’s the most important factor when delegating monitoring tasks?",
+    "options": [
+      "Clear instructions and accountability",
+      "Handing off the task quickly",
+      "Assuming they already know it",
+      "Avoiding responsibility entirely"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Delegation Planning)",
+    "justification": "Assesses clarity and accountability when sharing system responsibilities."
+  },
+  {
+    "id": "se_teamwork_1",
+    "trait": "teamwork",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A colleague is struggling to configure a new server. What’s the best action?",
+    "options": [
+      "Offer to help or troubleshoot together",
+      "Ignore and focus only on your tasks",
+      "Complain to management about them",
+      "Publicly point out their mistake"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Agreeableness - Supportiveness)",
+    "justification": "Assesses collaboration and willingness to support team members."
+  },
+  {
+    "id": "se_teamwork_2",
+    "trait": "teamwork",
+    "career": "System Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A teammate admits: 'I misconfigured the firewall and caused downtime.' How do you respond?",
+    "options": [
+      "Work with them to fix the issue and prevent it in future",
+      "Blame them in front of others",
+      "Ignore the problem",
+      "Escalate the mistake without helping"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Collaboration)",
+    "justification": "Evaluates constructive teamwork when handling mistakes."
+  },
+  {
+    "id": "se_teamwork_3",
+    "trait": "teamwork",
+    "career": "System Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You have 15 seconds: What best demonstrates teamwork during a system outage?",
+    "options": [
+      "Coordinate tasks and share updates with the team",
+      "Work silently without communication",
+      "Blame other departments immediately",
+      "Wait until someone else fixes it"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Agreeableness - Collective Mindset)",
+    "justification": "Assesses prioritization of team success during high-pressure incidents."
+  },
+  {
+    "id": "se_teamwork_4",
+    "trait": "teamwork",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "Which behavior helps build trust in a system engineering team?",
+    "options": [
+      "Providing accurate updates and keeping commitments",
+      "Avoiding communication unless necessary",
+      "Highlighting only others’ mistakes",
+      "Withholding critical system details"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Reliability)",
+    "justification": "Assesses dependability and transparency in teamwork."
+  },
+  {
+    "id": "se_teamwork_5",
+    "trait": "teamwork",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "During a heavy workload, how can you demonstrate teamwork?",
+    "options": [
+      "Collaborate with teammates and share responsibilities",
+      "Work in isolation without updates",
+      "Blame delays on other teams",
+      "Refuse to take additional tasks"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Agreeableness - Initiative)",
+    "justification": "Assesses initiative and communication during workload stress."
+  },
+  {
+    "id": "se_strategy_1",
+    "trait": "strategy",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which approach best ensures long-term system stability?",
+    "options": [
+      "Regular maintenance and patching schedules",
+      "Fixing systems only when they fail",
+      "Avoiding upgrades to reduce workload",
+      "Leaving issues unresolved"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Planning & Improvement)",
+    "justification": "Assesses proactive planning for long-term system health."
+  },
+  {
+    "id": "se_strategy_2",
+    "trait": "strategy",
+    "career": "System Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A manager asks: 'How can we prevent recurring outages?' What do you suggest?",
+    "options": [
+      "Propose redundancy and better monitoring systems",
+      "Blame users for misconfigurations",
+      "Ignore the outages until they escalate",
+      "Delay fixes to save time"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Strategic Thinking)",
+    "justification": "Evaluates ability to suggest forward-thinking, preventive solutions."
+  },
+  {
+    "id": "se_strategy_3",
+    "trait": "strategy",
+    "career": "System Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: Your CIO asks how you’ll improve system reliability. What’s your best response?",
+    "options": [
+      "Highlight monitoring, testing, and backup strategies",
+      "Say reliability will improve naturally",
+      "Provide vague reassurances",
+      "Avoid giving a clear answer"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Openness - Process Optimization)",
+    "justification": "Tests ability to communicate strategic reliability improvements quickly."
+  },
+  {
+    "id": "se_strategy_4",
+    "trait": "strategy",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s the best strategic step to minimize downtime risk?",
+    "options": [
+      "Test patches in staging before production",
+      "Apply updates directly in production",
+      "Ignore updates completely",
+      "Rely on manual fixes only"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Risk Planning)",
+    "justification": "Assesses ability to plan system updates strategically."
+  },
+  {
+    "id": "se_strategy_5",
+    "trait": "strategy",
+    "career": "System Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How do you ensure continuous improvement in IT operations?",
+    "options": [
+      "Review incidents and apply lessons learned",
+      "Repeat the same processes every time",
+      "Avoid documentation of changes",
+      "Wait for external audits only"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Reflection & Innovation)",
+    "justification": "Assesses willingness to integrate learning into long-term improvement."
+  }
+]

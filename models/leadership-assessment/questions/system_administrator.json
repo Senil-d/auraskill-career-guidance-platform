@@ -1,0 +1,517 @@
+[
+  {
+    "trait": "communication",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You need to inform users about a scheduled server downtime. What’s the best approach?",
+    "options": [
+      "Send a clear email with time, duration, and reason",
+      "Notify only your team verbally",
+      "Let users find out when the system is down",
+      "Ignore it and focus on your work"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Clarity, Responsibility)",
+    "justification": "Assesses proactive and clear communication in system-related events."
+  },
+  {
+    "id": "sa_comm_2",
+    "trait": "communication",
+    "career": "System Administrator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A colleague says, 'I don’t understand your network diagram.' What’s your response?",
+    "options": [
+      "Re-explain the diagram using simpler terms and visuals",
+      "Dismiss their concern",
+      "Ask them to figure it out themselves",
+      "Ignore the comment and continue working"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy, Support)",
+    "justification": "Evaluates empathy and communication responsiveness in technical discussions."
+  },
+  {
+    "id": "sa_comm_3",
+    "trait": "communication",
+    "career": "System Administrator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "In 20 seconds: Which message best fits when explaining a security update to non-technical users?",
+    "options": [
+      "A short message explaining the benefit and no action needed",
+      "A technical breakdown of every update step",
+      "Just mention 'system updated' without details",
+      "Send a long changelog with no explanation"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Audience Awareness)",
+    "justification": "Assesses clarity and audience-focused explanation under pressure."
+  },
+  {
+    "id": "sa_comm_4",
+    "trait": "communication",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How do you ensure your instructions for resetting passwords are understood?",
+    "options": [
+      "Use simple steps with screenshots and examples",
+      "Write a technical document only IT staff can read",
+      "Assume users will figure it out",
+      "Send them a link without context"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Clarity & Instruction)",
+    "justification": "Tests how well you adapt communication for user understanding."
+  },
+  {
+    "id": "sa_comm_5",
+    "trait": "communication",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which of these is an example of good internal IT communication?",
+    "options": [
+      "Posting regular system status updates",
+      "Waiting until someone asks for info",
+      "Blaming users for repeated issues",
+      "Only sharing details with your direct manager"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Transparency)",
+    "justification": "Assesses openness and regular information sharing in IT operations."
+  },
+  {
+    "id": "sa_adapt_1",
+    "trait": "adaptability",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A system you manage suddenly fails during peak hours. What’s your first response?",
+    "options": [
+      "Stay calm and follow emergency protocols",
+      "Panic and blame the network team",
+      "Wait for someone else to act",
+      "Restart servers without diagnosis"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Self-Regulation)",
+    "justification": "Assesses emotional control and stability during stressful events."
+  },
+  {
+    "id": "sa_adapt_2",
+    "trait": "adaptability",
+    "career": "System Administrator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A user complains loudly about an unresolved issue. What do you do?",
+    "options": [
+      "Listen patiently and assure them you’ll investigate",
+      "Argue and defend yourself immediately",
+      "Avoid responding to their complaint",
+      "Tell them it's not your responsibility"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy & Regulation)",
+    "justification": "Evaluates how calmly and constructively you handle criticism."
+  },
+  {
+    "id": "sa_adapt_3",
+    "trait": "adaptability",
+    "career": "System Administrator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "Your team is switching to a new monitoring tool. What’s your best response (in 20 seconds)?",
+    "options": [
+      "Explore the tool and adapt quickly",
+      "Complain about the change",
+      "Ignore it and use the old tool",
+      "Wait for others to figure it out"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Adaptability & Learning Agility)",
+    "justification": "Assesses open-mindedness and speed of adjustment."
+  },
+  {
+    "id": "sa_adapt_4",
+    "trait": "adaptability",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How should you handle conflicting instructions from two managers?",
+    "options": [
+      "Clarify expectations with both parties professionally",
+      "Choose the easier instruction",
+      "Ignore one and follow the other blindly",
+      "Complain to coworkers about the confusion"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Conflict Resolution)",
+    "justification": "Assesses emotional maturity in unclear or conflicting directions."
+  },
+  {
+    "id": "sa_adapt_5",
+    "trait": "adaptability",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "What demonstrates good adaptability in IT operations?",
+    "options": [
+      "Staying calm and modifying plans during incidents",
+      "Insisting everything must stay the same",
+      "Avoiding new scripts or automation",
+      "Delegating all change-related work"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Change Acceptance)",
+    "justification": "Tests openness to change and calmness in evolving situations."
+  },
+  {
+    "id": "sa_decision_1",
+    "trait": "decision-making",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A user requests admin access to install software. What’s your best action?",
+    "options": [
+      "Check policy and provide safe alternatives",
+      "Grant access immediately to save time",
+      "Ignore the request completely",
+      "Tell them to ask another admin"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Policy-Adaptive Judgment)",
+    "justification": "Assesses judgment while balancing policy and user needs."
+  },
+  {
+    "id": "sa_decision_2",
+    "trait": "decision-making",
+    "career": "System Administrator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "A critical server is overheating. You have 20 seconds to decide. What do you do?",
+    "options": [
+      "Shut it down safely and notify stakeholders",
+      "Ignore the alert for now",
+      "Restart it immediately without diagnosis",
+      "Wait until the next scheduled maintenance"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "Situational Leadership (Crisis Prioritization)",
+    "justification": "Evaluates decision-making under urgent infrastructure risks."
+  },
+  {
+    "id": "sa_decision_3",
+    "trait": "decision-making",
+    "career": "System Administrator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your manager says to apply an update today, but users demand uptime. What do you do?",
+    "options": [
+      "Propose applying it during off-hours to minimize impact",
+      "Apply it immediately without informing anyone",
+      "Ignore the manager’s request",
+      "Complain about the conflicting demands"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Balanced Decision-Making)",
+    "justification": "Tests ability to balance leadership requests and user impact."
+  },
+  {
+    "id": "sa_decision_4",
+    "trait": "decision-making",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How should you decide which tickets to handle first?",
+    "options": [
+      "Prioritize based on severity and business impact",
+      "Handle whichever is easiest first",
+      "Choose the ones assigned by friends",
+      "Pick randomly"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Task Prioritization)",
+    "justification": "Assesses systematic prioritization of workload."
+  },
+  {
+    "id": "sa_decision_5",
+    "trait": "decision-making",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which habit improves decision-making over time as an administrator?",
+    "options": [
+      "Learning from logs and incident reviews",
+      "Relying only on gut feeling",
+      "Delegating every choice to others",
+      "Avoiding tough decisions"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Learning-Oriented Decision-Making)",
+    "justification": "Tests whether you refine decisions by learning from past events."
+  },
+  {
+    "id": "sa_delegation_1",
+    "trait": "delegation",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You need to delegate log monitoring to a junior admin. What’s the best first step?",
+    "options": [
+      "Explain the monitoring process clearly and set expectations",
+      "Assign without any explanation",
+      "Do the work yourself instead",
+      "Tell them to ask another colleague"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Delegation Readiness)",
+    "justification": "Assesses ability to delegate with proper clarity and support."
+  },
+  {
+    "id": "sa_delegation_2",
+    "trait": "delegation",
+    "career": "System Administrator",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Rank these delegation practices from most to least effective:",
+    "options": [
+      "Match tasks with skill levels",
+      "Explain goals and expected outcomes",
+      "Micromanage every step",
+      "Avoid checking progress"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Delegation Best Practices)",
+    "justification": "Assesses knowledge of effective delegation order."
+  },
+  {
+    "id": "sa_delegation_3",
+    "trait": "delegation",
+    "career": "System Administrator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "You assigned a backup task, but your teammate says they're unsure. What do you do?",
+    "options": [
+      "Guide them through the steps and remain available for help",
+      "Tell them to just figure it out",
+      "Take the task back immediately",
+      "Criticize them for asking"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Supportive Delegation)",
+    "justification": "Tests leadership support while encouraging independence."
+  },
+  {
+    "id": "sa_delegation_4",
+    "trait": "delegation",
+    "career": "System Administrator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You are overloaded with server patching tasks, and a peer offers help. What’s your best quick action? (15 seconds)",
+    "options": [
+      "Identify and delegate suitable tasks quickly",
+      "Refuse and continue alone",
+      "Let them pick randomly",
+      "Complain about the workload"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Quick Delegation)",
+    "justification": "Assesses your ability to delegate fast under workload stress."
+  },
+  {
+    "id": "sa_delegation_5",
+    "trait": "delegation",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which factor matters most when delegating maintenance checks?",
+    "options": [
+      "Clarity of instructions and accountability",
+      "Speed of handing off the task",
+      "Assuming they already know it",
+      "Avoiding responsibility completely"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Effective Delegation)",
+    "justification": "Assesses thoughtful delegation and accountability awareness."
+  },
+  {
+    "id": "sa_teamwork_1",
+    "trait": "teamwork",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You notice a colleague struggling with configuring a server. What’s the best action?",
+    "options": [
+      "Offer to help or pair troubleshoot",
+      "Wait and see if they ask for help",
+      "Point out their mistake publicly",
+      "Ignore and focus on your own work"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Agreeableness - Supportiveness)",
+    "justification": "Assesses willingness to collaborate and assist colleagues."
+  },
+  {
+    "id": "sa_teamwork_2",
+    "trait": "teamwork",
+    "career": "System Administrator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A teammate admits: 'I misconfigured the firewall and caused downtime.' How do you respond?",
+    "options": [
+      "Work with them to quickly fix the issue",
+      "Blame them in front of the team",
+      "Ignore their message",
+      "Report them immediately without support"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Collaboration)",
+    "justification": "Assesses how you respond constructively to teammate mistakes."
+  },
+  {
+    "id": "sa_teamwork_3",
+    "trait": "teamwork",
+    "career": "System Administrator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You have 15 seconds: Which statement best describes effective teamwork in IT?",
+    "options": [
+      "Sharing responsibility for uptime and system health",
+      "Working only on your assigned servers",
+      "Avoiding collaboration unless required",
+      "Letting others fix mistakes alone"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Collective Mindset)",
+    "justification": "Evaluates prioritization of group success over individual tasks."
+  },
+  {
+    "id": "sa_teamwork_4",
+    "trait": "teamwork",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How do you build trust with your IT operations team?",
+    "options": [
+      "Keep commitments and share accurate updates",
+      "Avoid communication unless asked",
+      "Point out only others’ mistakes",
+      "Withhold critical information"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Reliability)",
+    "justification": "Assesses dependability and consistency in teamwork."
+  },
+  {
+    "id": "sa_teamwork_5",
+    "trait": "teamwork",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "During a major outage, how do you demonstrate teamwork?",
+    "options": [
+      "Coordinate tasks and keep the team updated",
+      "Work silently without sharing progress",
+      "Blame another team immediately",
+      "Leave the issue until it escalates"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Agreeableness - Initiative)",
+    "justification": "Assesses initiative and communication during critical teamwork scenarios."
+  },
+  {
+    "id": "sa_strategy_1",
+    "trait": "strategy",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which practice helps ensure long-term stability of IT systems?",
+    "options": [
+      "Regularly scheduled maintenance and patching",
+      "Only fixing issues when they break",
+      "Ignoring old servers until they fail",
+      "Relying solely on external vendors"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Planning & Improvement)",
+    "justification": "Assesses forward-thinking through proactive system care."
+  },
+  {
+    "id": "sa_strategy_2",
+    "trait": "strategy",
+    "career": "System Administrator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your manager asks how to reduce recurring helpdesk tickets. What do you suggest?",
+    "options": [
+      "Implement self-service knowledge base and training",
+      "Tell users to stop asking questions",
+      "Ignore the recurring issues",
+      "Hire more staff without analysis"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Strategic Action)",
+    "justification": "Assesses proactive planning and pattern-based problem solving."
+  },
+  {
+    "id": "sa_strategy_3",
+    "trait": "strategy",
+    "career": "System Administrator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: The CIO asks how to prevent future outages. What’s your response?",
+    "options": [
+      "Propose redundancy and monitoring improvements",
+      "Say downtime is unavoidable",
+      "Blame other teams for issues",
+      "Suggest delaying fixes indefinitely"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Process Optimization)",
+    "justification": "Evaluates your ability to propose strategic prevention quickly."
+  },
+  {
+    "id": "sa_strategy_4",
+    "trait": "strategy",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s a strategic way to reduce downtime risk?",
+    "options": [
+      "Test patches in staging before production",
+      "Apply updates directly in production",
+      "Avoid updates entirely",
+      "Depend only on manual fixes"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Risk Planning)",
+    "justification": "Tests ability to plan system updates strategically."
+  },
+  {
+    "id": "sa_strategy_5",
+    "trait": "strategy",
+    "career": "System Administrator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How do you ensure IT processes improve over time?",
+    "options": [
+      "Review incidents and apply lessons learned",
+      "Repeat the same processes without change",
+      "Wait for external audits only",
+      "Avoid documenting changes"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Reflection & Innovation)",
+    "justification": "Assesses how you integrate feedback into long-term improvements."
+  }
+]

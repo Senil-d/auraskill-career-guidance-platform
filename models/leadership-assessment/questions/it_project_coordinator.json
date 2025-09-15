@@ -1,0 +1,523 @@
+[
+  {
+    "id": "itpc_comm_1",
+    "trait": "communication",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How should you communicate project updates to stakeholders?",
+    "options": [
+      "Share concise progress reports with clear timelines",
+      "Only update them when asked",
+      "Send overly detailed technical logs",
+      "Avoid communication until the project ends"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Clarity, Engagement)",
+    "justification": "Assesses ability to communicate clearly and proactively with stakeholders."
+  },
+  {
+    "id": "itpc_comm_2",
+    "trait": "communication",
+    "career": "IT Project Coordinator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A team member says: 'I don’t understand the task priorities you gave.' How do you respond?",
+    "options": [
+      "Re-explain using simpler language and examples",
+      "Dismiss their concern",
+      "Tell them to figure it out alone",
+      "Ignore the message"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy, Support)",
+    "justification": "Evaluates how well you clarify and adapt your communication to the audience."
+  },
+  {
+    "id": "itpc_comm_3",
+    "trait": "communication",
+    "career": "IT Project Coordinator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: A senior manager asks for the project status. What’s the best response?",
+    "options": [
+      "Provide a short summary of key progress and risks",
+      "Give a detailed technical breakdown",
+      "Say everything is fine without evidence",
+      "Delay answering until you prepare slides"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Audience Awareness)",
+    "justification": "Tests ability to communicate clearly and concisely under pressure."
+  },
+  {
+    "id": "itpc_comm_4",
+    "trait": "communication",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What is the most effective way to ensure everyone understands project milestones?",
+    "options": [
+      "Hold regular meetings and provide visual timelines",
+      "Send a vague email once",
+      "Leave milestones undocumented",
+      "Assume everyone already knows"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Clarity & Transparency)",
+    "justification": "Assesses structured and clear milestone communication."
+  },
+  {
+    "id": "itpc_comm_5",
+    "trait": "communication",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which practice strengthens communication in project teams?",
+    "options": [
+      "Encouraging open feedback and regular check-ins",
+      "Only speaking with managers",
+      "Blaming members for mistakes publicly",
+      "Keeping important details to yourself"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Extraversion, Agreeableness)",
+    "justification": "Assesses collaboration and openness in communication practices."
+  },
+
+  {
+    "id": "itpc_adapt_1",
+    "trait": "adaptability",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A client suddenly changes requirements midway through the project. How do you respond?",
+    "options": [
+      "Discuss impact and adjust the plan with stakeholders",
+      "Ignore the change and stick to the old plan",
+      "Blame the client for bad planning",
+      "Delay response until the project ends"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Flexibility, Regulation)",
+    "justification": "Assesses openness and professionalism when handling unexpected changes."
+  },
+  {
+    "id": "itpc_adapt_2",
+    "trait": "adaptability",
+    "career": "IT Project Coordinator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A teammate says: 'We can’t meet this deadline with the new change.' What do you do?",
+    "options": [
+      "Work with them to re-prioritize tasks and propose solutions",
+      "Tell them to stop complaining and continue",
+      "Ignore their concern",
+      "Escalate without trying to resolve first"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy, Conflict Handling)",
+    "justification": "Evaluates adaptability in responding to team concerns and conflicts."
+  },
+  {
+    "id": "itpc_adapt_3",
+    "trait": "adaptability",
+    "career": "IT Project Coordinator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "A project tool suddenly crashes before a client presentation. You have 20 seconds: what do you do?",
+    "options": [
+      "Switch to backup material or screenshots",
+      "Cancel the presentation entirely",
+      "Blame IT immediately",
+      "Ignore the issue and proceed unprepared"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Composure under stress)",
+    "justification": "Tests ability to adapt quickly during high-pressure project scenarios."
+  },
+  {
+    "id": "itpc_adapt_4",
+    "trait": "adaptability",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What practice shows strong adaptability as a coordinator?",
+    "options": [
+      "Adjusting schedules and priorities when risks occur",
+      "Always keeping the same plan regardless",
+      "Avoiding input from stakeholders",
+      "Blaming external factors for every change"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Regulation & Flexibility)",
+    "justification": "Assesses proactive adjustments in dynamic environments."
+  },
+  {
+    "id": "itpc_adapt_5",
+    "trait": "adaptability",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How do you demonstrate adaptability in day-to-day coordination?",
+    "options": [
+      "Staying calm when priorities shift and communicating changes",
+      "Refusing to adjust any task plans",
+      "Avoiding feedback from others",
+      "Letting problems escalate without response"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Calmness & Regulation)",
+    "justification": "Evaluates calmness and openness when handling daily uncertainties."
+  },
+
+  {
+    "id": "itpc_decis_1",
+    "trait": "decision-making",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A stakeholder requests a feature outside project scope. What should you do first?",
+    "options": [
+      "Review scope and discuss with stakeholders",
+      "Say yes immediately to keep them happy",
+      "Ignore the request completely",
+      "Tell them it’s not possible without review"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Scope & Responsibility)",
+    "justification": "Assesses judgment in balancing requests with project boundaries."
+  },
+  {
+    "id": "itpc_decis_2",
+    "trait": "decision-making",
+    "career": "IT Project Coordinator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "A deadline is at risk due to resource shortages. You have 20 seconds: what’s the best action?",
+    "options": [
+      "Re-prioritize tasks and escalate resource needs",
+      "Ignore the shortage and hope it resolves",
+      "Delay the project without consultation",
+      "Blame the team for poor performance"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Crisis Prioritization)",
+    "justification": "Evaluates decision-making under time and resource pressure."
+  },
+  {
+    "id": "itpc_decis_3",
+    "trait": "decision-making",
+    "career": "IT Project Coordinator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your sponsor says: 'Cut testing to meet the deadline.' How do you respond?",
+    "options": [
+      "Explain risks and propose compromise options",
+      "Agree immediately without explanation",
+      "Ignore the instruction",
+      "Blame the testing team for delays"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Ethical Judgment)",
+    "justification": "Assesses ethical reasoning and ability to balance deadlines vs. quality."
+  },
+  {
+    "id": "itpc_decis_4",
+    "trait": "decision-making",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How should you decide which risks to address first in a project?",
+    "options": [
+      "Rank them by likelihood and impact",
+      "Handle the easiest risks first",
+      "Ignore risks until they occur",
+      "Choose randomly"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Risk Prioritization)",
+    "justification": "Evaluates structured decision-making using risk analysis."
+  },
+  {
+    "id": "itpc_decis_5",
+    "trait": "decision-making",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which habit improves your project decision-making over time?",
+    "options": [
+      "Reviewing past project lessons and feedback",
+      "Relying only on intuition",
+      "Avoiding decisions whenever possible",
+      "Delegating every decision to others"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Learning-Oriented Decision-Making)",
+    "justification": "Assesses continuous improvement through reflective decision-making."
+  },
+
+  {
+    "id": "itpc_deleg_1",
+    "trait": "delegation",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You need to delegate documentation tasks. What’s the best first step?",
+    "options": [
+      "Assign to a team member with clear guidelines",
+      "Give the task without instructions",
+      "Do it yourself even if overloaded",
+      "Wait until someone volunteers"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Delegation Readiness)",
+    "justification": "Assesses ability to delegate tasks clearly and appropriately."
+  },
+  {
+    "id": "itpc_deleg_2",
+    "trait": "delegation",
+    "career": "IT Project Coordinator",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Rank these delegation actions from most to least effective:",
+    "options": [
+      "Match tasks with skill levels",
+      "Set deadlines and expectations",
+      "Micromanage every step",
+      "Avoid progress checks"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Effective Delegation Practices)",
+    "justification": "Evaluates structured thinking around effective delegation order."
+  },
+  {
+    "id": "itpc_deleg_3",
+    "trait": "delegation",
+    "career": "IT Project Coordinator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A teammate says: 'I’m not sure how to complete the task you assigned.' What do you do?",
+    "options": [
+      "Clarify the task and offer guidance if needed",
+      "Tell them to figure it out alone",
+      "Take the task back immediately",
+      "Criticize them for asking questions"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Supportive Delegation)",
+    "justification": "Assesses leadership ability to provide clarity while maintaining accountability."
+  },
+  {
+    "id": "itpc_deleg_4",
+    "trait": "delegation",
+    "career": "IT Project Coordinator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You’re overloaded, and a teammate offers to help. What’s your best quick action? (15 seconds)",
+    "options": [
+      "Delegate urgent tasks they can handle",
+      "Refuse and continue alone",
+      "Let them choose any task randomly",
+      "Complain about the workload"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Quick Delegation)",
+    "justification": "Assesses ability to delegate fast and effectively under time pressure."
+  },
+  {
+    "id": "itpc_deleg_5",
+    "trait": "delegation",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "What’s the most important factor when delegating project tasks?",
+    "options": [
+      "Clarity of goals and accountability",
+      "Speed of handing off the task",
+      "Assuming everyone already knows what to do",
+      "Avoiding responsibility entirely"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Delegation Planning)",
+    "justification": "Evaluates clarity and accountability in project delegation."
+  },
+
+  {
+    "id": "itpc_team_1",
+    "trait": "teamwork",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A teammate is struggling to finish their part of a project. What’s the best action?",
+    "options": [
+      "Offer help and rebalance the workload",
+      "Ignore and focus only on your tasks",
+      "Complain to management immediately",
+      "Publicly criticize their delay"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Agreeableness - Supportiveness)",
+    "justification": "Assesses collaboration and willingness to support teammates."
+  },
+  {
+    "id": "itpc_team_2",
+    "trait": "teamwork",
+    "career": "IT Project Coordinator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "During a meeting, a teammate admits: 'I’m overwhelmed and can’t keep up.' How do you respond?",
+    "options": [
+      "Reassure them and redistribute tasks if possible",
+      "Tell them to deal with it alone",
+      "Ignore the concern",
+      "Blame them for poor time management"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Collaboration)",
+    "justification": "Evaluates constructive response to peer struggles."
+  },
+  {
+    "id": "itpc_team_3",
+    "trait": "teamwork",
+    "career": "IT Project Coordinator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You have 15 seconds: What defines strong teamwork in project coordination?",
+    "options": [
+      "Coordinating efforts and sharing responsibility",
+      "Working only on assigned tasks without sharing",
+      "Avoiding collaboration unless asked",
+      "Letting issues escalate without communication"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Agreeableness - Collective Mindset)",
+    "justification": "Tests prioritization of group success under time pressure."
+  },
+  {
+    "id": "itpc_team_4",
+    "trait": "teamwork",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "Which action best builds trust in a project team?",
+    "options": [
+      "Keeping commitments and providing accurate updates",
+      "Avoiding communication unless necessary",
+      "Highlighting only mistakes of others",
+      "Withholding key project details"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Reliability)",
+    "justification": "Assesses dependability and transparent teamwork."
+  },
+  {
+    "id": "itpc_team_5",
+    "trait": "teamwork",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "During a deadline crunch, how can you show teamwork?",
+    "options": [
+      "Coordinate efforts and update progress with the team",
+      "Work silently without sharing progress",
+      "Blame delays on another department",
+      "Leave tasks unfinished until escalation"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Agreeableness - Initiative)",
+    "justification": "Assesses initiative and cooperation during high-pressure projects."
+  },
+
+  {
+    "id": "itpc_strat_1",
+    "trait": "strategy",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which approach helps ensure project goals are met over the long term?",
+    "options": [
+      "Regularly reviewing milestones and adjusting plans",
+      "Waiting until problems occur",
+      "Avoiding stakeholder feedback",
+      "Focusing only on short-term tasks"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Planning & Improvement)",
+    "justification": "Assesses proactive planning and adjustment to ensure long-term success."
+  },
+  {
+    "id": "itpc_strat_2",
+    "trait": "strategy",
+    "career": "IT Project Coordinator",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A sponsor asks: 'How can we prevent recurring project delays?' What do you suggest?",
+    "options": [
+      "Propose risk planning and better resource allocation",
+      "Blame the team for past delays",
+      "Ignore the question",
+      "Suggest cutting quality checks to save time"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Strategic Thinking)",
+    "justification": "Evaluates your ability to propose proactive and strategic improvements."
+  },
+  {
+    "id": "itpc_strat_3",
+    "trait": "strategy",
+    "career": "IT Project Coordinator",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: A client asks how you will ensure project success. What’s your best response?",
+    "options": [
+      "Highlight monitoring, stakeholder updates, and contingency plans",
+      "Say the team will just work harder",
+      "Give vague reassurances without evidence",
+      "Avoid answering directly"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Openness - Process Optimization)",
+    "justification": "Assesses clarity and ability to communicate strategic planning under pressure."
+  },
+  {
+    "id": "itpc_strat_4",
+    "trait": "strategy",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s a strategic way to reduce risks in project delivery?",
+    "options": [
+      "Identify risks early and develop mitigation plans",
+      "Ignore risks until they appear",
+      "Escalate every risk immediately without review",
+      "Assume the team will handle risks without planning"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Risk Planning)",
+    "justification": "Assesses structured planning and foresight in reducing risks."
+  },
+  {
+    "id": "itpc_strat_5",
+    "trait": "strategy",
+    "career": "IT Project Coordinator",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How do you ensure continuous improvement across projects?",
+    "options": [
+      "Review lessons learned and apply them to new projects",
+      "Repeat the same process without changes",
+      "Rely only on external consultants",
+      "Avoid documenting improvements"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Reflection & Innovation)",
+    "justification": "Assesses ability to apply reflection and innovation for future success."
+  }
+]

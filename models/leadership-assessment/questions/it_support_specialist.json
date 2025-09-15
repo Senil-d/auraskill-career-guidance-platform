@@ -1,0 +1,526 @@
+[
+  {
+    "id": "itss_com_1",
+    "trait": "communication",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A user emails you saying they don’t understand the steps you provided. What should you do?",
+    "options": [
+      "Re-explain using simpler words and visuals",
+      "Reply with a link to documentation only",
+      "Ignore it since you already sent the steps",
+      "Ask them to contact someone else"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy, Clarity)",
+    "justification": "Assesses clarity and user-focused communication."
+  },
+  {
+    "id": "itss_com_2",
+    "trait": "communication",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "During a live chat, a user becomes angry and says your service is useless. What is the best response?",
+    "options": [
+      "Remain calm and ask them to explain the issue clearly",
+      "Defend the system and blame poor usage",
+      "End the chat to avoid escalation",
+      "Tell them you’re doing your best, then go silent"
+    ],
+    "scores": [3, 0, 1, 1],
+    "theory": "Goleman's Emotional Intelligence – Self-regulation",
+    "justification": "Tests your emotional control and empathy during conflict."
+  },
+  {
+    "id": "itss_com_3",
+    "trait": "communication",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 3,
+    "question": "You're explaining a technical fix to a non-technical user. What should you avoid?",
+    "options": [
+      "Using metaphors and real-world examples",
+      "Describing the fix using internal server logs",
+      "Confirming their understanding as you go",
+      "Using simple, sequential instructions"
+    ],
+    "scores": [3, 0, 3, 3],
+    "theory": "Big Five – Openness & Clarity",
+    "justification": "Evaluates clarity and accessibility in communication."
+  },
+  {
+    "id": "itss_com_4",
+    "trait": "communication",
+    "career": "IT Support Specialist",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your team member says: \"This user keeps asking the same thing. I’m tired of explaining.\" What do you reply?",
+    "options": [
+      "Let's rephrase it and make sure the user really gets it.",
+      "Tell them to stop bothering us.",
+      "Just send the steps again with no explanation.",
+      "Ignore the request next time."
+    ],
+    "scores": [3, 0, 1, 0],
+    "theory": "Big Five – Agreeableness & Emotional Intelligence",
+    "justification": "Tests your ability to coach teammates with empathy and professionalism."
+  },
+  {
+    "id": "itss_com_5",
+    "trait": "communication",
+    "career": "IT Support Specialist",
+    "type": "drag_drop",
+    "difficulty": 3,
+    "question": "Rank the steps in providing clear troubleshooting instructions to a confused user:",
+    "options": [
+      "Break steps into bullet points",
+      "Use plain language",
+      "Offer to guide them through it live",
+      "Avoid technical abbreviations"
+    ],
+    "correct_order": [1, 0, 3, 2],
+    "scoring_method": "ranking_match",
+    "theory": "EI + Strategic Communication",
+    "justification": "Assesses structured and user-sensitive explanation skills."
+  },
+
+
+ {
+    "id": "itss_adapt_1",
+    "trait": "adaptability",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You are assigned to support a new unfamiliar system. What do you do?",
+    "options": [
+      "Quickly learn and ask help from experienced colleagues",
+      "Complain and request reassignment",
+      "Avoid the system and delay tasks",
+      "Guess your way through"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "EI (Self-Regulation, Learning Agility)",
+    "justification": "Assesses how you handle change and new responsibilities."
+  },
+  {
+    "id": "itss_adapt_2",
+    "trait": "adaptability",
+    "career": "IT Support Specialist",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Mid-shift, your team lead says priorities have changed. A critical printer issue must be handled now. What do you do?",
+    "options": [
+      "Adapt your schedule and jump on the task",
+      "Finish your current work first",
+      "Let someone else handle it",
+      "Delay until the end of day"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "EI (Flexibility, Conflict Tolerance)",
+    "justification": "Assesses how you shift focus and accept new priorities."
+  },
+  {
+    "id": "itss_adapt_3",
+    "trait": "adaptability",
+    "career": "IT Support Specialist",
+    "type": "timed",
+    "difficulty": 3,
+    "question": "You are on a call when another critical alert arrives. You have 15 seconds to respond. What’s the best action?",
+    "options": [
+      "Acknowledge the new alert and schedule follow-up",
+      "Drop the current call to handle it",
+      "Ignore the alert for now",
+      "Tell someone else without details"
+    ],
+    "scores": [3, 2, 1, 0],
+    "time_limit": 15,
+    "theory": "EI (Regulation under pressure)",
+    "justification": "Tests multitasking and emotional control in urgent scenarios."
+  },
+  {
+    "id": "itss_adapt_4",
+    "trait": "adaptability",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "Which strategy helps build emotional flexibility in fast-paced IT support?",
+    "options": [
+      "Staying calm and focused under user pressure",
+      "Memorizing fixed scripts",
+      "Avoiding high-pressure situations",
+      "Only helping friendly users"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "EI (Self-Regulation, Calmness)",
+    "justification": "Assesses your ability to stay composed with unpredictable users."
+  },
+  {
+    "id": "itss_adapt_5",
+    "trait": "adaptability",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You’re asked to cover a new shift pattern. How do you respond?",
+    "options": [
+      "Adjust and test the new schedule",
+      "Refuse immediately",
+      "Do it but with complaints",
+      "Ignore the request"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "EI (Flexibility)",
+    "justification": "Tests openness and attitude toward organizational needs."
+  },
+
+
+ {
+    "id": "itss_dec_1",
+    "trait": "decision-making",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A user is waiting, but you're unsure about the best solution. What should you do?",
+    "options": [
+      "Use known troubleshooting steps while informing the user",
+      "Try random solutions until one works",
+      "Tell them you don’t know and drop the call",
+      "Avoid taking responsibility"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Readiness & Responsibility)",
+    "justification": "Assesses taking initiative and applying known methods under uncertainty."
+  },
+  {
+    "id": "itss_dec_2",
+    "trait": "decision-making",
+    "career": "IT Support Specialist",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You must choose between fixing a low-priority issue quickly or diagnosing a high-priority one that may take time. You have 20 seconds.",
+    "options": [
+      "Start diagnosing the high-priority issue",
+      "Finish the low-priority one first",
+      "Wait until the team lead assigns it",
+      "Ignore both until someone else decides"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Prioritization under pressure)",
+    "justification": "Tests your ability to weigh task urgency and act under time limits."
+  },
+  {
+    "id": "itss_dec_3",
+    "trait": "decision-making",
+    "career": "IT Support Specialist",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A client wants a solution that goes against standard policy. What do you do?",
+    "options": [
+      "Explain the policy and offer acceptable alternatives",
+      "Break the policy to satisfy the client",
+      "Tell them to stop asking",
+      "Escalate immediately without trying"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Bounded Judgment)",
+    "justification": "Assesses your ethical decision-making and communication in tough choices."
+  },
+  {
+    "id": "itss_dec_4",
+    "trait": "decision-making",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s a good decision-making strategy under stress?",
+    "options": [
+      "Pause briefly and follow a structured checklist",
+      "Make fast decisions based on instincts",
+      "Push the decision to someone else",
+      "Avoid any decision"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Composure and structure)",
+    "justification": "Measures your ability to stay rational under stress."
+  },
+  {
+    "id": "itss_dec_5",
+    "trait": "decision-making",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which of the following helps you make better decisions over time?",
+    "options": [
+      "Reflecting on past cases and feedback",
+      "Avoiding mistakes at all costs",
+      "Letting others always decide",
+      "Sticking only to intuition"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Growth Decision Style)",
+    "justification": "Evaluates learning-based decision improvements."
+  },
+
+
+  {
+    "id": "itss_del_1",
+    "trait": "delegation",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Your team lead asks you to delegate a task you’ve done before. What’s your best approach?",
+    "options": [
+      "Give clear instructions and offer support if needed",
+      "Avoid delegating and do it yourself again",
+      "Assign it without explaining",
+      "Wait until someone volunteers"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "Situational Leadership (Leadership Maturity)",
+    "justification": "Assesses how well you share responsibilities and guide others."
+  },
+  {
+    "id": "itss_del_2",
+    "trait": "delegation",
+    "career": "IT Support Specialist",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Rank these delegation actions from most to least effective:",
+    "options": [
+      "Explain task clearly and check understanding",
+      "Assign based on skill fit",
+      "Leave it in a shared chat without context",
+      "Micromanage every step"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Delegation Logic)",
+    "justification": "Tests logical delegation and communication priority."
+  },
+  {
+    "id": "itss_del_3",
+    "trait": "delegation",
+    "career": "IT Support Specialist",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your colleague is unsure about a task you delegated. What do you do?",
+    "options": [
+      "Clarify expectations and offer to help if stuck",
+      "Get upset and take back the task",
+      "Tell them to figure it out alone",
+      "Escalate to your supervisor"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Supportive Delegation)",
+    "justification": "Assesses how you support others while still leading."
+  },
+  {
+    "id": "itss_del_4",
+    "trait": "delegation",
+    "career": "IT Support Specialist",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You’re swamped with tickets, and someone offers help. What’s your best next move? (15 seconds)",
+    "options": [
+      "Quickly identify tasks they can handle and delegate",
+      "Say no and continue working alone",
+      "Ask them to pick something themselves",
+      "Tell them it’s too late to help"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Quick Judgment)",
+    "justification": "Tests fast delegation under workload pressure."
+  },
+  {
+    "id": "itss_del_5",
+    "trait": "delegation",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which of these is most important when assigning a task?",
+    "options": [
+      "Clarity of instructions and ownership",
+      "Speed of handing it off",
+      "Assuming they already know it",
+      "Doing it yourself later anyway"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Delegation Planning)",
+    "justification": "Assesses clear thinking before delegation."
+  },
+
+   {
+    "id": "itss_team_1",
+    "trait": "teamwork",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You notice a teammate is struggling with ticket volume. What’s the best action?",
+    "options": [
+      "Offer help and balance the workload",
+      "Ignore it and focus on your own tasks",
+      "Tell the supervisor immediately",
+      "Joke about their slow speed"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "Big Five (Agreeableness - Supportiveness)",
+    "justification": "Assesses collaboration and willingness to support teammates."
+  },
+  {
+    "id": "itss_team_2",
+    "trait": "teamwork",
+    "career": "IT Support Specialist",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your teammate sends a message: 'I messed up the escalation process.' What do you do?",
+    "options": [
+      "Respond calmly and offer to fix it together",
+      "Blame them for making the mistake",
+      "Ignore the message",
+      "Report them to your manager immediately"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Collaboration)",
+    "justification": "Evaluates how you respond to peer errors in a team setting."
+  },
+  {
+    "id": "itss_team_3",
+    "trait": "teamwork",
+    "career": "IT Support Specialist",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You have 15 seconds: Which statement best describes effective teamwork?",
+    "options": [
+      "Team success is more important than individual credit",
+      "Only do what’s in your job description",
+      "Let others handle their part alone",
+      "Focus only on your assigned duties"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "Big Five (Agreeableness - Collective Mindset)",
+    "justification": "Tests your ability to prioritize group success under pressure."
+  },
+  {
+    "id": "itss_team_4",
+    "trait": "teamwork",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s a good way to build trust in your support team?",
+    "options": [
+      "Keep commitments and be consistent",
+      "Only communicate with supervisors",
+      "Criticize publicly when someone fails",
+      "Avoid collaboration where possible"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Reliability)",
+    "justification": "Assesses your ability to earn trust through dependable behavior."
+  },
+  {
+    "id": "itss_team_5",
+    "trait": "teamwork",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which behavior shows you're a team player during high call volume?",
+    "options": [
+      "Check in with your teammates and offer help",
+      "Complain about how busy it is",
+      "Avoid calls when it's not your turn",
+      "Let others handle all incoming tickets"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Initiative)",
+    "justification": "Assesses willingness to support during team pressure moments."
+  },
+
+  {
+    "id": "itss_strat_1",
+    "trait": "strategy",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which habit helps you develop long-term effectiveness in support work?",
+    "options": [
+      "Documenting recurring issues and solutions",
+      "Reacting only to urgent tickets",
+      "Avoiding new technologies",
+      "Letting others manage strategy"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Planning & Improvement)",
+    "justification": "Assesses long-term thinking and improvement habit."
+  },
+  {
+    "id": "itss_strat_2",
+    "trait": "strategy",
+    "career": "IT Support Specialist",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "Your team is facing repeated issues from the same user group. What do you suggest?",
+    "options": [
+      "Propose a training guide or recurring fix process",
+      "Ignore it unless told otherwise",
+      "Log each issue without analysis",
+      "Hope it fixes itself"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "Big Five (Openness - Strategic Action)",
+    "justification": "Assesses your proactive planning and pattern spotting."
+  },
+  {
+    "id": "itss_strat_3",
+    "trait": "strategy",
+    "career": "IT Support Specialist",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You notice multiple teams handling similar requests. What’s your 20-second response?",
+    "options": [
+      "Suggest consolidating support channels",
+      "Let it continue for now",
+      "Send a memo to everyone",
+      "Avoid raising issues outside your team"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Openness - Process Optimization)",
+    "justification": "Tests strategic mindset under limited time."
+  },
+  {
+    "id": "itss_strat_4",
+    "trait": "strategy",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What is a strategic way to reduce common support delays?",
+    "options": [
+      "Create knowledge base articles for frequent issues",
+      "Wait for users to describe problems better",
+      "Escalate everything to seniors",
+      "Handle all issues alone"
+    ],
+    "scores": [3, 1, 1, 0],
+    "theory": "Big Five (Openness - Knowledge Sharing)",
+    "justification": "Assesses knowledge reuse and preventative strategy."
+  },
+  {
+    "id": "itss_strat_5",
+    "trait": "strategy",
+    "career": "IT Support Specialist",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You want to help your team work more efficiently over time. What's a strategic move?",
+    "options": [
+      "Analyze recurring problems and suggest process changes",
+      "Take on more tickets without sharing ideas",
+      "Stick only to your daily tasks",
+      "Wait for supervisors to improve things"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Innovation & Reflection)",
+    "justification": "Evaluates how you think about team-wide improvement."
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "id": "tse_comm_1",
+    "trait": "communication",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A customer says: 'I don’t understand your technical explanation.' What’s the best response?",
+    "options": [
+      "Re-explain using simpler words and examples",
+      "Repeat the same explanation louder",
+      "Tell them to search online",
+      "Ignore their confusion"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Clarity & Empathy)",
+    "justification": "Assesses your ability to adapt communication style for customer understanding."
+  },
+  {
+    "id": "tse_comm_2",
+    "trait": "communication",
+    "career": "Technical Support Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A frustrated client emails: 'Your support team never fixes anything!' How do you reply?",
+    "options": [
+      "Acknowledge their frustration and offer immediate assistance",
+      "Deny their claim and defend the team",
+      "Ignore the complaint",
+      "Tell them to contact someone else"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Empathy & Regulation)",
+    "justification": "Evaluates your ability to de-escalate and show empathy under pressure."
+  },
+  {
+    "id": "tse_comm_3",
+    "trait": "communication",
+    "career": "Technical Support Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: How would you explain a 'driver update' to a non-technical user?",
+    "options": [
+      "It’s software that helps your device work correctly with your computer",
+      "It’s just something Windows installs automatically",
+      "It’s a complicated code thing",
+      "You don’t need to know about it"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Clarity under stress)",
+    "justification": "Tests ability to explain technical concepts simply under time constraints."
+  },
+  {
+    "id": "tse_comm_4",
+    "trait": "communication",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "Which method ensures users follow your troubleshooting instructions?",
+    "options": [
+      "Use clear step-by-step guides with visuals",
+      "Send highly technical documentation",
+      "Assume users will figure it out",
+      "Give them a link without context"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Clarity & Instruction)",
+    "justification": "Assesses how well you adapt instructions for user understanding."
+  },
+  {
+    "id": "tse_comm_5",
+    "trait": "communication",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which is an example of good communication in customer support?",
+    "options": [
+      "Regular updates to customers on their ticket status",
+      "Only reply when customers complain",
+      "Use jargon-heavy responses",
+      "Avoid giving any details until resolution"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Transparency & Engagement)",
+    "justification": "Assesses proactive and transparent communication with customers."
+  },
+  {
+    "id": "tse_adapt_1",
+    "trait": "adaptability",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A customer introduces a new tool you’ve never supported before. What’s your response?",
+    "options": [
+      "Research the tool quickly and ask colleagues if needed",
+      "Refuse to help because it’s new",
+      "Tell the customer to figure it out themselves",
+      "Ignore the request"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Learning Agility)",
+    "justification": "Assesses willingness to adapt to new technologies."
+  },
+  {
+    "id": "tse_adapt_2",
+    "trait": "adaptability",
+    "career": "Technical Support Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A customer says angrily: 'Your last fix didn’t work!' How do you react?",
+    "options": [
+      "Stay calm, apologize, and suggest an alternative fix",
+      "Argue that your fix was correct",
+      "Ignore their frustration",
+      "Blame the customer for not following instructions"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Emotional Intelligence (Conflict Regulation)",
+    "justification": "Evaluates your ability to adapt to emotional situations and maintain professionalism."
+  },
+  {
+    "id": "tse_adapt_3",
+    "trait": "adaptability",
+    "career": "Technical Support Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "Your main support tool crashes just before a live troubleshooting session. What’s your 20-second response?",
+    "options": [
+      "Switch to a backup tool or manual process",
+      "Cancel the session immediately",
+      "Blame IT for the tool crash",
+      "Wait and do nothing"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Emotional Intelligence (Composure & Flexibility)",
+    "justification": "Tests adaptability in high-pressure tool failure scenarios."
+  },
+  {
+    "id": "tse_adapt_4",
+    "trait": "adaptability",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s the best way to handle conflicting instructions from two managers?",
+    "options": [
+      "Clarify priorities with both managers professionally",
+      "Choose whichever is easiest",
+      "Ignore one and follow the other blindly",
+      "Complain to coworkers about the situation"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Conflict Resolution)",
+    "justification": "Assesses adaptability and professionalism under conflicting directions."
+  },
+  {
+    "id": "tse_adapt_5",
+    "trait": "adaptability",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which behavior shows adaptability in technical support?",
+    "options": [
+      "Staying calm and adjusting troubleshooting steps when new issues appear",
+      "Refusing to try different methods",
+      "Avoiding responsibility for problems",
+      "Ignoring unexpected changes"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Emotional Intelligence (Change Acceptance)",
+    "justification": "Assesses composure and willingness to adapt during troubleshooting."
+  },
+  {
+    "id": "tse_decision_1",
+    "trait": "decision-making",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A customer requests admin access to install software. What’s the best action?",
+    "options": [
+      "Check policy and suggest safe alternatives",
+      "Grant access immediately to save time",
+      "Ignore the request completely",
+      "Tell them to ask someone else"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Policy-Adaptive Judgment)",
+    "justification": "Assesses decision-making while balancing policy and customer needs."
+  },
+  {
+    "id": "tse_decision_2",
+    "trait": "decision-making",
+    "career": "Technical Support Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "A system outage occurs during peak hours. You have 20 seconds: what do you do first?",
+    "options": [
+      "Escalate to the incident team and inform users",
+      "Ignore the outage until asked",
+      "Restart everything without diagnosis",
+      "Wait until the end of your shift"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Crisis Prioritization)",
+    "justification": "Evaluates quick decision-making during urgent system incidents."
+  },
+  {
+    "id": "tse_decision_3",
+    "trait": "decision-making",
+    "career": "Technical Support Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A client says: 'Please skip documentation and just fix it fast.' How do you respond?",
+    "options": [
+      "Explain why documentation is necessary and offer a compromise",
+      "Skip documentation completely",
+      "Ignore their request",
+      "Blame them for slowing you down"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Ethical Decision-Making)",
+    "justification": "Assesses your ability to balance speed and compliance."
+  },
+  {
+    "id": "tse_decision_4",
+    "trait": "decision-making",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s the best way to decide which tickets to resolve first?",
+    "options": [
+      "Prioritize by severity and business impact",
+      "Choose the easiest ones first",
+      "Pick randomly",
+      "Only resolve tickets from familiar clients"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Task Prioritization)",
+    "justification": "Evaluates structured prioritization of workload."
+  },
+  {
+    "id": "tse_decision_5",
+    "trait": "decision-making",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which habit strengthens your decision-making in technical support?",
+    "options": [
+      "Reviewing logs and past cases for patterns",
+      "Relying only on gut feeling",
+      "Avoiding tough decisions",
+      "Always pushing decisions to managers"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Learning-Oriented Decision-Making)",
+    "justification": "Assesses how you improve decisions through learning and reflection."
+  },
+  {
+    "id": "tse_delegation_1",
+    "trait": "delegation",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "You need to assign a simple troubleshooting task to a junior. What’s the best way?",
+    "options": [
+      "Explain the steps clearly and check understanding",
+      "Assign without any instructions",
+      "Do it yourself to save time",
+      "Wait until they figure it out alone"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Delegation Readiness)",
+    "justification": "Assesses ability to delegate with clarity and support."
+  },
+  {
+    "id": "tse_delegation_2",
+    "trait": "delegation",
+    "career": "Technical Support Engineer",
+    "type": "drag-drop",
+    "difficulty": 2,
+    "question": "Rank these delegation practices from most to least effective:",
+    "options": [
+      "Assign tasks based on skill levels",
+      "Provide clear expectations and deadlines",
+      "Micromanage every detail",
+      "Avoid checking progress entirely"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Effective Delegation Practices)",
+    "justification": "Tests structured thinking around task delegation priorities."
+  },
+  {
+    "id": "tse_delegation_3",
+    "trait": "delegation",
+    "career": "Technical Support Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A teammate says: 'I don’t know how to handle the ticket you gave me.' How do you respond?",
+    "options": [
+      "Guide them through the process and remain available for help",
+      "Tell them to figure it out themselves",
+      "Take the task back immediately",
+      "Criticize them for asking"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Situational Leadership (Supportive Delegation)",
+    "justification": "Assesses leadership in balancing guidance and accountability."
+  },
+  {
+    "id": "tse_delegation_4",
+    "trait": "delegation",
+    "career": "Technical Support Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You’re overloaded, and a peer offers to help. What’s your best quick action? (15 seconds)",
+    "options": [
+      "Delegate tickets they can handle right away",
+      "Refuse and continue alone",
+      "Let them pick tasks randomly",
+      "Complain about the workload instead"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Situational Leadership (Quick Delegation)",
+    "justification": "Evaluates ability to delegate fast under workload stress."
+  },
+  {
+    "id": "tse_delegation_5",
+    "trait": "delegation",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which factor is most important when delegating troubleshooting tasks?",
+    "options": [
+      "Clarity of instructions and accountability",
+      "Speed of handing over the task",
+      "Assuming they already know it",
+      "Avoiding responsibility entirely"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Situational Leadership (Delegation Planning)",
+    "justification": "Assesses thoughtful delegation and accountability awareness."
+  },
+  {
+    "id": "tse_teamwork_1",
+    "trait": "teamwork",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "A teammate is struggling with a customer ticket. What’s the best way to respond?",
+    "options": [
+      "Offer to help or share your troubleshooting experience",
+      "Ignore and let them fail",
+      "Complain to management about their performance",
+      "Publicly criticize their slow progress"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Agreeableness - Supportiveness)",
+    "justification": "Assesses collaboration and willingness to support team members."
+  },
+  {
+    "id": "tse_teamwork_2",
+    "trait": "teamwork",
+    "career": "Technical Support Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A colleague admits: 'I closed a ticket too early and the issue came back.' How do you respond?",
+    "options": [
+      "Help them reopen the ticket and fix it together",
+      "Blame them in front of others",
+      "Ignore their mistake",
+      "Escalate the issue without supporting them"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Collaboration)",
+    "justification": "Evaluates constructive teamwork when handling mistakes."
+  },
+  {
+    "id": "tse_teamwork_3",
+    "trait": "teamwork",
+    "career": "Technical Support Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 15,
+    "question": "You have 15 seconds: What best demonstrates strong teamwork in technical support?",
+    "options": [
+      "Sharing workload and keeping everyone updated",
+      "Working only on your assigned tickets",
+      "Avoiding collaboration unless necessary",
+      "Letting issues escalate without telling anyone"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Agreeableness - Collective Mindset)",
+    "justification": "Tests prioritization of team success under time pressure."
+  },
+  {
+    "id": "tse_teamwork_4",
+    "trait": "teamwork",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "How can you build trust in your support team?",
+    "options": [
+      "Keep commitments and provide accurate updates",
+      "Avoid communication unless asked",
+      "Highlight only others’ mistakes",
+      "Withhold important ticket details"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Agreeableness - Reliability)",
+    "justification": "Assesses dependability and transparent teamwork."
+  },
+  {
+    "id": "tse_teamwork_5",
+    "trait": "teamwork",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "During a heavy workload, how do you show teamwork?",
+    "options": [
+      "Coordinate with teammates and share updates",
+      "Work silently without communication",
+      "Blame other departments for delays",
+      "Avoid taking new tickets"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Agreeableness - Initiative)",
+    "justification": "Evaluates initiative and communication in high-pressure teamwork scenarios."
+  },
+  {
+    "id": "tse_strategy_1",
+    "trait": "strategy",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "Which practice helps prevent recurring customer issues?",
+    "options": [
+      "Documenting solutions and creating knowledge base articles",
+      "Fixing issues only when they reappear",
+      "Ignoring repeated tickets",
+      "Relying solely on memory"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Planning & Improvement)",
+    "justification": "Assesses proactive strategy to reduce repeated problems."
+  },
+  {
+    "id": "tse_strategy_2",
+    "trait": "strategy",
+    "career": "Technical Support Engineer",
+    "type": "roleplay",
+    "difficulty": 2,
+    "question": "A manager asks: 'How can we reduce ticket volume in the future?' What do you suggest?",
+    "options": [
+      "Introduce FAQs and user self-service tools",
+      "Hire more support staff immediately",
+      "Ignore the ticket volume",
+      "Tell users to stop reporting issues"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Strategic Thinking)",
+    "justification": "Evaluates proactive suggestions to reduce workload strategically."
+  },
+  {
+    "id": "tse_strategy_3",
+    "trait": "strategy",
+    "career": "Technical Support Engineer",
+    "type": "timed",
+    "difficulty": 3,
+    "time_limit": 20,
+    "question": "You have 20 seconds: A client asks how you ensure reliable long-term support. What do you answer?",
+    "options": [
+      "Emphasize root cause fixes and preventive measures",
+      "Say you’ll respond faster next time",
+      "Promise zero downtime without planning",
+      "Avoid answering until later"
+    ],
+    "scores": [3, 2, 1, 0],
+    "theory": "Big Five (Openness - Process Optimization)",
+    "justification": "Tests ability to propose strategic improvements under pressure."
+  },
+  {
+    "id": "tse_strategy_4",
+    "trait": "strategy",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 2,
+    "question": "What’s a strategic step when handling recurring high-impact tickets?",
+    "options": [
+      "Analyze root causes and collaborate with other teams",
+      "Continue fixing without investigating patterns",
+      "Escalate all tickets without review",
+      "Blame customers for repeated issues"
+    ],
+    "scores": [3, 2, 0, 0],
+    "theory": "Big Five (Openness - Risk Planning)",
+    "justification": "Assesses long-term problem-solving and collaboration strategies."
+  },
+  {
+    "id": "tse_strategy_5",
+    "trait": "strategy",
+    "career": "Technical Support Engineer",
+    "type": "msq",
+    "difficulty": 1,
+    "question": "How do you ensure continuous improvement in customer support?",
+    "options": [
+      "Review incidents and apply lessons learned",
+      "Repeat the same steps without change",
+      "Avoid documentation of fixes",
+      "Rely only on ad-hoc troubleshooting"
+    ],
+    "scores": [3, 1, 0, 0],
+    "theory": "Big Five (Openness - Reflection & Innovation)",
+    "justification": "Evaluates ability to apply learning to improve long-term support quality."
+  }
+]
