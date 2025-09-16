@@ -2,23 +2,31 @@ const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+const generateToken = (user) => {
+  return jwt.sign(
+    {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      career: user.career,
+      AL_stream: user.AL_stream
+    },
+    process.env.JWT_SECRET,
+    { expiresIn: '7d' }
+  );
 };
 
-//Register new user
+// Register new user
 exports.registerUser = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, career } = req.body;
 
     if (!username || !email || !password) {
       return res.status(400).json({ message: 'Please provide username, email, and password' });
     }
 
     const userExists = await User.findOne({ email });
-    if (userExists) {
-      return res.status(400).json({ message: 'User already exists' });
-    };
+    if (userExists) return res.status(400).json({ message: 'User already exists' });
 
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
@@ -27,25 +35,22 @@ exports.registerUser = async (req, res) => {
       username,
       email,
       password: hashedPassword,
+      career,
     });
 
-    if (user) {
-      res.status(201).json({
-        _id: user.id,
-        username: user.username,
-        email: user.email,
-        token: generateToken(user.id),
-      });
-    } else {
-      res.status(400).json({ message: 'Invalid user data' });
-    }
-
+    res.status(201).json({
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      career: user.career,
+      token: generateToken(user)
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-//Authenticate a user
+// Login user
 exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -57,19 +62,19 @@ exports.loginUser = async (req, res) => {
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
     res.json({
-      _id: user.id,
+      _id: user._id,
       username: user.username,
       email: user.email,
       AL_stream: user.AL_stream,
       career: user.career,
-      token: generateToken(user.id),
+      token: generateToken(user)
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-//Get user profile
+// Get user profile
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
@@ -81,7 +86,7 @@ exports.getUserProfile = async (req, res) => {
   }
 };
 
-//Update user profile
+// Update user profile (AL_stream, career)
 exports.updateProfile = async (req, res) => {
   try {
     const { AL_stream, career } = req.body;
