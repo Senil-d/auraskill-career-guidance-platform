@@ -24,15 +24,24 @@ const userSchema = new mongoose.Schema(
       default: null, 
       trim: true,
     },
+    specialization: {
+      type: String,
+      default: null, 
+      trim: true,
+    },
     career: {
       type: String,
       default: null, 
       trim: true,
     },
-    specialization: {
+    requiredSkills: {
+      type: Map,
+      of: Number, 
+      default: {},
+    },
+    skillJustification: {
       type: String,
-      default: null, 
-      trim: true,
+      default: null,
     },
   },
   { timestamps: true }

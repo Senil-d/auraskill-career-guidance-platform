@@ -64,7 +64,7 @@ const CareerSuggestionScreen = () => {
       );
 
       Alert.alert("Success", `Career "${career}" saved to your profile!`);
-      navigation.replace("Home");
+      navigation.replace("RequiredSkills");
     } catch (error) {
       console.error("Error saving career:", error);
       Alert.alert("Error", "Could not save your chosen career");

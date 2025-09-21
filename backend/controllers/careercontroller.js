@@ -64,14 +64,53 @@ exports.chooseCareer = async (req, res) => {
     const user = await User.findById(req.user.id);
     if (!user) return res.status(404).json({ message: "User not found" });
 
+    const filePath = path.join(__dirname, "../data/career_skill_data.csv");
+
+    let matchedRow = null;
+
+    // Read CSV to get skills
+    await new Promise((resolve, reject) => {
+      fs.createReadStream(filePath)
+        .pipe(csv())
+        .on("data", (row) => {
+          if (row.career.toLowerCase() === chosenCareer.toLowerCase()) {
+            matchedRow = row;
+          }
+        })
+        .on("end", resolve)
+        .on("error", reject);
+    });
+
+    if (!matchedRow) {
+      return res.status(404).json({ message: "Career not found in skill dataset" });
+    }
+
+    // Prepare skills object
+    const skills = {};
+    if (matchedRow["Problem-Solving"])
+      skills["Problem-Solving"] = parseInt(matchedRow["Problem-Solving"]);
+    if (matchedRow["Analytical"])
+      skills["Analytical"] = parseInt(matchedRow["Analytical"]);
+    if (matchedRow["Artistic"])
+      skills["Artistic"] = parseInt(matchedRow["Artistic"]);
+    if (matchedRow["Leadership"])
+      skills["Leadership"] = parseInt(matchedRow["Leadership"]);
+
+    // Update user
     user.career = chosenCareer;
+    user.requiredSkills = skills;
+    user.skillJustification = matchedRow["Justification"] || null;
+
     await user.save();
 
     res.json({
-      message: "Career choice saved successfully",
+      message: "Career choice saved successfully with skills",
       career: user.career,
+      requiredSkills: user.requiredSkills,
+      justification: user.careerJustification,
     });
   } catch (error) {
+    console.error("Error in chooseCareer:", error);
     res.status(500).json({ message: error.message });
   }
 };

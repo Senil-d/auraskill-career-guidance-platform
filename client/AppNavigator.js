@@ -12,6 +12,7 @@ import AwarenessScreen from './screens/startScreens/AwarnessScreen';
 import StreamScreen from './screens/startScreens/ALStreamScreen';
 import SpecializationScreen from './screens/startScreens/SpecializationScreen';
 import CareerSuggestionScreen from './screens/startScreens/CareerSuggestionScreen';
+import RequiredSkillScreen from './screens/startScreens/RequiredSkillScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ const AppNavigator = () => {
         <Stack.Screen name="Specialization" component={SpecializationScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="CareerSuggestions" component={CareerSuggestionScreen} />
+        <Stack.Screen name="RequiredSkills" component={RequiredSkillScreen} />
 
       </Stack.Navigator> 
     </NavigationContainer>
