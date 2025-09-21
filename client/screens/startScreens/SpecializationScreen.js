@@ -46,7 +46,7 @@ const SpecializationScreen = ({ route }) => {
 
       if (response.data) {
         Alert.alert("Success", "Profile updated successfully!");
-        navigation.replace("Home");
+        navigation.replace("CareerSuggestions");
       }
     } catch (error) {
       console.error(error);
