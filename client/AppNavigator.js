@@ -5,6 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Import your screens
 import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignupScreen';
+import HomeScreen from './screens/HomeScreen';
+
+// Import start screens
+import AwarenessScreen from './screens/startScreens/AwarnessScreen';
+import StreamScreen from './screens/startScreens/ALStreamScreen';
+import SpecializationScreen from './screens/startScreens/SpecializationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,8 +25,12 @@ const AppNavigator = () => {
       >
         <Stack.Screen name="LogIn" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="Awareness" component={AwarenessScreen} />
+        <Stack.Screen name="Stream" component={StreamScreen} />
+        <Stack.Screen name="Specialization" component={SpecializationScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
 
-      </Stack.Navigator>
+      </Stack.Navigator> 
     </NavigationContainer>
   );
 };

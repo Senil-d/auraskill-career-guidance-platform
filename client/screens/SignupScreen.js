@@ -39,7 +39,7 @@ const SignUpScreen = () => {
       if (response.data) {
         await AsyncStorage.setItem("token", response.data.token);
         Alert.alert("Success", "Account created successfully!");
-        navigation.navigate("Home"); // 🔑 Change to your app’s main screen
+        navigation.navigate("Awareness", { signupData: response.data });
       }
     } catch (error) {
       console.error(error);
