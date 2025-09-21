@@ -7,6 +7,7 @@ const connectDB = require('./config/db');
 // Import routes
 const authRoutes = require('./routes/userRoute');
 const leadershipAssessRoutes = require('./routes/leadershipAssess.route');
+const careerRoutes = require('./routes/careerRoute');
 
 // Load environment variables
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(morgan('dev'));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/leadership', leadershipAssessRoutes);
+app.use('/api/career', careerRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
