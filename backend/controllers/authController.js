@@ -72,7 +72,7 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-// Get user profile
+// Get all user profile
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
@@ -84,15 +84,16 @@ exports.getUserProfile = async (req, res) => {
   }
 };
 
-// Update user profile (AL_stream, career)
+// Update user profile (AL_stream, specialization)
 exports.updateProfile = async (req, res) => {
   try {
-    const { AL_stream, career } = req.body;
+    const { AL_stream, specialization, career } = req.body;
 
     const user = await User.findById(req.user.id);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
     if (AL_stream) user.AL_stream = AL_stream;
+    if (specialization) user.specialization = specialization; 
     if (career) user.career = career;
 
     await user.save();
@@ -100,9 +101,11 @@ exports.updateProfile = async (req, res) => {
     res.json({
       message: 'Profile updated successfully',
       AL_stream: user.AL_stream,
+      specialization: user.specialization,
       career: user.career,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+

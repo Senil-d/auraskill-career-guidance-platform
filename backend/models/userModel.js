@@ -29,6 +29,11 @@ const userSchema = new mongoose.Schema(
       default: null, 
       trim: true,
     },
+    specialization: {
+      type: String,
+      default: null, 
+      trim: true,
+    },
   },
   { timestamps: true }
 );
