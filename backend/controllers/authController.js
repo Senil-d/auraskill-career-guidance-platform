@@ -19,7 +19,7 @@ const generateToken = (user) => {
 // Register new user
 exports.registerUser = async (req, res) => {
   try {
-    const { username, email, password, career } = req.body;
+    const { username, email, password} = req.body;
 
     if (!username || !email || !password) {
       return res.status(400).json({ message: 'Please provide username, email, and password' });
@@ -35,14 +35,12 @@ exports.registerUser = async (req, res) => {
       username,
       email,
       password: hashedPassword,
-      career,
     });
 
     res.status(201).json({
       _id: user._id,
       username: user.username,
       email: user.email,
-      career: user.career,
       token: generateToken(user)
     });
   } catch (error) {
