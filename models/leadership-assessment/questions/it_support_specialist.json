@@ -68,24 +68,23 @@
     "justification": "Tests your ability to coach teammates with empathy and professionalism."
   },
   {
-    "id": "itss_com_5",
-    "trait": "communication",
-    "career": "IT Support Specialist",
-    "type": "drag_drop",
-    "difficulty": 3,
-    "question": "Rank the steps in providing clear troubleshooting instructions to a confused user:",
-    "options": [
-      "Break steps into bullet points",
-      "Use plain language",
-      "Offer to guide them through it live",
-      "Avoid technical abbreviations"
-    ],
-    "correct_order": [1, 0, 3, 2],
-    "scoring_method": "ranking_match",
-    "theory": "EI + Strategic Communication",
-    "justification": "Assesses structured and user-sensitive explanation skills."
-  },
-
+  "id": "itss_com_5",
+  "trait": "communication",
+  "career": "IT Support Specialist",
+  "type": "timed",
+  "difficulty": 3,
+  "time_limit": 20,
+  "question": "You have 20 seconds: What is the best way to provide clear troubleshooting instructions to a confused user?",
+  "options": [
+    "Break steps into bullet points",
+    "Use plain language",
+    "Offer to guide them through it live",
+    "Avoid technical abbreviations"
+  ],
+  "scores": [3, 3, 2, 2],
+  "theory": "EI + Strategic Communication",
+  "justification": "Assesses structured and user-sensitive explanation skills under time pressure."
+},
 
  {
     "id": "itss_adapt_1",
@@ -281,22 +280,23 @@
     "justification": "Assesses how well you share responsibilities and guide others."
   },
   {
-    "id": "itss_del_2",
-    "trait": "delegation",
-    "career": "IT Support Specialist",
-    "type": "drag-drop",
-    "difficulty": 2,
-    "question": "Rank these delegation actions from most to least effective:",
-    "options": [
-      "Explain task clearly and check understanding",
-      "Assign based on skill fit",
-      "Leave it in a shared chat without context",
-      "Micromanage every step"
-    ],
-    "scores": [3, 2, 1, 0],
-    "theory": "Situational Leadership (Delegation Logic)",
-    "justification": "Tests logical delegation and communication priority."
-  },
+  "id": "itss_del_2",
+  "trait": "delegation",
+  "career": "IT Support Specialist",
+  "type": "timed",
+  "difficulty": 2,
+  "time_limit": 15,
+  "question": "You have 15 seconds: Which delegation action is the most effective?",
+  "options": [
+    "Explain task clearly and check understanding",
+    "Assign based on skill fit",
+    "Leave it in a shared chat without context",
+    "Micromanage every step"
+  ],
+  "scores": [3, 2, 1, 0],
+  "theory": "Situational Leadership (Delegation Logic)",
+  "justification": "Tests logical delegation and communication priority under time constraints."
+},
   {
     "id": "itss_del_3",
     "trait": "delegation",

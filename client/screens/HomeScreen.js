@@ -86,7 +86,7 @@ const HomeScreen = () => {
         {/* Example navigation buttons */}
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("Quiz")}
+          onPress={() => navigation.navigate("LeadershipQuiz")}
         >
           <Text style={styles.buttonText}>Start Quiz</Text>
         </TouchableOpacity>

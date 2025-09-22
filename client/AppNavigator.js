@@ -13,6 +13,8 @@ import StreamScreen from './screens/startScreens/ALStreamScreen';
 import SpecializationScreen from './screens/startScreens/SpecializationScreen';
 import CareerSuggestionScreen from './screens/startScreens/CareerSuggestionScreen';
 import RequiredSkillScreen from './screens/startScreens/RequiredSkillScreen';
+import LeadershipQuizScreen from './screens/leadershipScreens/LeadershipQuizzScreen';
+import LeadershipResultScreen from './screens/leadershipScreens/LeadershipResultScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +35,8 @@ const AppNavigator = () => {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="CareerSuggestions" component={CareerSuggestionScreen} />
         <Stack.Screen name="RequiredSkills" component={RequiredSkillScreen} />
+        <Stack.Screen name="LeadershipQuiz" component={LeadershipQuizScreen} />
+        <Stack.Screen name="LeadershipResult" component={LeadershipResultScreen} />
 
       </Stack.Navigator> 
     </NavigationContainer>
