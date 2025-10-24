@@ -1,202 +1,97 @@
-# logic/engine.py
-
 import random
-from utils.loader import load_questions
+from utils.constant import TRAITS
+from utils.utils import inverse_weight_probs, feedback
+from utils.loader import load_question_pool
+from utils.personalization import personalize_scenario
+import os
 
+QUESTION_POOL_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "questions", "question_pool.json")
 
-class Engine:
-    def __init__(self):
-        self.sessions = {}
+class SBREEngine:
 
-    # ---------------------------
-    # Start session and return first question
-    # ---------------------------
-    def start_session(self, user_id, career):
-        print(f"[START_SESSION] Starting session for user: {user_id}, career: {career}")
-        traits = ["communication", "adaptability", "decision-making", "delegation", "teamwork", "strategy"]
-        session_token = f"{user_id}_{career.replace(' ', '')}_{random.randint(1000, 9999)}"
+    def get_next_adaptive_question(self):
+        # If no questions asked yet, pick random trait
+        if not self.asked_ids:
+            trait = self.get_next_trait(first=True)
+        else:
+            # Find the lowest scoring trait
+            min_score = min(self.trait_scores.values())
+            weakest_traits = [t for t, v in self.trait_scores.items() if v == min_score]
+            trait = random.choice(weakest_traits)
+        q = self.select_question(trait)
+        if q:
+            q["scenario"] = personalize_scenario(q["scenario"], self.al_stream, self.career, self.decision_style)
+        return q
+    def __init__(self, al_stream, career, decision_style, total_questions=12):
+        self.al_stream = al_stream
+        self.career = career
+        self.decision_style = decision_style
+        self.total_questions = total_questions
 
-        # Initialize session progress
-        progress = {}
-        for trait in traits:
-            progress[trait] = {
-                "asked": 0,
-                "correct": 0,
-                "max": 0,
-                "difficulty": 2,  # start medium
-                "questions_seen": []
-            }
+        print(f"Loading questions from: {QUESTION_POOL_FILE}")
+        self.questions = load_question_pool(QUESTION_POOL_FILE)
+        print(f"Loaded {len(self.questions)} validated questions.")
+        self.trait_scores = {t: 0.0 for t in TRAITS}
+        self.asked_ids = set()
 
-        self.sessions[session_token] = {
-            "user_id": user_id,
-            "career": career,
-            "traits": traits,
-            "progress": progress,
-            "current_trait_index": 0
-        }
+        # Group by trait
+        self.by_trait = {t: [q for q in self.questions if q["trait"] == t] for t in TRAITS}
+        self.per_trait_max = self._compute_per_trait_max()
 
-        # Immediately return first question
-        first_question = self._get_next_question(session_token)
+    def get_next_trait(self, first=False):
+        if first: return random.choice(TRAITS)
+        probs = inverse_weight_probs(self.trait_scores)
+        return random.choices(TRAITS, weights=probs, k=1)[0]
+
+    def select_question(self, trait):
+        pool = [q for q in self.by_trait.get(trait, []) if q["id"] not in self.asked_ids]
+        if not pool: return None
+        q = random.choice(pool)
+        self.asked_ids.add(q["id"])
+        return dict(q)
+
+    def evaluate_response(self, weights):
+        for t, v in weights.items():
+            if t in self.trait_scores:
+                self.trait_scores[t] += float(v)
+
+    def generate_quiz(self):
+        quiz = []
+        for i in range(self.total_questions):
+            trait = self.get_next_trait(first=(i == 0))
+            q = self.select_question(trait)
+            if not q: continue
+            q["scenario"] = personalize_scenario(q["scenario"], self.al_stream, self.career, self.decision_style)
+            quiz.append(q)
+        return quiz
+
+    def evaluate_final_results(self):
+        results = {}
+        for t in TRAITS:
+            max_t = self.per_trait_max.get(t, 10 * self.total_questions)
+            results[t] = round((self.trait_scores[t] / max_t) * 100, 2)
+        overall = round(sum(results.values()) / len(TRAITS), 2)
+        level, fb = feedback(overall, results)
         return {
-            "session_token": session_token,
-            "current_trait": traits[0],
-            "first_question": first_question
-        }
-
-    # ---------------------------
-    # Internal: pick next question
-    # ---------------------------
-    def _get_next_question(self, session_token):
-        session = self.sessions.get(session_token)
-        if not session:
-            print("[ERROR] Invalid session token")
-            return {"error": "Invalid session token"}
-
-        trait_index = session["current_trait_index"]
-        if trait_index >= len(session["traits"]):
-            print("[INFO] All traits completed")
-            return {"completed": True}
-
-        current_trait = session["traits"][trait_index]
-        progress = session["progress"][current_trait]
-        difficulty = progress["difficulty"]
-        career = session["career"]
-
-        print(f"[GET_QUESTION] Trait: {current_trait}, Difficulty: {difficulty}, Career: {career}")
-
-        # Load questions at current difficulty
-        questions = load_questions(career, current_trait, difficulty)
-        questions = [q for q in questions if q["id"] not in progress["questions_seen"]]
-
-        print(f"[DEBUG] Found {len(questions)} unseen questions at difficulty {difficulty}")
-
-        # Fallback if no questions at this difficulty
-        if not questions:
-            for alt_diff in [1, 3]:
-                alt_questions = load_questions(career, current_trait, alt_diff)
-                alt_questions = [q for q in alt_questions if q["id"] not in progress["questions_seen"]]
-                if alt_questions:
-                    progress["difficulty"] = alt_diff
-                    questions = alt_questions
-                    print(f"[FALLBACK] Switching to difficulty {alt_diff}")
-                    break
-
-        if not questions:
-            print(f"[INFO] No more questions for trait: {current_trait}, moving to next trait.")
-            session["current_trait_index"] += 1
-            if session["current_trait_index"] >= len(session["traits"]):
-                return {"completed": True}
-            return self._get_next_question(session_token)
-
-        # Choose one randomly
-        question = random.choice(questions)
-        progress["questions_seen"].append(question["id"])
-        print(f"[QUESTION SELECTED] ID: {question['id']}")
-
-        return {
-            "id": question["id"],
-            "trait": current_trait,
-            "career": career,
-            "type": question.get("type", "msq"),
-            "difficulty": progress["difficulty"],
-            "question": question["question"],
-            "options": question["options"]
-        }
-
-    # ---------------------------
-    # Submit answer and return next question
-    # ---------------------------
-    def submit_answer(self, session_token, question_id, selected_index=None, user_order=None):
-        session = self.sessions.get(session_token)
-        if not session:
-            return {"error": "Invalid session token"}
-
-        trait_index = session["current_trait_index"]
-        if trait_index >= len(session["traits"]):
-            return {"completed": True}
-
-        current_trait = session["traits"][trait_index]
-        progress = session["progress"][current_trait]
-        career = session["career"]
-        difficulty = progress["difficulty"]
-
-        # Reload question
-        questions = load_questions(career, current_trait, difficulty)
-        question = next((q for q in questions if q["id"] == question_id), None)
-        if not question:
-            return {"error": "Question not found"}
-
-        score, max_score = 0, 3
-
-        if question["type"] in ["msq", "roleplay", "timed"]:
-            if selected_index is None or selected_index >= len(question["options"]):
-                return {"error": "Invalid answer index"}
-            score = question["scores"][selected_index]
-            max_score = max(question["scores"])
-
-        elif question["type"] == "drag_drop":
-            if not user_order or not isinstance(user_order, list):
-                return {"error": "Invalid drag_drop answer"}
-            correct_order = question.get("correct_order", [])
-            score = 3 if user_order == correct_order else 1
-            max_score = 3
-
-        # Update progress
-        progress["asked"] += 1
-        progress["correct"] += score
-        progress["max"] += max_score
-
-        # Adjust difficulty adaptively
-        if score >= 2 and difficulty < 3:
-            progress["difficulty"] += 1
-        elif score <= 1 and difficulty > 1:
-            progress["difficulty"] -= 1
-
-        # Move to next trait if done
-        if progress["asked"] >= 3:
-            session["current_trait_index"] += 1
-            if session["current_trait_index"] >= len(session["traits"]):
-                return {"completed": True}
-
-        return self._get_next_question(session_token)
-
-    # ---------------------------
-    # Final summary
-    # ---------------------------
-    def summary(self, session_token):
-        session = self.sessions.get(session_token)
-        if not session:
-            return {"error": "Invalid session token"}
-
-        trait_scores = {}
-        total_score = 0
-
-        for trait in session["traits"]:
-            p = session["progress"][trait]
-            norm_score = round((p["correct"] / p["max"]) * 10, 2) if p["max"] > 0 else 0
-
-            if norm_score >= 7.0:
-                level = "Advanced"
-            elif norm_score >= 4.0:
-                level = "Intermediate"
-            else:
-                level = "Beginner"
-
-            trait_scores[trait] = {
-                "raw": p["correct"],
-                "max": p["max"],
-                "score": norm_score,
-                "level": level
-            }
-            total_score += norm_score
-
-        overall = round(total_score / len(session["traits"]), 2)
-        overall_level = "Advanced" if overall >= 7 else "Intermediate" if overall >= 4 else "Beginner"
-
-        print(f"[SUMMARY] Token: {session_token}, Overall Score: {overall}, Level: {overall_level}")
-        return {
-            "skill_area": "leadership",
+            "decision_making": results["DM"],
+            "empathy": results["EC"],
+            "conflict_management": results["CM"],
+            "strategic_thinking": results["ST"],
             "overall_score": overall,
-            "level": overall_level,
-            "trait_scores": trait_scores
+            "leadership_level": level,
+            "feedback": fb
         }
+
+    def _compute_per_trait_max(self):
+        per = {t: 0 for t in TRAITS}
+        for q in self.questions:
+            opts = q.get("options", [])
+            max_per_trait = {t: 0 for t in TRAITS}
+            for o in opts:
+                w = o.get("weights", {})
+                for t in TRAITS:
+                    val = w.get(t, 0)
+                    if val > max_per_trait[t]: max_per_trait[t] = val
+            for t in TRAITS:
+                per[t] += max_per_trait[t]
+        return per
