@@ -6,8 +6,10 @@ const connectDB = require('./config/db');
 
 // Import routes
 const authRoutes = require('./routes/userRoute');
-const leadershipAssessRoutes = require('./routes/leadershipAssess.route');
 const careerRoutes = require('./routes/careerRoute');
+
+// Leadership assessment routes
+const leadershipRoutes = require('./routes/leadership.route');
 
 // Load environment variables
 dotenv.config();
@@ -24,10 +26,12 @@ app.use(cors());
 app.use(morgan('dev'));
 
 
-// Routes
+// Common Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/leadership', leadershipAssessRoutes);
 app.use('/api/career', careerRoutes);
+
+// Leadership assessment routes
+app.use('/api/leadership', leadershipRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
