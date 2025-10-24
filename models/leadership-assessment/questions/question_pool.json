@@ -1,0 +1,882 @@
+[
+  {
+    "id": 101,
+    "category": "decision_making",
+    "scenario": "You must select a software vendor for a critical system upgrade with limited time for evaluation.",
+    "options": [
+      {"text": "Compare key performance data quickly and choose the most reliable vendor.", "weights": {"DM": 9, "EC": 5, "CM": 5, "ST": 8}},
+      {"text": "Hold a long discussion with every stakeholder before deciding.", "weights": {"DM": 6, "EC": 8, "CM": 6, "ST": 6}},
+      {"text": "Delegate the choice to a senior team member familiar with vendors.", "weights": {"DM": 7, "EC": 7, "CM": 5, "ST": 6}},
+      {"text": "Pick the lowest-cost option to save budget.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}}
+    ]
+  },
+  {
+    "id": 102,
+    "category": "decision_making",
+    "scenario": "A sudden system failure threatens to delay delivery. You must act before full details are known.",
+    "options": [
+      {"text": "Make the best decision using available facts and update once verified.", "weights": {"DM": 9, "EC": 5, "CM": 6, "ST": 7}},
+      {"text": "Pause all work until a full root-cause analysis is complete.", "weights": {"DM": 5, "EC": 4, "CM": 5, "ST": 4}},
+      {"text": "Ask the team to continue while you gather more information.", "weights": {"DM": 7, "EC": 7, "CM": 6, "ST": 6}},
+      {"text": "Escalate the issue immediately to senior management.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}}
+    ]
+  },
+  {
+    "id": 103,
+    "category": "decision_making",
+    "scenario": "Two promising candidates are equally qualified for a key position.",
+    "options": [
+      {"text": "Re-evaluate both using objective performance indicators.", "weights": {"DM": 9, "EC": 6, "CM": 5, "ST": 7}},
+      {"text": "Choose the candidate who aligns best with team culture.", "weights": {"DM": 7, "EC": 8, "CM": 6, "ST": 6}},
+      {"text": "Let the team vote on their preferred candidate.", "weights": {"DM": 6, "EC": 7, "CM": 7, "ST": 5}},
+      {"text": "Delay the hiring until more data or feedback arrives.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 104,
+    "category": "decision_making",
+    "scenario": "Your project budget was unexpectedly reduced by 30%.",
+    "options": [
+      {"text": "Reprioritize deliverables to focus on high-impact outcomes.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 8}},
+      {"text": "Request more funds while continuing with the original plan.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}},
+      {"text": "Cut non-essential features immediately without consultation.", "weights": {"DM": 7, "EC": 4, "CM": 4, "ST": 7}},
+      {"text": "Freeze the project until finances are clarified.", "weights": {"DM": 4, "EC": 4, "CM": 5, "ST": 4}}
+    ]
+  },
+  {
+    "id": 105,
+    "category": "decision_making",
+    "scenario": "Two team leads disagree about which task should be prioritized first.",
+    "options": [
+      {"text": "Analyze impact and decide based on organizational goals.", "weights": {"DM": 9, "EC": 6, "CM": 7, "ST": 8}},
+      {"text": "Ask both to compromise and split resources evenly.", "weights": {"DM": 7, "EC": 7, "CM": 8, "ST": 6}},
+      {"text": "Allow them to decide independently.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Delay decision until more data is available.", "weights": {"DM": 4, "EC": 4, "CM": 5, "ST": 4}}
+    ]
+  },
+  {
+    "id": 106,
+    "category": "decision_making",
+    "scenario": "A client requests a change that will extend the project timeline.",
+    "options": [
+      {"text": "Negotiate scope and adjust schedule realistically.", "weights": {"DM": 8, "EC": 8, "CM": 7, "ST": 8}},
+      {"text": "Accept without negotiation to maintain goodwill.", "weights": {"DM": 6, "EC": 7, "CM": 5, "ST": 6}},
+      {"text": "Reject the request immediately to protect timeline.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 7}},
+      {"text": "Defer the decision to your manager.", "weights": {"DM": 4, "EC": 5, "CM": 5, "ST": 4}}
+    ]
+  },
+  {
+    "id": 107,
+    "category": "decision_making",
+    "scenario": "You must choose between two suppliers: one cheaper but less proven, the other costlier but reliable.",
+    "options": [
+      {"text": "Select the reliable supplier based on risk analysis.", "weights": {"DM": 9, "EC": 5, "CM": 5, "ST": 9}},
+      {"text": "Pick the cheaper one to stay within budget.", "weights": {"DM": 6, "EC": 4, "CM": 4, "ST": 6}},
+      {"text": "Ask the team for input before choosing.", "weights": {"DM": 7, "EC": 8, "CM": 6, "ST": 6}},
+      {"text": "Delay purchase until next quarter.", "weights": {"DM": 4, "EC": 4, "CM": 5, "ST": 4}}
+    ]
+  },
+  {
+    "id": 108,
+    "category": "decision_making",
+    "scenario": "A sudden market trend challenges your current business strategy.",
+    "options": [
+      {"text": "Review data quickly and pivot strategy if justified.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Wait to see if the trend stabilizes before acting.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Continue the current plan but communicate awareness.", "weights": {"DM": 7, "EC": 7, "CM": 6, "ST": 7}},
+      {"text": "Let upper management decide the next move.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 109,
+    "category": "decision_making",
+    "scenario": "Your team proposes two equally good technical solutions.",
+    "options": [
+      {"text": "Compare long-term scalability and maintenance cost before deciding.", "weights": {"DM": 9, "EC": 5, "CM": 5, "ST": 9}},
+      {"text": "Pick the most innovative one to motivate the team.", "weights": {"DM": 7, "EC": 8, "CM": 6, "ST": 7}},
+      {"text": "Let the team vote to encourage ownership.", "weights": {"DM": 6, "EC": 8, "CM": 7, "ST": 6}},
+      {"text": "Randomly choose to save time.", "weights": {"DM": 3, "EC": 3, "CM": 4, "ST": 3}}
+    ]
+  },
+  {
+    "id": 110,
+    "category": "decision_making",
+    "scenario": "A senior executive insists on a course of action you believe is risky.",
+    "options": [
+      {"text": "Present data-driven evidence and propose safer alternatives.", "weights": {"DM": 9, "EC": 7, "CM": 6, "ST": 9}},
+      {"text": "Follow orders while documenting your concerns.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 7}},
+      {"text": "Comply without objection to avoid conflict.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Escalate the disagreement to HR or another leader.", "weights": {"DM": 6, "EC": 5, "CM": 7, "ST": 6}}
+    ]
+  },
+  {
+    "id": 111,
+    "category": "decision_making",
+    "scenario": "Your department must cut 10% of its workforce.",
+    "options": [
+      {"text": "Use objective performance data to make the decision fairly.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 8}},
+      {"text": "Consult team leads for recommendations.", "weights": {"DM": 8, "EC": 8, "CM": 7, "ST": 7}},
+      {"text": "Choose randomly to avoid personal bias.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Ask HR to make all termination decisions.", "weights": {"DM": 4, "EC": 5, "CM": 5, "ST": 4}}
+    ]
+  },
+  {
+    "id": 112,
+    "category": "decision_making",
+    "scenario": "You discover an error in a financial report already sent to a client.",
+    "options": [
+      {"text": "Inform the client immediately with a corrected version.", "weights": {"DM": 8, "EC": 9, "CM": 7, "ST": 7}},
+      {"text": "Quietly fix the record and hope they don't notice.", "weights": {"DM": 3, "EC": 3, "CM": 4, "ST": 3}},
+      {"text": "Inform your manager and wait for instructions.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}},
+      {"text": "Blame the error on the accounting software.", "weights": {"DM": 2, "EC": 2, "CM": 3, "ST": 2}}
+    ]
+  },
+  {
+    "id": 113,
+    "category": "decision_making",
+    "scenario": "You must allocate limited training funds among multiple teams.",
+    "options": [
+      {"text": "Fund programs with the highest ROI on performance.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Distribute funds equally to avoid conflict.", "weights": {"DM": 6, "EC": 7, "CM": 8, "ST": 6}},
+      {"text": "Ask department heads to submit proposals.", "weights": {"DM": 7, "EC": 8, "CM": 6, "ST": 7}},
+      {"text": "Postpone spending until next budget cycle.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 114,
+    "category": "decision_making",
+    "scenario": "Your team disagrees with your proposed project plan.",
+    "options": [
+      {"text": "Review their feedback and refine your plan based on evidence.", "weights": {"DM": 8, "EC": 9, "CM": 7, "ST": 8}},
+      {"text": "Stick to your plan firmly to show leadership.", "weights": {"DM": 7, "EC": 5, "CM": 6, "ST": 7}},
+      {"text": "Abandon your plan completely to maintain harmony.", "weights": {"DM": 4, "EC": 6, "CM": 7, "ST": 4}},
+      {"text": "Escalate disagreement to your supervisor.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 115,
+    "category": "decision_making",
+    "scenario": "You’re offered two projects: one safe but routine, another risky but innovative.",
+    "options": [
+      {"text": "Choose the innovative project with risk mitigation steps.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Pick the safe project to guarantee success.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Ask management which project benefits them more.", "weights": {"DM": 5, "EC": 6, "CM": 5, "ST": 5}},
+      {"text": "Avoid deciding until more data emerges.", "weights": {"DM": 3, "EC": 4, "CM": 4, "ST": 3}}
+    ]
+  },
+  {
+    "id": 116,
+    "category": "decision_making",
+    "scenario": "A senior colleague asks you to approve an expense that breaks company policy.",
+    "options": [
+      {"text": "Decline politely and report through the proper channel.", "weights": {"DM": 9, "EC": 7, "CM": 7, "ST": 8}},
+      {"text": "Approve it quietly to preserve the relationship.", "weights": {"DM": 4, "EC": 5, "CM": 4, "ST": 4}},
+      {"text": "Discuss alternatives that meet both needs ethically.", "weights": {"DM": 8, "EC": 9, "CM": 7, "ST": 8}},
+      {"text": "Ignore it and hope finance notices the violation.", "weights": {"DM": 2, "EC": 2, "CM": 3, "ST": 2}}
+    ]
+  },
+  {
+    "id": 117,
+    "category": "decision_making",
+    "scenario": "Data from two analytics tools contradict each other before a major report.",
+    "options": [
+      {"text": "Investigate discrepancies and triangulate reliable data.", "weights": {"DM": 9, "EC": 5, "CM": 5, "ST": 9}},
+      {"text": "Choose whichever data favors your department.", "weights": {"DM": 3, "EC": 3, "CM": 4, "ST": 3}},
+      {"text": "Delay the report until alignment is achieved.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Disclose both sets of data transparently.", "weights": {"DM": 8, "EC": 8, "CM": 7, "ST": 8}}
+    ]
+  },
+  {
+    "id": 118,
+    "category": "decision_making",
+    "scenario": "A cross-functional team asks for your input on a process redesign you know little about.",
+    "options": [
+      {"text": "Gather quick insights from experts before deciding.", "weights": {"DM": 8, "EC": 7, "CM": 6, "ST": 8}},
+      {"text": "Decline involvement to avoid slowing progress.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Ask for a summary presentation to make an informed call.", "weights": {"DM": 8, "EC": 8, "CM": 6, "ST": 8}},
+      {"text": "Agree to whatever the majority suggests.", "weights": {"DM": 5, "EC": 6, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 119,
+    "category": "decision_making",
+    "scenario": "A new technology could automate 40% of your team’s work but may cause layoffs.",
+    "options": [
+      {"text": "Evaluate both productivity gain and human impact objectively.", "weights": {"DM": 9, "EC": 8, "CM": 7, "ST": 9}},
+      {"text": "Adopt immediately to impress executives.", "weights": {"DM": 6, "EC": 5, "CM": 4, "ST": 7}},
+      {"text": "Reject to protect current employees.", "weights": {"DM": 6, "EC": 7, "CM": 7, "ST": 5}},
+      {"text": "Delay implementation until policy guidelines are clear.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 6}}
+    ]
+  },
+  {
+    "id": 120,
+    "category": "decision_making",
+    "scenario": "You must decide whether to cancel a project that’s behind schedule but near completion.",
+    "options": [
+      {"text": "Assess recovery cost versus value before final decision.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Continue to completion to avoid sunk-cost criticism.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Cancel immediately to focus on new initiatives.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 7}},
+      {"text": "Seek stakeholder input and delay closure decision.", "weights": {"DM": 7, "EC": 9, "CM": 6, "ST": 7}}
+    ]
+  },
+  {
+    "id": 201,
+    "category": "empathy_communication",
+    "scenario": "A team member seems distracted and their performance has dropped recently.",
+    "options": [
+      {"text": "Have a private talk to understand possible personal or work issues.", "weights": {"DM": 6, "EC": 10, "CM": 7, "ST": 6}},
+      {"text": "Send them a formal email highlighting poor performance.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 5}},
+      {"text": "Ignore the issue until results worsen further.", "weights": {"DM": 3, "EC": 2, "CM": 3, "ST": 3}},
+      {"text": "Reassign them temporarily to easier tasks.", "weights": {"DM": 6, "EC": 7, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 202,
+    "category": "empathy_communication",
+    "scenario": "A junior colleague struggles to explain their idea in a meeting and gets interrupted.",
+    "options": [
+      {"text": "Invite them to finish speaking and support their idea constructively.", "weights": {"DM": 6, "EC": 10, "CM": 8, "ST": 6}},
+      {"text": "Step in and present their idea on their behalf.", "weights": {"DM": 7, "EC": 7, "CM": 6, "ST": 6}},
+      {"text": "Move on to the next agenda item to save time.", "weights": {"DM": 4, "EC": 3, "CM": 4, "ST": 4}},
+      {"text": "Criticize their communication to push them to improve.", "weights": {"DM": 5, "EC": 2, "CM": 3, "ST": 4}}
+    ]
+  },
+  {
+    "id": 203,
+    "category": "empathy_communication",
+    "scenario": "A team conflict arises due to a misinterpreted message you sent.",
+    "options": [
+      {"text": "Clarify the intent and apologize for any misunderstanding.", "weights": {"DM": 7, "EC": 10, "CM": 8, "ST": 6}},
+      {"text": "Defend your message and explain that they overreacted.", "weights": {"DM": 6, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Ignore it, assuming they will resolve it on their own.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Ask a mediator to handle the clarification for you.", "weights": {"DM": 5, "EC": 6, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 204,
+    "category": "empathy_communication",
+    "scenario": "A remote team member often misses meetings due to time zone differences.",
+    "options": [
+      {"text": "Adjust meeting times occasionally to include them.", "weights": {"DM": 6, "EC": 9, "CM": 7, "ST": 6}},
+      {"text": "Ask them to catch up from recordings only.", "weights": {"DM": 5, "EC": 6, "CM": 5, "ST": 5}},
+      {"text": "Keep schedule unchanged; consistency is more important.", "weights": {"DM": 7, "EC": 4, "CM": 4, "ST": 6}},
+      {"text": "Remove them from meetings altogether.", "weights": {"DM": 3, "EC": 2, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 205,
+    "category": "empathy_communication",
+    "scenario": "A colleague becomes defensive after receiving constructive feedback.",
+    "options": [
+      {"text": "Stay calm and restate feedback focusing on solutions.", "weights": {"DM": 7, "EC": 9, "CM": 8, "ST": 7}},
+      {"text": "End the conversation immediately.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Criticize them for being unprofessional.", "weights": {"DM": 4, "EC": 2, "CM": 3, "ST": 4}},
+      {"text": "Ask another team member to deliver the feedback instead.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 206,
+    "category": "empathy_communication",
+    "scenario": "You must communicate a major organizational change that will unsettle your team.",
+    "options": [
+      {"text": "Be transparent and emphasize available support systems.", "weights": {"DM": 8, "EC": 10, "CM": 8, "ST": 7}},
+      {"text": "Share minimal details to avoid panic.", "weights": {"DM": 6, "EC": 4, "CM": 5, "ST": 5}},
+      {"text": "Wait until official HR communication is released.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Let rumors spread and address them later.", "weights": {"DM": 3, "EC": 2, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 207,
+    "category": "empathy_communication",
+    "scenario": "A shy intern presents an incomplete report to the team.",
+    "options": [
+      {"text": "Encourage them publicly for effort and provide private guidance.", "weights": {"DM": 7, "EC": 10, "CM": 8, "ST": 6}},
+      {"text": "Reassign the task to a more experienced employee.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Criticize them in front of others for missing key data.", "weights": {"DM": 4, "EC": 2, "CM": 3, "ST": 3}},
+      {"text": "Ignore it; they will improve with experience.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 208,
+    "category": "empathy_communication",
+    "scenario": "During a brainstorming session, quieter members remain silent.",
+    "options": [
+      {"text": "Invite quieter members to share thoughts directly.", "weights": {"DM": 6, "EC": 10, "CM": 8, "ST": 6}},
+      {"text": "Proceed with ideas from the more vocal team members.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "End session early and ask for written suggestions later.", "weights": {"DM": 7, "EC": 8, "CM": 7, "ST": 7}},
+      {"text": "Let group dynamics handle participation naturally.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 209,
+    "category": "empathy_communication",
+    "scenario": "A customer sends an angry email about a product issue.",
+    "options": [
+      {"text": "Acknowledge frustration and promise immediate investigation.", "weights": {"DM": 7, "EC": 9, "CM": 8, "ST": 7}},
+      {"text": "Forward it to the support team without reply.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Send a detailed explanation defending the product.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Ignore the complaint unless they follow up again.", "weights": {"DM": 3, "EC": 2, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 210,
+    "category": "empathy_communication",
+    "scenario": "You must deliver negative feedback to a high-performing employee.",
+    "options": [
+      {"text": "Balance praise with constructive points and offer coaching.", "weights": {"DM": 8, "EC": 10, "CM": 8, "ST": 7}},
+      {"text": "Be direct about issues without sugarcoating.", "weights": {"DM": 7, "EC": 6, "CM": 6, "ST": 6}},
+      {"text": "Avoid mentioning it to preserve morale.", "weights": {"DM": 4, "EC": 3, "CM": 4, "ST": 4}},
+      {"text": "Send feedback via email instead of a conversation.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}}
+    ]
+  },
+  {
+    "id": 211,
+    "category": "empathy_communication",
+    "scenario": "A cross-cultural team struggles with language misunderstandings.",
+    "options": [
+      {"text": "Encourage open clarification and simplify shared communication tools.", "weights": {"DM": 7, "EC": 10, "CM": 8, "ST": 7}},
+      {"text": "Assign one translator to manage all messages.", "weights": {"DM": 6, "EC": 7, "CM": 6, "ST": 6}},
+      {"text": "Continue as usual; issues will resolve over time.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Exclude members who communicate less fluently.", "weights": {"DM": 2, "EC": 1, "CM": 2, "ST": 2}}
+    ]
+  },
+  {
+    "id": 212,
+    "category": "empathy_communication",
+    "scenario": "A team member disagrees with your decision in front of others.",
+    "options": [
+      {"text": "Acknowledge their point and invite discussion respectfully.", "weights": {"DM": 7, "EC": 9, "CM": 8, "ST": 7}},
+      {"text": "Defend your decision firmly without discussion.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Dismiss their input to maintain authority.", "weights": {"DM": 5, "EC": 3, "CM": 3, "ST": 4}},
+      {"text": "Ignore the comment entirely.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 213,
+    "category": "empathy_communication",
+    "scenario": "You notice a normally vocal team member has become unusually quiet in meetings.",
+    "options": [
+      {"text": "Check in privately to ensure they feel comfortable sharing.", "weights": {"DM": 6, "EC": 10, "CM": 8, "ST": 6}},
+      {"text": "Ask them in public why they are silent lately.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Ignore it unless it affects deadlines.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Have another colleague talk to them informally.", "weights": {"DM": 6, "EC": 8, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 214,
+    "category": "empathy_communication",
+    "scenario": "Two employees have cultural differences causing tension.",
+    "options": [
+      {"text": "Mediate by discussing diversity and mutual respect.", "weights": {"DM": 7, "EC": 10, "CM": 9, "ST": 7}},
+      {"text": "Separate them onto different teams.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Let them resolve it privately.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Ignore it unless HR intervenes.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 215,
+    "category": "empathy_communication",
+    "scenario": "You must explain a complex idea to non-technical stakeholders.",
+    "options": [
+      {"text": "Simplify the concept and use relatable examples.", "weights": {"DM": 7, "EC": 10, "CM": 7, "ST": 7}},
+      {"text": "Provide a technical document and let them review.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Ignore misunderstandings; they aren’t your problem.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Ask your technical lead to present instead.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 216,
+    "category": "empathy_communication",
+    "scenario": "An employee takes criticism personally and reacts emotionally.",
+    "options": [
+      {"text": "Allow them time to cool down and follow up with empathy.", "weights": {"DM": 7, "EC": 10, "CM": 8, "ST": 7}},
+      {"text": "Reiterate that emotions shouldn’t affect feedback.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "End the discussion abruptly.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 4}},
+      {"text": "Involve HR to manage the reaction.", "weights": {"DM": 5, "EC": 6, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 217,
+    "category": "empathy_communication",
+    "scenario": "A teammate’s mistake causes client dissatisfaction.",
+    "options": [
+      {"text": "Take accountability as a leader and resolve it collectively.", "weights": {"DM": 8, "EC": 9, "CM": 8, "ST": 7}},
+      {"text": "Blame the teammate privately to ensure lessons are learned.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Address it publicly to demonstrate standards.", "weights": {"DM": 5, "EC": 4, "CM": 3, "ST": 5}},
+      {"text": "Ignore it since the issue is already fixed.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 218,
+    "category": "empathy_communication",
+    "scenario": "Your new policy announcement was misunderstood by employees.",
+    "options": [
+      {"text": "Clarify through an open Q&A session and feedback loop.", "weights": {"DM": 7, "EC": 10, "CM": 8, "ST": 7}},
+      {"text": "Send a clarification email only.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}},
+      {"text": "Do nothing; misunderstandings fade with time.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Delegate communication to another department.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 219,
+    "category": "empathy_communication",
+    "scenario": "A peer receives credit for an idea you initially proposed.",
+    "options": [
+      {"text": "Acknowledge the idea publicly and add your contribution respectfully.", "weights": {"DM": 7, "EC": 9, "CM": 7, "ST": 6}},
+      {"text": "Privately confront them for stealing your idea.", "weights": {"DM": 6, "EC": 6, "CM": 6, "ST": 5}},
+      {"text": "Complain to management about unfair recognition.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Stay silent to avoid tension.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 220,
+    "category": "empathy_communication",
+    "scenario": "A client keeps asking the same questions despite your previous explanations.",
+    "options": [
+      {"text": "Remain patient and rephrase answers for clarity.", "weights": {"DM": 7, "EC": 10, "CM": 7, "ST": 7}},
+      {"text": "Remind them firmly that you’ve already explained.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}},
+      {"text": "Ignore their follow-up emails.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Escalate the client to another representative.", "weights": {"DM": 5, "EC": 6, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 301,
+    "category": "conflict_management",
+    "scenario": "Two team members are arguing about how to implement a project feature.",
+    "options": [
+      {"text": "Bring both together to hear their views and find a compromise.", "weights": {"DM": 7, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Decide whose idea to use and move on.", "weights": {"DM": 8, "EC": 5, "CM": 6, "ST": 6}},
+      {"text": "Let them resolve it privately.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Avoid involvement to keep peace.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 302,
+    "category": "conflict_management",
+    "scenario": "A senior colleague publicly criticizes your approach during a team meeting.",
+    "options": [
+      {"text": "Stay calm, acknowledge their view, and propose a follow-up discussion.", "weights": {"DM": 7, "EC": 8, "CM": 10, "ST": 6}},
+      {"text": "Defend your idea strongly in front of everyone.", "weights": {"DM": 8, "EC": 5, "CM": 6, "ST": 7}},
+      {"text": "Ignore the comment to maintain professionalism.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 5}},
+      {"text": "Confront them after the meeting in frustration.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 303,
+    "category": "conflict_management",
+    "scenario": "A team feels one member isn’t contributing enough to group work.",
+    "options": [
+      {"text": "Discuss expectations openly and set clear shared goals.", "weights": {"DM": 7, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Handle it privately with the underperforming member.", "weights": {"DM": 8, "EC": 8, "CM": 8, "ST": 7}},
+      {"text": "Let the team handle it informally.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Replace the member immediately.", "weights": {"DM": 6, "EC": 3, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 304,
+    "category": "conflict_management",
+    "scenario": "Two departments are blaming each other for a missed client deadline.",
+    "options": [
+      {"text": "Hold a joint review to find root causes and lessons learned.", "weights": {"DM": 8, "EC": 8, "CM": 10, "ST": 8}},
+      {"text": "Assign fault to the most responsible team.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 6}},
+      {"text": "Let management decide responsibility.", "weights": {"DM": 5, "EC": 5, "CM": 4, "ST": 5}},
+      {"text": "Avoid addressing the issue to prevent tension.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 305,
+    "category": "conflict_management",
+    "scenario": "You disagree with your manager’s unrealistic deadline.",
+    "options": [
+      {"text": "Provide evidence and propose a more achievable plan.", "weights": {"DM": 8, "EC": 9, "CM": 9, "ST": 8}},
+      {"text": "Follow orders despite concerns.", "weights": {"DM": 5, "EC": 4, "CM": 5, "ST": 5}},
+      {"text": "Complain about the manager to your peers.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}},
+      {"text": "Escalate the issue to upper management.", "weights": {"DM": 6, "EC": 5, "CM": 6, "ST": 6}}
+    ]
+  },
+  {
+    "id": 306,
+    "category": "conflict_management",
+    "scenario": "Two senior engineers frequently clash over technical decisions.",
+    "options": [
+      {"text": "Act as mediator to align them on project goals.", "weights": {"DM": 7, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Let them sort it out among themselves.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Assign each to different parts of the project.", "weights": {"DM": 6, "EC": 6, "CM": 7, "ST": 6}},
+      {"text": "Pick one side and enforce their approach.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 6}}
+    ]
+  },
+  {
+    "id": 307,
+    "category": "conflict_management",
+    "scenario": "Your project team is frustrated with unclear roles.",
+    "options": [
+      {"text": "Clarify roles through an open team discussion.", "weights": {"DM": 7, "EC": 9, "CM": 9, "ST": 7}},
+      {"text": "Assign roles directly and expect compliance.", "weights": {"DM": 8, "EC": 5, "CM": 6, "ST": 7}},
+      {"text": "Ignore the complaints; focus on output.", "weights": {"DM": 4, "EC": 3, "CM": 4, "ST": 4}},
+      {"text": "Ask HR to mediate the issue.", "weights": {"DM": 6, "EC": 7, "CM": 7, "ST": 6}}
+    ]
+  },
+  {
+    "id": 308,
+    "category": "conflict_management",
+    "scenario": "A team member is dominating discussions, silencing others.",
+    "options": [
+      {"text": "Privately coach them on inclusive communication.", "weights": {"DM": 7, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Confront them during the meeting.", "weights": {"DM": 7, "EC": 6, "CM": 7, "ST": 6}},
+      {"text": "Allow behavior to continue; they contribute value.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Remove them from group meetings.", "weights": {"DM": 4, "EC": 3, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 309,
+    "category": "conflict_management",
+    "scenario": "Your team is upset because promotions were announced unfairly.",
+    "options": [
+      {"text": "Listen empathetically and explain the criteria transparently.", "weights": {"DM": 8, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Defend the company policy without discussion.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Avoid the discussion; HR will handle it.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Ask employees to stop complaining.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 310,
+    "category": "conflict_management",
+    "scenario": "Two sub-teams blame each other for poor communication on deliverables.",
+    "options": [
+      {"text": "Create a joint review to establish clear communication rules.", "weights": {"DM": 8, "EC": 8, "CM": 10, "ST": 8}},
+      {"text": "Pick one lead to handle all communication.", "weights": {"DM": 6, "EC": 6, "CM": 7, "ST": 6}},
+      {"text": "Avoid the issue; it will resolve over time.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Blame both teams equally to end the dispute.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}}
+    ]
+  },
+  {
+    "id": 311,
+    "category": "conflict_management",
+    "scenario": "You notice growing tension between two senior managers under you.",
+    "options": [
+      {"text": "Facilitate a one-on-one dialogue to rebuild trust.", "weights": {"DM": 7, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Report the issue to top management.", "weights": {"DM": 6, "EC": 6, "CM": 6, "ST": 6}},
+      {"text": "Reassign them to different teams.", "weights": {"DM": 6, "EC": 5, "CM": 6, "ST": 6}},
+      {"text": "Wait for the issue to resolve naturally.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 312,
+    "category": "conflict_management",
+    "scenario": "A peer ignores your emails and delays collaboration.",
+    "options": [
+      {"text": "Communicate expectations directly and politely.", "weights": {"DM": 7, "EC": 9, "CM": 9, "ST": 7}},
+      {"text": "Complain to their manager immediately.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}},
+      {"text": "Ignore them and move forward without their input.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Send multiple reminders until they reply.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 313,
+    "category": "conflict_management",
+    "scenario": "A client demands a service your team cannot deliver within scope.",
+    "options": [
+      {"text": "Negotiate respectfully to redefine deliverables.", "weights": {"DM": 8, "EC": 9, "CM": 9, "ST": 8}},
+      {"text": "Promise to deliver and adjust later.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Reject the request immediately.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 7}},
+      {"text": "Ignore the request until escalation occurs.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 314,
+    "category": "conflict_management",
+    "scenario": "Two employees refuse to work together due to personal issues.",
+    "options": [
+      {"text": "Mediate privately to find a professional resolution.", "weights": {"DM": 7, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Assign them to different teams to avoid disruption.", "weights": {"DM": 6, "EC": 6, "CM": 6, "ST": 6}},
+      {"text": "Force them to collaborate regardless.", "weights": {"DM": 6, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Ignore the problem unless it escalates.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 315,
+    "category": "conflict_management",
+    "scenario": "Team members feel your feedback style is too harsh.",
+    "options": [
+      {"text": "Ask for specific feedback and adjust communication style.", "weights": {"DM": 7, "EC": 9, "CM": 9, "ST": 7}},
+      {"text": "Explain that you’re focused on performance, not tone.", "weights": {"DM": 7, "EC": 6, "CM": 6, "ST": 6}},
+      {"text": "Dismiss their concern and continue your style.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 4}},
+      {"text": "Apologize publicly without real change.", "weights": {"DM": 5, "EC": 7, "CM": 6, "ST": 5}}
+    ]
+  },
+  {
+    "id": 316,
+    "category": "conflict_management",
+    "scenario": "Project partners disagree on the division of funding.",
+    "options": [
+      {"text": "Review financial data together and align expectations.", "weights": {"DM": 8, "EC": 8, "CM": 10, "ST": 8}},
+      {"text": "Divide funds evenly regardless of effort.", "weights": {"DM": 6, "EC": 6, "CM": 7, "ST": 6}},
+      {"text": "Let leadership make the financial call.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Avoid taking part in financial discussions.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 317,
+    "category": "conflict_management",
+    "scenario": "A stakeholder insists on an unrealistic change mid-project.",
+    "options": [
+      {"text": "Negotiate scope and timeline adjustments respectfully.", "weights": {"DM": 8, "EC": 9, "CM": 9, "ST": 8}},
+      {"text": "Comply without discussion to maintain the relationship.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}},
+      {"text": "Reject the request outright.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 7}},
+      {"text": "Ignore their input completely.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 318,
+    "category": "conflict_management",
+    "scenario": "A high-performing employee frequently undermines others’ opinions.",
+    "options": [
+      {"text": "Provide direct feedback about collaboration expectations.", "weights": {"DM": 8, "EC": 8, "CM": 10, "ST": 7}},
+      {"text": "Appreciate their performance and overlook the issue.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Address the issue only if complaints arise.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Reassign them to independent tasks.", "weights": {"DM": 6, "EC": 6, "CM": 7, "ST": 6}}
+    ]
+  },
+  {
+    "id": 319,
+    "category": "conflict_management",
+    "scenario": "An external partner misses multiple deadlines, frustrating your team.",
+    "options": [
+      {"text": "Discuss delays diplomatically and agree on a recovery plan.", "weights": {"DM": 8, "EC": 9, "CM": 9, "ST": 8}},
+      {"text": "Threaten to cancel the contract immediately.", "weights": {"DM": 7, "EC": 4, "CM": 5, "ST": 6}},
+      {"text": "Ignore the issue and hope improvement occurs.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Escalate the issue to procurement without discussion.", "weights": {"DM": 6, "EC": 5, "CM": 6, "ST": 6}}
+    ]
+  },
+  {
+    "id": 320,
+    "category": "conflict_management",
+    "scenario": "Two employees argue about unequal workload distribution.",
+    "options": [
+      {"text": "Review responsibilities and redistribute fairly.", "weights": {"DM": 8, "EC": 9, "CM": 10, "ST": 7}},
+      {"text": "Ask them to balance tasks among themselves.", "weights": {"DM": 6, "EC": 6, "CM": 6, "ST": 6}},
+      {"text": "Ignore the argument until productivity drops.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Assign a new leader to monitor them closely.", "weights": {"DM": 6, "EC": 5, "CM": 6, "ST": 6}}
+    ]
+  },
+  {
+    "id": 401,
+    "category": "strategic_thinking",
+    "scenario": "Your organization is entering a new market with unfamiliar competitors.",
+    "options": [
+      {"text": "Conduct a detailed market analysis before finalizing strategy.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Rely on existing strategies that worked domestically.", "weights": {"DM": 6, "EC": 5, "CM": 4, "ST": 6}},
+      {"text": "Follow competitors’ tactics to minimize risk.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Launch immediately and adjust later.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 402,
+    "category": "strategic_thinking",
+    "scenario": "A technological shift could disrupt your main product within a year.",
+    "options": [
+      {"text": "Develop a roadmap to integrate or outpace the new technology.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Wait until customers demand the change.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Focus on short-term profits before adapting.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Ignore the shift; it's just a trend.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 403,
+    "category": "strategic_thinking",
+    "scenario": "Your team delivers projects on time but struggles with innovation.",
+    "options": [
+      {"text": "Set aside time for creative experimentation within sprints.", "weights": {"DM": 7, "EC": 7, "CM": 6, "ST": 9}},
+      {"text": "Keep focus strictly on delivery speed.", "weights": {"DM": 6, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Hire new employees specifically for innovation.", "weights": {"DM": 7, "EC": 6, "CM": 6, "ST": 8}},
+      {"text": "Let team members innovate on personal time only.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 404,
+    "category": "strategic_thinking",
+    "scenario": "Leadership asks you to prepare a five-year growth plan.",
+    "options": [
+      {"text": "Analyze trends, risks, and set measurable milestones.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Repurpose last year’s plan with updated figures.", "weights": {"DM": 5, "EC": 5, "CM": 4, "ST": 5}},
+      {"text": "Focus only on next year’s targets.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Wait for corporate strategy to guide your plan.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 405,
+    "category": "strategic_thinking",
+    "scenario": "A partner company proposes a collaboration outside your usual domain.",
+    "options": [
+      {"text": "Evaluate long-term potential and strategic alignment first.", "weights": {"DM": 8, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Reject immediately; it's too risky.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Accept quickly to explore opportunities.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 7}},
+      {"text": "Defer the decision indefinitely.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 406,
+    "category": "strategic_thinking",
+    "scenario": "An upcoming policy change may affect your industry’s regulations.",
+    "options": [
+      {"text": "Study implications early and plan compliance strategies.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Wait until the policy is enforced before acting.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Assign responsibility to legal without review.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Ignore; policies rarely impact operations directly.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 407,
+    "category": "strategic_thinking",
+    "scenario": "You must decide whether to expand the product line or improve existing services.",
+    "options": [
+      {"text": "Use data to evaluate market potential and scalability.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Base the decision purely on team preference.", "weights": {"DM": 6, "EC": 7, "CM": 5, "ST": 6}},
+      {"text": "Follow what competitors are doing.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Avoid expanding to minimize risks.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 408,
+    "category": "strategic_thinking",
+    "scenario": "Customer feedback indicates new trends that conflict with your current roadmap.",
+    "options": [
+      {"text": "Reassess the roadmap to align with evolving user needs.", "weights": {"DM": 8, "EC": 8, "CM": 7, "ST": 9}},
+      {"text": "Stick to the plan; changing direction is costly.", "weights": {"DM": 6, "EC": 5, "CM": 4, "ST": 6}},
+      {"text": "Delay updates until more data confirms the trend.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Disregard feedback; it's anecdotal.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 409,
+    "category": "strategic_thinking",
+    "scenario": "A competitor starts adopting AI to enhance decision processes.",
+    "options": [
+      {"text": "Explore AI adoption through a pilot initiative.", "weights": {"DM": 8, "EC": 7, "CM": 6, "ST": 9}},
+      {"text": "Wait to see results before investing.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Ignore the move; AI is just a buzzword.", "weights": {"DM": 4, "EC": 3, "CM": 3, "ST": 4}},
+      {"text": "Focus on marketing to offset the lack of AI tools.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}}
+    ]
+  },
+  {
+    "id": 410,
+    "category": "strategic_thinking",
+    "scenario": "Your company must choose between a local partnership and global expansion.",
+    "options": [
+      {"text": "Conduct comparative analysis of long-term gains and risks.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Choose global expansion for visibility.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 7}},
+      {"text": "Stay local to minimize financial risk.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Postpone the decision until next year.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 411,
+    "category": "strategic_thinking",
+    "scenario": "You’re asked to design a corporate sustainability initiative.",
+    "options": [
+      {"text": "Develop long-term goals aligning with corporate values and impact.", "weights": {"DM": 8, "EC": 7, "CM": 6, "ST": 10}},
+      {"text": "Replicate another company’s successful model.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Focus only on quick wins for publicity.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Delay planning until leadership prioritizes it.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 412,
+    "category": "strategic_thinking",
+    "scenario": "Your team’s innovation budget is reduced by 40%.",
+    "options": [
+      {"text": "Focus remaining funds on the most promising projects.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 9}},
+      {"text": "Distribute funds equally to maintain fairness.", "weights": {"DM": 6, "EC": 7, "CM": 6, "ST": 6}},
+      {"text": "Suspend innovation work until next fiscal year.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Cut small experiments to protect core operations.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 7}}
+    ]
+  },
+  {
+    "id": 413,
+    "category": "strategic_thinking",
+    "scenario": "Customer data reveals a gradual shift toward a younger demographic.",
+    "options": [
+      {"text": "Update strategy to target emerging audience segments.", "weights": {"DM": 8, "EC": 7, "CM": 6, "ST": 9}},
+      {"text": "Keep targeting the existing loyal base.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Delay strategic response until trend stabilizes.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Launch short-term promotions instead of adjusting strategy.", "weights": {"DM": 6, "EC": 6, "CM": 5, "ST": 6}}
+    ]
+  },
+  {
+    "id": 414,
+    "category": "strategic_thinking",
+    "scenario": "You must select between automation investment and workforce expansion.",
+    "options": [
+      {"text": "Model long-term ROI and workforce impact before deciding.", "weights": {"DM": 9, "EC": 7, "CM": 6, "ST": 10}},
+      {"text": "Choose automation for cost savings.", "weights": {"DM": 7, "EC": 5, "CM": 5, "ST": 7}},
+      {"text": "Expand workforce to boost morale.", "weights": {"DM": 6, "EC": 7, "CM": 6, "ST": 6}},
+      {"text": "Delay decision until next budgeting cycle.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 415,
+    "category": "strategic_thinking",
+    "scenario": "You’re considering a data-driven approach to predict future sales.",
+    "options": [
+      {"text": "Adopt predictive analytics to forecast trends proactively.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Continue manual tracking methods.", "weights": {"DM": 5, "EC": 5, "CM": 4, "ST": 5}},
+      {"text": "Rely on intuition instead of data.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Wait until another department proves the model.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}}
+    ]
+  },
+  {
+    "id": 416,
+    "category": "strategic_thinking",
+    "scenario": "An unexpected crisis affects the company’s main revenue stream.",
+    "options": [
+      {"text": "Develop contingency plans and explore alternative income sources.", "weights": {"DM": 8, "EC": 7, "CM": 7, "ST": 10}},
+      {"text": "Cut expenses and hope for market recovery.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Freeze operations temporarily.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}},
+      {"text": "Blame external factors and avoid action.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  },
+  {
+    "id": 417,
+    "category": "strategic_thinking",
+    "scenario": "A merger opportunity arises that could double company size.",
+    "options": [
+      {"text": "Conduct due diligence to assess strategic fit and synergy.", "weights": {"DM": 9, "EC": 7, "CM": 6, "ST": 10}},
+      {"text": "Approve quickly to seize the opportunity.", "weights": {"DM": 7, "EC": 6, "CM": 5, "ST": 7}},
+      {"text": "Reject the offer due to potential risks.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Let executives decide without your input.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 418,
+    "category": "strategic_thinking",
+    "scenario": "The board asks for a 10-year vision for organizational digital transformation.",
+    "options": [
+      {"text": "Craft a phased plan integrating technology, people, and culture.", "weights": {"DM": 8, "EC": 7, "CM": 6, "ST": 10}},
+      {"text": "Outsource the strategy to an external consultant.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Repurpose existing short-term digital plans.", "weights": {"DM": 5, "EC": 4, "CM": 4, "ST": 5}},
+      {"text": "Delay vision creation until funding approval.", "weights": {"DM": 4, "EC": 4, "CM": 4, "ST": 4}}
+    ]
+  },
+  {
+    "id": 419,
+    "category": "strategic_thinking",
+    "scenario": "Data shows your market will shrink in three years due to automation.",
+    "options": [
+      {"text": "Invest in R&D to create new product lines.", "weights": {"DM": 8, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Cut staff to prepare for downturn.", "weights": {"DM": 6, "EC": 4, "CM": 4, "ST": 6}},
+      {"text": "Maintain current operations and hope for stability.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}},
+      {"text": "Exit the market immediately.", "weights": {"DM": 5, "EC": 5, "CM": 5, "ST": 5}}
+    ]
+  },
+  {
+    "id": 420,
+    "category": "strategic_thinking",
+    "scenario": "Leadership requests metrics to evaluate innovation success.",
+    "options": [
+      {"text": "Define clear KPIs like ROI, adoption, and time-to-impact.", "weights": {"DM": 9, "EC": 6, "CM": 6, "ST": 10}},
+      {"text": "Measure success only by revenue growth.", "weights": {"DM": 6, "EC": 5, "CM": 5, "ST": 6}},
+      {"text": "Use employee satisfaction surveys instead.", "weights": {"DM": 7, "EC": 8, "CM": 6, "ST": 7}},
+      {"text": "Avoid metrics; innovation can’t be measured.", "weights": {"DM": 3, "EC": 3, "CM": 3, "ST": 3}}
+    ]
+  }
+]
