@@ -33,7 +33,7 @@ app.use('/api/career', careerRoutes);
 
 
 //Problem-solving routes
-app.use('/problemsolving', problemSolvingAssessRoutes);
+app.use('/api/problemsolving', problemSolvingAssessRoutes);
 // Leadership assessment routes
 app.use('/api/leadership', leadershipRoutes);
 
