@@ -49,14 +49,19 @@ async def generate_quiz(request: Request):
 # Evaluate Answers
 # ----------------------------
 @app.post("/evaluate")
-async def evaluate_quiz(request: Request):
+async def evaluate(request: Request):
     data = await request.json()
+
     questions = data.get("questions", [])
     answers = data.get("answers", {})
 
-    result = evaluate_answers(questions, answers)
-    return result
+    # Ensure keys are strings (Node sends as string IDs)
+    user_answers = {str(k): v for k, v in answers.items()}
 
+    # Call your existing Python function
+    result = evaluate_answers(questions, user_answers)
+
+    return result
 # ----------------------------
 # Run Server
 # ----------------------------
