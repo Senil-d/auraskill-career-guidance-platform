@@ -26,6 +26,7 @@ CAREER_CATEGORY_MAP = {
         "Project Manager", "Team Lead", "Product Manager", "Operations Manager"
     ]
 }
+
 # ------------------------------------------------------------
 # 2️⃣ Helper Functions
 # ------------------------------------------------------------
@@ -61,6 +62,7 @@ def load_category_file(category: str) -> List[Dict]:
         data = json.load(f)
         print(f"📘 Loaded {len(data)} total questions from {file_name}")
         return data
+    
 
 def group_by_subskill(questions: List[Dict]) -> Dict[str, List[Dict]]:
     grouped = {}
@@ -78,7 +80,6 @@ def select_random_questions(grouped_questions: Dict[str, List[Dict]], per_skill:
             chosen = random.sample(qs, per_skill)
         selected.extend(chosen)
     return selected
-
 
 # ------------------------------------------------------------
 # 3️⃣ Evaluate User Answers (merged here)
