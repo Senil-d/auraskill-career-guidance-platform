@@ -1,0 +1,13 @@
+{
+  "Data Analyst": [
+    "data_interpretation"
+  ],
+  "AI Engineer": [
+    "data_interpretation",
+    "pattern_recognition"
+  ],
+  "System Engineer": [
+    "data_interpretation",
+    "pattern_recognition"
+  ]
+}
