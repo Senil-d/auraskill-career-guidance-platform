@@ -6,11 +6,12 @@ const {
   startSession,
   submitAnswer,
   getSummary,
-} = require('../controllers/leadershipAssess.controller');
+} = require('../controllers/leadership.controller.js');
+
 
 
 router.post('/start', protect, startSession);
-router.post('/submit', protect, submitAnswer);
-router.get('/summary/:session_token', protect, getSummary);
+router.post('/answer', protect, submitAnswer);
+router.get('/summary/:session_id', protect, getSummary);
 
 module.exports = router;
