@@ -1,0 +1,102 @@
+import { spawn } from "child_process";
+import path from "path";
+
+// ----------------------
+// 1️⃣ Generate Questions
+// ----------------------
+export const generateQuiz = async (req, res) => {
+  try {
+    const { career } = req.body;
+    if (!career) {
+      return res.status(400).json({ error: "Career is required" });
+    }
+
+    // Path to your Python script
+    const pythonPath = path.resolve(
+      "../../models/problemSolving-assessment/generate_questions/question_generator.py"
+    );
+
+    // Run Python process
+    const pyProcess = spawn("python3", [pythonPath, career]);
+
+    let dataToSend = "";
+    let errorMsg = "";
+
+    pyProcess.stdout.on("data", (data) => {
+      dataToSend += data.toString();
+    });
+
+    pyProcess.stderr.on("data", (data) => {
+      errorMsg += data.toString();
+    });
+
+    pyProcess.on("close", (code) => {
+      if (code !== 0) {
+        console.error("❌ Python Error:", errorMsg);
+        return res.status(500).json({ error: errorMsg });
+      }
+
+      try {
+        const result = JSON.parse(dataToSend);
+        return res.json(result);
+      } catch (err) {
+        console.error("⚠️ JSON Parse Error:", dataToSend);
+        return res.status(500).json({ error: "Invalid JSON from Python" });
+      }
+    });
+  } catch (error) {
+    console.error("❌ Quiz generation failed:", error);
+    return res.status(500).json({ error: "Quiz generation failed" });
+  }
+};
+
+// ----------------------
+// 2️⃣ Evaluate Answers
+// ----------------------
+export const evaluateQuiz = async (req, res) => {
+  try {
+    const { category, answers } = req.body; // { "category": "Development & Engineering", "answers": {...} }
+
+    if (!category || !answers) {
+      return res.status(400).json({ error: "Category and answers are required" });
+    }
+
+    const pythonPath = path.resolve(
+      "models/problemSolving-assessment/question_generator.py"
+    );
+
+    // Convert answers object to string
+    const inputData = JSON.stringify({ category, answers });
+
+    const pyProcess = spawn("python3", [pythonPath, "--evaluate", inputData]);
+
+    let dataToSend = "";
+    let errorMsg = "";
+
+    pyProcess.stdout.on("data", (data) => {
+      dataToSend += data.toString();
+    });
+
+    pyProcess.stderr.on("data", (data) => {
+      errorMsg += data.toString();
+    });
+
+    pyProcess.on("close", (code) => {
+      if (code !== 0) {
+        console.error("❌ Python Error:", errorMsg);
+        return res.status(500).json({ error: errorMsg });
+      }
+
+      try {
+        const result = JSON.parse(dataToSend);
+        return res.json(result);
+      } catch (err) {
+        console.error("⚠️ JSON Parse Error:", dataToSend);
+        return res.status(500).json({ error: "Invalid JSON from Python" });
+      }
+    });
+  } catch (error) {
+    console.error("❌ Evaluation failed:", error);
+    return res.status(500).json({ error: "Evaluation failed" });
+  }
+};

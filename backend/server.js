@@ -7,6 +7,10 @@ const connectDB = require('./config/db');
 // Import routes
 const authRoutes = require('./routes/userRoute');
 const careerRoutes = require('./routes/careerRoute');
+const problemSolvingAssessRoutes = require('./routes/problemSolvingAssess.route');
+
+// Leadership assessment routes
+const leadershipRoutes = require('./routes/leadership.route');
 
 // Leadership assessment routes
 const leadershipRoutes = require('./routes/leadership.route');
@@ -30,10 +34,13 @@ app.use(morgan('dev'));
 app.use('/api/auth', authRoutes);
 app.use('/api/career', careerRoutes);
 
+
+//Problem-solving routes
+app.use('/api/problemsolving', problemSolvingAssessRoutes);
 // Leadership assessment routes
 app.use('/api/leadership', leadershipRoutes);
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5005;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
