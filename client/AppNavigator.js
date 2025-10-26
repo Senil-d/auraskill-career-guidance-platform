@@ -1,31 +1,31 @@
-import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Import your screens
+import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignupScreen';
-import HomeScreen from './screens/HomeScreen';
 
 // Import start screens
-import AwarenessScreen from './screens/startScreens/AwarnessScreen';
-import StreamScreen from './screens/startScreens/ALStreamScreen';
-import SpecializationScreen from './screens/startScreens/SpecializationScreen';
-import CareerSuggestionScreen from './screens/startScreens/CareerSuggestionScreen';
-import RequiredSkillScreen from './screens/startScreens/RequiredSkillScreen';
+import { default as LandingScreen, default as LoadingScreen } from './screens/LandingScreen';
 import LeadershipQuizScreen from './screens/leadershipScreens/LeadershipQuizzScreen';
 import LeadershipResultScreen from './screens/leadershipScreens/LeadershipResultScreen';
-import LandingScreen from './screens/LandingScreen';
-import LoadingScreen from './screens/LandingScreen';
+import StreamScreen from './screens/startScreens/ALStreamScreen';
+import AwarenessScreen from './screens/startScreens/AwarnessScreen';
+import CareerSuggestionScreen from './screens/startScreens/CareerSuggestionScreen';
+import RequiredSkillScreen from './screens/startScreens/RequiredSkillScreen';
+import SpecializationScreen from './screens/startScreens/SpecializationScreen';
 import WelcomeGuideScreen from './screens/WelcomeGuideScreen';
 
 import CareerSkillChart from './screens/career/CareerSkillChart';
 import SuggestCareer from './screens/career/SuggestCareer';
 
-import PSskillAssesment from './screens/career/skills/PSskillAssesment';
 import ANskillAssesment from './screens/career/skills/ANskillAssesment';
 import ARskillAssesment from './screens/career/skills/ARskillAssesment';
 import LEskillAssesment from './screens/career/skills/LEskillAssesment';
+import PSskillAssesment from './screens/career/skills/PSskillAssesment';
+
+import AnalyticalResultScreen from './screens/career/skills/Results/AnalyticalResultScreen';
 
 import ResultScreen from './screens/career/skills/Results/ResultScreen';
 
@@ -56,6 +56,7 @@ const AppNavigator = () => {
         <Stack.Screen name="LEskillAssesment" component={LEskillAssesment} />
         <Stack.Screen name="ARskillAssesment" component={ARskillAssesment} />
         <Stack.Screen name="ANskillAssesment" component={ANskillAssesment} />
+        <Stack.Screen name="AnalyticalResultScreen" component={AnalyticalResultScreen} />
 
         <Stack.Screen name="ResultScreen" component={ResultScreen} />
 
