@@ -1,102 +1,15 @@
-import { spawn } from "child_process";
-import path from "path";
-
-// ----------------------
-// 1️⃣ Generate Questions
-// ----------------------
-export const generateQuiz = async (req, res) => {
-  try {
-    const { career } = req.body;
-    if (!career) {
-      return res.status(400).json({ error: "Career is required" });
-    }
-
-    // Path to your Python script
-    const pythonPath = path.resolve(
-      "../../models/problemSolving-assessment/generate_questions/question_generator.py"
-    );
-
-    // Run Python process
-    const pyProcess = spawn("python3", [pythonPath, career]);
-
-    let dataToSend = "";
-    let errorMsg = "";
-
-    pyProcess.stdout.on("data", (data) => {
-      dataToSend += data.toString();
-    });
-
-    pyProcess.stderr.on("data", (data) => {
-      errorMsg += data.toString();
-    });
-
-    pyProcess.on("close", (code) => {
-      if (code !== 0) {
-        console.error("❌ Python Error:", errorMsg);
-        return res.status(500).json({ error: errorMsg });
-      }
-
-      try {
-        const result = JSON.parse(dataToSend);
-        return res.json(result);
-      } catch (err) {
-        console.error("⚠️ JSON Parse Error:", dataToSend);
-        return res.status(500).json({ error: "Invalid JSON from Python" });
-      }
-    });
-  } catch (error) {
-    console.error("❌ Quiz generation failed:", error);
-    return res.status(500).json({ error: "Quiz generation failed" });
-  }
-};
-
-// ----------------------
-// 2️⃣ Evaluate Answers
-// ----------------------
-export const evaluateQuiz = async (req, res) => {
-  try {
-    const { category, answers } = req.body; // { "category": "Development & Engineering", "answers": {...} }
-
-    if (!category || !answers) {
-      return res.status(400).json({ error: "Category and answers are required" });
-    }
-
-    const pythonPath = path.resolve(
-      "models/problemSolving-assessment/question_generator.py"
-    );
-
-    // Convert answers object to string
-    const inputData = JSON.stringify({ category, answers });
-
-    const pyProcess = spawn("python3", [pythonPath, "--evaluate", inputData]);
-
-    let dataToSend = "";
-    let errorMsg = "";
-
-    pyProcess.stdout.on("data", (data) => {
-      dataToSend += data.toString();
-    });
-
-    pyProcess.stderr.on("data", (data) => {
-      errorMsg += data.toString();
-    });
-
-    pyProcess.on("close", (code) => {
-      if (code !== 0) {
-        console.error("❌ Python Error:", errorMsg);
-        return res.status(500).json({ error: errorMsg });
-      }
-
-      try {
-        const result = JSON.parse(dataToSend);
-        return res.json(result);
-      } catch (err) {
-        console.error("⚠️ JSON Parse Error:", dataToSend);
-        return res.status(500).json({ error: "Invalid JSON from Python" });
-      }
-    });
-  } catch (error) {
-    console.error("❌ Evaluation failed:", error);
-    return res.status(500).json({ error: "Evaluation failed" });
-  }
-};
+annotated-doc==0.0.3
+annotated-types==0.7.0
+anyio==4.11.0
+click==8.3.0
+fastapi==0.120.0
+h11==0.16.0
+idna==3.11
+pydantic==2.12.3
+pydantic_core==2.41.4
+python-dotenv==1.1.1
+sniffio==1.3.1
+starlette==0.48.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+uvicorn==0.38.0
