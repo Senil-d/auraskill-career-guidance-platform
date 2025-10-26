@@ -12,9 +12,6 @@ const problemSolvingAssessRoutes = require('./routes/problemSolvingAssess.route'
 // Leadership assessment routes
 const leadershipRoutes = require('./routes/leadership.route');
 
-// Leadership assessment routes
-const leadershipRoutes = require('./routes/leadership.route');
-
 // Load environment variables
 dotenv.config();
 
