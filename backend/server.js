@@ -8,6 +8,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/userRoute');
 const careerRoutes = require('./routes/careerRoute');
 const problemSolvingAssessRoutes = require('./routes/problemSolvingAssess.route');
+const artisticRoutes = require('./routes/artisticRoute');
 
 // Leadership assessment routes
 const leadershipRoutes = require('./routes/leadership.route');
@@ -31,6 +32,8 @@ app.use(morgan('dev'));
 app.use('/api/auth', authRoutes);
 app.use('/api/career', careerRoutes);
 
+// Artistic assessment routes
+app.use('/api/artistic', artisticRoutes);
 
 //Problem-solving routes
 app.use('/api/problemsolving', problemSolvingAssessRoutes);

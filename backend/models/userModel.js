@@ -4,7 +4,7 @@ const resultSchema = new mongoose.Schema(
   {
     traits: {
       type: Map,
-      of: Number, // e.g., { DM: 85, EC: 70, ... }
+      of: Number, // e.g., { DM: 85, EC: 70, ... } or { Realistic: 5, Artistic: 8, ... }
       default: {},
     },
     overall_score: {
@@ -18,6 +18,10 @@ const resultSchema = new mongoose.Schema(
     feedback: {
       type: String,
       default: null,
+    },
+    details: {
+      type: mongoose.Schema.Types.Mixed,
+      default: {},
     },
   },
   { _id: false }
@@ -75,7 +79,25 @@ const userSchema = new mongoose.Schema(
       type: Map,
       of: resultSchema,
       default: {},
-    }
+    },
+    artisticHistory: {
+      type: [
+        {
+          traits: {
+            type: Map,
+            of: Number,
+            default: {},
+          },
+          overall_score: Number,
+          level: String,
+          feedback: String,
+          details: mongoose.Schema.Types.Mixed,
+          attemptNumber: Number,
+          completedAt: Date,
+        },
+      ],
+      default: [],
+    },
   },
   { timestamps: true }
 );
