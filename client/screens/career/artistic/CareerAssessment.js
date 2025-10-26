@@ -9,13 +9,12 @@ import {
   ActivityIndicator,
   Dimensions
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 
 // Import your JSON data (you'll need to adjust the path)
-import questionsData from '../data/output.json';
-import AssessmentResults from '../artistic/AssessmentResults';
-import FinalScoreScreen from '../artistic/FinalScoreScreen';
+import questionsData from '../../data/output.json';
+import AssessmentResults from './AssessmentResults';
+import FinalScoreScreen from './FinalScoreScreen';
 
 // Career Options (keeping for compatibility with existing code)
 const CAREER_OPTIONS = [
@@ -25,18 +24,18 @@ const CAREER_OPTIONS = [
 ];
 
 const APP_COLORS = {
-  primary: '#6A5AE0',
-  secondary: '#836FFF', 
+  primary: '#6366f1',
+  secondary: '#8b5cf6', 
   success: '#10b981',
   danger: '#ef4444',
   warning: '#f59e0b',
   info: '#3b82f6',
-  light: '#ffffff',
-  background: '#F7F7F7',
-  cardBackground: '#ffffff',
-  text: '#333333',
-  subtext: '#888888',
-  border: '#E0E0E0'
+  light: '#f8fafc',
+  dark: '#0f172a',
+  darkCard: '#1e293b',
+  darkBorder: '#334155',
+  darkText: '#e2e8f0',
+  darkSubtext: '#94a3b8'
 };
 
 // RIASEC Personality Types
@@ -198,12 +197,16 @@ const CareerAssessment = ({ route, onAssessmentComplete, onProceedToCV, assessme
   };
 
   const completeAssessment = () => {
+
+    
     setLoading(true);
     
     setTimeout(() => {
       setLoading(false);
-      // Navigate to Assessment Results (RIASEC Scoring) page
       setCurrentStep('results');
+      
+
+      // Don't call onAssessmentComplete here - just show results
     }, 1000);
   };
 
@@ -340,11 +343,37 @@ const CareerAssessment = ({ route, onAssessmentComplete, onProceedToCV, assessme
   };
 
   const renderResults = () => {
-    const careerCompatibility = calculateCareerCompatibility();
-    const percentageScore = Math.round((totalCorrect / TOTAL_QUESTIONS) * 100);
-    const assessmentScore = Math.round((totalCorrect / TOTAL_QUESTIONS) * 10 * 10) / 10;
+
     
-    // Show AssessmentResults only if user came back from CV screen
+    const careerCompatibility = calculateCareerCompatibility();
+    
+    const handleContinueToCV = () => {
+      // Navigate to CV analysis with assessment results
+      const percentageScore = Math.round((totalCorrect / TOTAL_QUESTIONS) * 100);
+      const assessmentScore = Math.round((totalCorrect / TOTAL_QUESTIONS) * 10 * 10) / 10;
+      
+      const results = {
+        selectedCareer,
+        riasecScores: scores,
+        careerCompatibility,
+        totalScore: percentageScore,
+        totalQuestions: TOTAL_QUESTIONS,
+        totalCorrect: totalCorrect,
+        assessmentScoreOut10: assessmentScore
+      };
+      
+      // Navigate to CV classification with assessment results
+      navigation.navigate('cv', {
+        assessmentResults: results,
+        onCVComplete: handleCVAnalysisComplete
+      });
+    };
+
+    const handleSkipToFinalScore = () => {
+      // Show final score without CV analysis
+      setShowFinalScore(true);
+    };
+
     return (
       <AssessmentResults
         scores={scores}
@@ -353,6 +382,9 @@ const CareerAssessment = ({ route, onAssessmentComplete, onProceedToCV, assessme
         totalQuestions={TOTAL_QUESTIONS}
         careerOptions={CAREER_OPTIONS}
         careerCompatibility={careerCompatibility}
+        onContinue={handleContinueToCV}
+        onProceedToCV={handleSkipToFinalScore}
+        showCVOption={true}
       />
     );
   };
@@ -395,148 +427,140 @@ const getResponsiveValue = (small, medium, large) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F7FA',
+    backgroundColor: APP_COLORS.dark,
   },
   stepContainer: {
     flex: 1,
-    padding: getResponsiveValue(16, 20, 24),
-    backgroundColor: '#F5F7FA',
+    padding: getResponsiveValue(12, 16, 20),
+    backgroundColor: APP_COLORS.dark,
   },
   title: {
-    fontSize: getResponsiveValue(26, 28, 32),
-    fontWeight: '800',
-    color: '#1a1a2e',
+    fontSize: getResponsiveValue(20, 22, 24),
+    fontWeight: 'bold',
+    color: '#ffffff',
     textAlign: 'center',
-    marginBottom: getResponsiveValue(8, 10, 12),
-    paddingHorizontal: getResponsiveValue(12, 16, 20),
-    letterSpacing: 0.5,
+    marginBottom: getResponsiveValue(8, 9, 10),
+    paddingHorizontal: getResponsiveValue(8, 12, 16),
+    textShadowColor: 'rgba(99, 102, 241, 0.3)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 2,
   },
   subtitle: {
-    fontSize: getResponsiveValue(15, 16, 17),
-    color: '#6b7280',
+    fontSize: getResponsiveValue(14, 15, 16),
+    color: APP_COLORS.darkSubtext,
     textAlign: 'center',
-    marginBottom: getResponsiveValue(24, 28, 32),
-    paddingHorizontal: getResponsiveValue(12, 16, 20),
-    lineHeight: getResponsiveValue(22, 24, 26),
-    fontWeight: '500',
+    marginBottom: getResponsiveValue(20, 25, 30),
+    paddingHorizontal: getResponsiveValue(8, 12, 16),
+    lineHeight: getResponsiveValue(20, 22, 24),
   },
   careerButton: {
-    backgroundColor: APP_COLORS.cardBackground,
-    padding: getResponsiveValue(20, 22, 24),
-    borderRadius: 20,
-    marginBottom: getResponsiveValue(14, 16, 18),
+    backgroundColor: APP_COLORS.darkCard,
+    padding: getResponsiveValue(18, 20, 22),
+    borderRadius: 16,
+    marginBottom: getResponsiveValue(12, 14, 16),
     borderWidth: 2,
-    borderColor: APP_COLORS.border,
-    shadowColor: '#6A5AE0',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.08,
-    shadowRadius: 16,
-    elevation: 5,
+    borderColor: APP_COLORS.darkBorder,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 8,
   },
   selectedCareer: {
     borderColor: APP_COLORS.primary,
-    backgroundColor: '#ffffff',
+    backgroundColor: 'rgba(99, 102, 241, 0.1)',
     shadowColor: APP_COLORS.primary,
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.4,
     elevation: 12,
     transform: [{ scale: 1.02 }],
-    borderWidth: 3,
   },
   careerButtonText: {
-    fontSize: getResponsiveValue(17, 18, 20),
-    fontWeight: '700',
-    color: '#1a1a2e',
-    marginBottom: getResponsiveValue(6, 7, 8),
+    fontSize: getResponsiveValue(16, 17, 18),
+    fontWeight: 'bold',
+    color: APP_COLORS.darkText,
+    marginBottom: getResponsiveValue(4, 5, 6),
     textAlign: 'center',
-    letterSpacing: 0.3,
   },
   careerDescription: {
-    fontSize: getResponsiveValue(13, 14, 15),
-    color: '#6b7280',
+    fontSize: getResponsiveValue(12, 13, 14),
+    color: APP_COLORS.darkSubtext,
     textAlign: 'center',
-    lineHeight: getResponsiveValue(18, 20, 22),
-    fontWeight: '500',
+    lineHeight: getResponsiveValue(16, 18, 20),
   },
   progressText: {
     textAlign: 'center',
     color: APP_COLORS.primary,
-    marginBottom: getResponsiveValue(18, 20, 22),
-    fontSize: getResponsiveValue(15, 16, 17),
-    fontWeight: '700',
-    letterSpacing: 0.5,
-  },
-  questionContainer: {
-    backgroundColor: '#ffffff',
-    padding: getResponsiveValue(24, 26, 28),
-    borderRadius: 24,
-    marginBottom: getResponsiveValue(18, 20, 22),
-    shadowColor: '#6A5AE0',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.12,
-    shadowRadius: 20,
-    elevation: 8,
-    borderWidth: 1,
-    borderColor: 'rgba(106, 90, 224, 0.1)',
-  },
-  questionType: {
-    fontSize: getResponsiveValue(13, 14, 15),
-    color: APP_COLORS.primary,
-    marginBottom: getResponsiveValue(12, 14, 16),
-    textAlign: 'center',
-    fontWeight: '700',
-    textTransform: 'uppercase',
-    letterSpacing: 1,
-  },
-  questionText: {
-    fontSize: getResponsiveValue(17, 18, 20),
-    color: '#1a1a2e',
-    textAlign: 'center',
-    lineHeight: getResponsiveValue(26, 28, 30),
+    marginBottom: getResponsiveValue(16, 18, 20),
+    fontSize: getResponsiveValue(14, 15, 16),
     fontWeight: '600',
   },
+  questionContainer: {
+    backgroundColor: APP_COLORS.darkCard,
+    padding: getResponsiveValue(20, 22, 24),
+    borderRadius: 20,
+    marginBottom: getResponsiveValue(16, 18, 20),
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.3,
+    shadowRadius: 16,
+    elevation: 10,
+    borderWidth: 1,
+    borderColor: APP_COLORS.darkBorder,
+  },
+  questionType: {
+    fontSize: getResponsiveValue(12, 13, 14),
+    color: APP_COLORS.primary,
+    marginBottom: getResponsiveValue(8, 9, 10),
+    textAlign: 'center',
+    fontWeight: '600',
+  },
+  questionText: {
+    fontSize: getResponsiveValue(16, 17, 18),
+    color: APP_COLORS.darkText,
+    textAlign: 'center',
+    lineHeight: getResponsiveValue(22, 24, 26),
+    fontWeight: '500',
+  },
   answerOptions: {
-    marginBottom: getResponsiveValue(18, 20, 22),
+    marginBottom: getResponsiveValue(16, 18, 20),
   },
   answerOption: {
-    backgroundColor: '#ffffff',
-    padding: getResponsiveValue(18, 20, 22),
-    borderRadius: 16,
-    marginBottom: getResponsiveValue(10, 12, 14),
+    backgroundColor: APP_COLORS.darkCard,
+    padding: getResponsiveValue(16, 18, 20),
+    borderRadius: 14,
+    marginBottom: getResponsiveValue(8, 9, 10),
     borderWidth: 2,
-    borderColor: '#E5E7EB',
+    borderColor: APP_COLORS.darkBorder,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.06,
-    shadowRadius: 10,
-    elevation: 3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 4,
   },
   selectedAnswer: {
     borderColor: APP_COLORS.primary,
-    backgroundColor: 'rgba(106, 90, 224, 0.04)',
+    backgroundColor: 'rgba(99, 102, 241, 0.15)',
     shadowColor: APP_COLORS.primary,
-    shadowOpacity: 0.15,
-    elevation: 6,
-    borderWidth: 2.5,
+    shadowOpacity: 0.4,
+    elevation: 8,
+    transform: [{ scale: 1.01 }],
   },
   correctAnswer: {
     borderColor: APP_COLORS.success,
-    backgroundColor: 'rgba(16, 185, 129, 0.06)',
+    backgroundColor: 'rgba(16, 185, 129, 0.15)',
     shadowColor: APP_COLORS.success,
-    shadowOpacity: 0.15,
-    borderWidth: 2.5,
+    shadowOpacity: 0.4,
   },
   incorrectAnswer: {
     borderColor: APP_COLORS.danger,
-    backgroundColor: 'rgba(239, 68, 68, 0.06)',
+    backgroundColor: 'rgba(239, 68, 68, 0.15)',
     shadowColor: APP_COLORS.danger,
-    shadowOpacity: 0.15,
-    borderWidth: 2.5,
+    shadowOpacity: 0.4,
   },
   answerOptionText: {
-    fontSize: getResponsiveValue(15, 16, 17),
-    color: '#374151',
-    lineHeight: getResponsiveValue(22, 24, 26),
-    fontWeight: '500',
+    fontSize: getResponsiveValue(14, 15, 16),
+    color: APP_COLORS.darkText,
+    lineHeight: getResponsiveValue(20, 22, 24),
   },
   correctAnswerText: {
     color: APP_COLORS.success,
@@ -547,147 +571,142 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   feedbackContainer: {
-    padding: getResponsiveValue(18, 20, 22),
-    borderRadius: 20,
-    marginBottom: getResponsiveValue(18, 20, 22),
+    padding: getResponsiveValue(16, 18, 20),
+    borderRadius: 16,
+    marginBottom: getResponsiveValue(16, 18, 20),
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 12,
-    elevation: 5,
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
   },
   correctFeedback: {
-    backgroundColor: 'rgba(16, 185, 129, 0.08)',
-    borderLeftWidth: 5,
+    backgroundColor: 'rgba(16, 185, 129, 0.2)',
+    borderLeftWidth: 6,
     borderLeftColor: APP_COLORS.success,
     borderWidth: 1,
-    borderColor: 'rgba(16, 185, 129, 0.2)',
+    borderColor: 'rgba(16, 185, 129, 0.3)',
   },
   incorrectFeedback: {
-    backgroundColor: 'rgba(239, 68, 68, 0.08)',
-    borderLeftWidth: 5,
+    backgroundColor: 'rgba(239, 68, 68, 0.2)',
+    borderLeftWidth: 6,
     borderLeftColor: APP_COLORS.danger,
     borderWidth: 1,
-    borderColor: 'rgba(239, 68, 68, 0.2)',
+    borderColor: 'rgba(239, 68, 68, 0.3)',
   },
   feedbackText: {
-    fontSize: getResponsiveValue(15, 16, 17),
-    fontWeight: '600',
-    lineHeight: getResponsiveValue(22, 24, 26),
-    color: '#374151',
+    fontSize: getResponsiveValue(14, 15, 16),
+    fontWeight: '500',
+    lineHeight: getResponsiveValue(20, 22, 24),
+    color: APP_COLORS.darkText,
   },
   submitButton: {
     backgroundColor: APP_COLORS.primary,
-    padding: getResponsiveValue(18, 20, 22),
-    borderRadius: 20,
+    padding: getResponsiveValue(16, 18, 20),
+    borderRadius: 16,
     alignItems: 'center',
-    marginBottom: getResponsiveValue(14, 16, 18),
+    marginBottom: getResponsiveValue(12, 14, 16),
     shadowColor: APP_COLORS.primary,
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.3,
-    shadowRadius: 16,
-    elevation: 10,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.1)',
   },
   submitButtonDisabled: {
-    backgroundColor: '#D1D5DB',
-    shadowOpacity: 0.1,
+    backgroundColor: APP_COLORS.darkBorder,
+    shadowOpacity: 0.2,
     elevation: 2,
   },
   submitButtonText: {
     color: 'white',
-    fontWeight: '700',
-    fontSize: getResponsiveValue(16, 17, 18),
-    letterSpacing: 0.5,
+    fontWeight: 'bold',
+    fontSize: getResponsiveValue(15, 16, 17),
   },
   scoreIndicator: {
-    backgroundColor: '#ffffff',
-    padding: getResponsiveValue(16, 18, 20),
-    borderRadius: 20,
-    marginBottom: getResponsiveValue(14, 16, 18),
+    backgroundColor: APP_COLORS.darkCard,
+    padding: getResponsiveValue(14, 16, 18),
+    borderRadius: 16,
+    marginBottom: getResponsiveValue(12, 14, 16),
     alignItems: 'center',
     borderWidth: 2,
     borderColor: APP_COLORS.primary,
-    shadowColor: APP_COLORS.primary,
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.15,
-    shadowRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
     elevation: 6,
   },
   scoreIndicatorText: {
-    fontSize: getResponsiveValue(16, 17, 18),
-    fontWeight: '800',
+    fontSize: getResponsiveValue(15, 16, 17),
+    fontWeight: 'bold',
     color: APP_COLORS.primary,
-    letterSpacing: 0.5,
   },
   progressBar: {
-    height: getResponsiveValue(12, 14, 16),
-    backgroundColor: '#E5E7EB',
-    borderRadius: getResponsiveValue(8, 9, 10),
+    height: getResponsiveValue(10, 12, 14),
+    backgroundColor: APP_COLORS.darkBorder,
+    borderRadius: getResponsiveValue(5, 6, 7),
     overflow: 'hidden',
-    borderWidth: 0,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: APP_COLORS.darkBorder,
   },
   progressFill: {
     height: '100%',
     backgroundColor: APP_COLORS.primary,
-    borderRadius: getResponsiveValue(8, 9, 10),
+    borderRadius: getResponsiveValue(5, 6, 7),
     shadowColor: APP_COLORS.primary,
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.5,
     shadowRadius: 2,
   },
   scoreSummary: {
-    backgroundColor: '#ffffff',
-    padding: getResponsiveValue(28, 32, 36),
-    borderRadius: 28,
-    marginBottom: getResponsiveValue(18, 20, 22),
+    backgroundColor: APP_COLORS.darkCard,
+    padding: getResponsiveValue(24, 28, 32),
+    borderRadius: 24,
+    marginBottom: getResponsiveValue(16, 18, 20),
     alignItems: 'center',
-    borderWidth: 0,
-    shadowColor: '#6A5AE0',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.2,
-    shadowRadius: 24,
-    elevation: 15,
+    borderWidth: 3,
+    borderColor: APP_COLORS.primary,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.4,
+    shadowRadius: 20,
+    elevation: 12,
   },
   scoreCircle: {
-    width: getResponsiveValue(100, 110, 120),
-    height: getResponsiveValue(100, 110, 120),
-    borderRadius: getResponsiveValue(50, 55, 60),
-    backgroundColor: 'rgba(106, 90, 224, 0.08)',
+    width: getResponsiveValue(80, 90, 100),
+    height: getResponsiveValue(80, 90, 100),
+    borderRadius: getResponsiveValue(40, 45, 50),
+    backgroundColor: APP_COLORS.dark,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 4,
     borderColor: APP_COLORS.primary,
-    marginBottom: getResponsiveValue(16, 18, 20),
+    marginBottom: getResponsiveValue(12, 14, 15),
     shadowColor: APP_COLORS.primary,
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.25,
-    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
     elevation: 8,
   },
   scoreCircleText: {
-    fontSize: getResponsiveValue(32, 34, 36),
-    fontWeight: '800',
+    fontSize: getResponsiveValue(24, 26, 28),
+    fontWeight: 'bold',
     color: APP_COLORS.primary,
   },
   scoreMessage: {
-    fontSize: getResponsiveValue(20, 21, 22),
-    fontWeight: '700',
-    marginBottom: getResponsiveValue(10, 12, 14),
+    fontSize: getResponsiveValue(18, 19, 20),
+    fontWeight: 'bold',
+    marginBottom: getResponsiveValue(8, 9, 10),
     textAlign: 'center',
-    color: '#1a1a2e',
-    letterSpacing: 0.3,
+    color: APP_COLORS.darkText,
   },
   detailText: {
-    fontSize: getResponsiveValue(15, 16, 17),
-    color: '#6b7280',
-    marginBottom: getResponsiveValue(14, 16, 18),
+    fontSize: getResponsiveValue(14, 15, 16),
+    color: APP_COLORS.darkSubtext,
+    marginBottom: getResponsiveValue(12, 14, 15),
     textAlign: 'center',
-    fontWeight: '500',
   },
   scoreBreakdown: {
     flexDirection: isSmallScreen ? 'column' : 'row',
@@ -698,7 +717,7 @@ const styles = StyleSheet.create({
   },
   breakdownText: {
     fontSize: getResponsiveValue(13, 14, 15),
-    color: APP_COLORS.subtext,
+    color: APP_COLORS.darkSubtext,
   },
   correctText: {
     color: APP_COLORS.success,
@@ -709,25 +728,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   resultsSection: {
-    backgroundColor: '#ffffff',
-    padding: getResponsiveValue(22, 26, 30),
-    borderRadius: 24,
-    marginBottom: getResponsiveValue(18, 20, 22),
-    shadowColor: '#6A5AE0',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.1,
-    shadowRadius: 16,
+    backgroundColor: APP_COLORS.darkCard,
+    padding: getResponsiveValue(20, 24, 28),
+    borderRadius: 20,
+    marginBottom: getResponsiveValue(16, 18, 20),
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
     elevation: 8,
     borderWidth: 1,
-    borderColor: 'rgba(106, 90, 224, 0.1)',
+    borderColor: APP_COLORS.darkBorder,
   },
   sectionTitle: {
-    fontSize: getResponsiveValue(18, 19, 20),
-    fontWeight: '700',
-    color: '#1a1a2e',
-    marginBottom: getResponsiveValue(14, 16, 18),
+    fontSize: getResponsiveValue(16, 17, 18),
+    fontWeight: 'bold',
+    color: APP_COLORS.darkText,
+    marginBottom: getResponsiveValue(12, 14, 15),
     textAlign: 'center',
-    letterSpacing: 0.3,
   },
   scoreRow: {
     flexDirection: 'row',
@@ -737,18 +755,18 @@ const styles = StyleSheet.create({
   scoreLabel: {
     width: getResponsiveValue(80, 90, 100),
     fontSize: getResponsiveValue(12, 13, 14),
-    color: APP_COLORS.text,
+    color: APP_COLORS.darkText,
     fontWeight: '500',
   },
   scoreBarContainer: {
     flex: 1,
     height: getResponsiveValue(12, 14, 16),
-    backgroundColor: APP_COLORS.background,
+    backgroundColor: APP_COLORS.dark,
     borderRadius: getResponsiveValue(6, 7, 8),
     overflow: 'hidden',
     marginHorizontal: getResponsiveValue(8, 9, 10),
     borderWidth: 1,
-    borderColor: APP_COLORS.border,
+    borderColor: APP_COLORS.darkBorder,
   },
   scoreBar: {
     height: '100%',
@@ -773,7 +791,7 @@ const styles = StyleSheet.create({
   careerScoreLabel: {
     flex: 1,
     fontSize: getResponsiveValue(12, 13, 14),
-    color: APP_COLORS.text,
+    color: APP_COLORS.darkText,
     fontWeight: '500',
   },
   careerScoreValue: {
@@ -817,14 +835,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: getResponsiveValue(32, 36, 40),
-    backgroundColor: '#F5F7FA',
+    backgroundColor: APP_COLORS.dark,
   },
   loadingText: {
-    marginTop: getResponsiveValue(18, 20, 22),
-    color: '#374151',
-    fontSize: getResponsiveValue(16, 17, 18),
+    marginTop: getResponsiveValue(16, 18, 20),
+    color: APP_COLORS.darkText,
+    fontSize: getResponsiveValue(15, 16, 17),
     textAlign: 'center',
-    fontWeight: '600',
   },
 });
 

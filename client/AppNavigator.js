@@ -27,6 +27,12 @@ import ANskillAssesment from './screens/career/skills/ANskillAssesment';
 import ARskillAssesment from './screens/career/skills/ARskillAssesment';
 import LEskillAssesment from './screens/career/skills/LEskillAssesment';
 
+// Import Artistic Assessment Screens
+import CVClassification from './screens/career/artistic/CVClassification';
+import FinalScoreScreen from './screens/career/artistic/FinalScoreScreen';
+import AssessmentResults from './screens/career/artistic/AssessmentResults';
+import ArtisticProfileScreen from './screens/career/artistic/ArtisticProfileScreen';
+
 import Header from './screens/components/Header';
 import NavBar from './screens/components/NavBar';
 import UserProfile from './screens/components/UserProfile';
@@ -68,6 +74,12 @@ const AppNavigator = () => {
         <Stack.Screen name="RequiredSkills" component={RequiredSkillScreen} />
         <Stack.Screen name="LeadershipQuiz" component={LeadershipQuizScreen} />
         <Stack.Screen name="LeadershipResult" component={LeadershipResultScreen} />
+        
+        {/* Artistic Assessment Screens */}
+        <Stack.Screen name="cv" component={CVClassification} />
+        <Stack.Screen name="finalscore" component={FinalScoreScreen} />
+        <Stack.Screen name="assessmentresults" component={AssessmentResults} />
+        <Stack.Screen name="artisticprofile" component={ArtisticProfileScreen} />
 
       </Stack.Navigator> 
     </NavigationContainer>
