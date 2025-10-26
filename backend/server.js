@@ -14,6 +14,12 @@ const leadershipRoutes = require('./routes/leadership.route');
 
 //Roadmap routes
 const roadmapRoutes = require('./routes/roadmap.route');
+// // Leadership assessment routes
+// const leadershipRoutes = require('./routes/leadership.route');
+
+
+// Analytical assessment routes
+const analyticalRoutes = require("./routes/analytical.route");
 
 // Load environment variables
 dotenv.config({ path: "./.env" });
@@ -44,6 +50,8 @@ app.use('/api/leadership', leadershipRoutes);
 
 //Roadmap routes
 app.use('/api/roadmap', roadmapRoutes);
+// Analytical assessment routes
+app.use("/api/analytical", analyticalRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5005;
