@@ -7,10 +7,11 @@ const HomeScreen = () => {
   return (
     <>
     <Header/>
+    <NavBar/>
     <View>
       <Text>HomeScreen</Text>
     </View>
-    <NavBar/>
+    
     </>
     
   )

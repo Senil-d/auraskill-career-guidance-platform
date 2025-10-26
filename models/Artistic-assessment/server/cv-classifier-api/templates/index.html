@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Role Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .artistic {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+        }
+        .not_artistic {
+            background-color: #ffebee;
+            border: 1px solid #ffcdd2;
+        }
+        .examples {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .confidence-bar {
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .confidence-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Design Role Classifier</h1>
+        <p>Enter a job title or description to classify it as artistic/design-related or not:</p>
+        
+        <form id="classifyForm">
+            <textarea id="textInput" placeholder="Enter job title or description to test..."></textarea>
+            <button type="submit">Classify</button>
+        </form>
+        
+        <div id="result" class="result">
+            <h3>Classification Result:</h3>
+            <p><strong>Input:</strong> <span id="inputText"></span></p>
+            <p><strong>Prediction:</strong> <span id="prediction"></span></p>
+            <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+            <div class="confidence-bar">
+                <div id="confidenceBar" class="confidence-fill"></div>
+            </div>
+            <div id="probabilities"></div>
+        </div>
+        
+        <div class="examples">
+            <h3>Try these examples:</h3>
+            <ul>
+                <li>UI/UX designer with prototyping skills</li>
+                <li>Software engineer with Python experience</li>
+                <li>Graphic designer specializing in branding</li>
+                <li>Data analyst with SQL expertise</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('classifyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const text = document.getElementById('textInput').value.trim();
+            
+            if (!text) {
+                alert('Please enter some text to classify');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({ text })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    // Display results
+                    document.getElementById('inputText').textContent = result.input_text;
+                    document.getElementById('prediction').textContent = result.prediction;
+                    document.getElementById('confidence').textContent = (result.confidence * 100).toFixed(2) + '%';
+                    
+                    // Update confidence bar
+                    const confidenceBar = document.getElementById('confidenceBar');
+                    confidenceBar.style.width = (result.confidence * 100) + '%';
+                    confidenceBar.style.backgroundColor = result.prediction === 'artistic' ? '#4CAF50' : '#F44336';
+                    
+                    // Display probabilities
+                    let probabilitiesHtml = '<strong>Probabilities:</strong><br>';
+                    for (const [cls, prob] of Object.entries(result.probabilities)) {
+                        probabilitiesHtml += `${cls}: ${(prob * 100).toFixed(2)}%<br>`;
+                    }
+                    document.getElementById('probabilities').innerHTML = probabilitiesHtml;
+                    
+                    // Show result with appropriate styling
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.style.display = 'block';
+                    resultDiv.className = 'result ' + (result.prediction === 'artistic' ? 'artistic' : 'not_artistic');
+                    
+                    // Add text icons based on prediction (no emojis)
+                    document.getElementById('prediction').innerHTML = result.prediction + 
+                        (result.prediction === 'artistic' ? ' (Design Role)' : ' (Non-Design Role)');
+                        
+                } else {
+                    alert('Error: ' + result.error);
+                }
+            } catch (error) {
+                alert('Error connecting to server: ' + error.message);
+            }
+        });
+        
+        // Add click handlers for example texts
+        document.querySelectorAll('.examples li').forEach(li => {
+            li.style.cursor = 'pointer';
+            li.style.color = '#1976D2';
+            li.addEventListener('click', () => {
+                document.getElementById('textInput').value = li.textContent;
+            });
+        });
+    </script>
+</body>
+</html>'''

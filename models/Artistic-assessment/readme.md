@@ -1,0 +1,1 @@
+Artistic skill assessment component
