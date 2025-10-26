@@ -1,8 +1,7 @@
 import statistics
 
-# -----------------------------------------------------------
-# ⚙️ DIFFICULTY ESTIMATOR
-# -----------------------------------------------------------
+#  DIFFICULTY ESTIMATOR
+
 
 def estimate_difficulty(ai_confidence: float = None, accuracy_rate: float = None, avg_time: float = None):
     """
@@ -66,9 +65,9 @@ def estimate_difficulty(ai_confidence: float = None, accuracy_rate: float = None
         "reason": reason
     }
 
-# -----------------------------------------------------------
-# 🧮 ADAPTIVE DIFFICULTY UPDATER
-# -----------------------------------------------------------
+
+#  ADAPTIVE DIFFICULTY UPDATER
+
 
 def update_user_difficulty(previous_difficulty: str, last_score: float):
     """

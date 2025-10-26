@@ -1,4 +1,4 @@
-const leadershipService = require('../servivces/leadershipServices');
+const leadershipService = require('../services/leadershipServices');
 
 // POST /api/leadership/start
 const startSession = async (req, res) => {
