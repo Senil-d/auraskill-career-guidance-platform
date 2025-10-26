@@ -27,6 +27,8 @@ import PSskillAssesment from './screens/career/skills/PSskillAssesment';
 
 import AnalyticalResultScreen from './screens/career/skills/Results/AnalyticalResultScreen';
 
+import ResultScreen from './screens/career/skills/Results/ResultScreen';
+
 import Header from './screens/components/Header';
 import NavBar from './screens/components/NavBar';
 import UserProfile from './screens/components/UserProfile';
@@ -55,6 +57,8 @@ const AppNavigator = () => {
         <Stack.Screen name="ARskillAssesment" component={ARskillAssesment} />
         <Stack.Screen name="ANskillAssesment" component={ANskillAssesment} />
         <Stack.Screen name="AnalyticalResultScreen" component={AnalyticalResultScreen} />
+
+        <Stack.Screen name="ResultScreen" component={ResultScreen} />
 
         <Stack.Screen name="Landing" component={LandingScreen} />
         <Stack.Screen name="Loading" component={LoadingScreen} />

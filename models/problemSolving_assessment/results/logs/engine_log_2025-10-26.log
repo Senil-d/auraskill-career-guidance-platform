@@ -1,0 +1,263 @@
+2025-10-26 16:37:57,999 | INFO | 🚀 Problem-Solving Adaptive Engine initialized successfully.
+2025-10-26 16:41:11,703 | INFO | 🧠 Generating quiz for User: 12345 | Career: Data Analyst
+2025-10-26 16:41:11,704 | ERROR | ❌ ERROR: ❌ Dataset not found for category 'Data & Analytics': /Users/kavindu/Documents/updated-app/auraskill-career-guidance-platform/models/problemSolving_assessment/datasets/data_and_analytics_questions.json
+2025-10-26 16:41:31,024 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 16:41:31,024 | ERROR | ❌ ERROR: ❌ Dataset not found for category 'Development & Engineering': /Users/kavindu/Documents/updated-app/auraskill-career-guidance-platform/models/problemSolving_assessment/datasets/development_and_engineering_questions.json
+2025-10-26 16:45:06,325 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 16:45:06,325 | ERROR | ❌ ERROR: ❌ Dataset not found for category 'Development & Engineering': /Users/kavindu/Documents/updated-app/auraskill-career-guidance-platform/models/problemSolving_assessment/datasets/development_and_engineering_questions.json
+2025-10-26 16:50:00,522 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 16:50:00,522 | ERROR | ❌ ERROR: ❌ Dataset not found for category 'Development & Engineering': /Users/kavindu/Documents/updated-app/auraskill-career-guidance-platform/models/problemSolving_assessment/datasets/development_and_engineering_questions.json
+2025-10-26 16:52:10,716 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 16:52:10,716 | ERROR | ❌ ERROR: ❌ Dataset not found for category 'Development & Engineering': /Users/kavindu/Documents/updated-app/auraskill-career-guidance-platform/models/problemSolving_assessment/datasets/development_and_engineering_questions.json
+2025-10-26 16:56:20,318 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 16:56:20,319 | INFO | 🧾 Session Created | ID: 66ba070d-2d90-4648-9ab3-37adc747bac2 | User: 12345
+2025-10-26 17:24:29,314 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 17:24:29,315 | INFO | 🧾 Session Created | ID: 039224a9-5433-4edb-8419-e1cf9c925c6e | User: 12345
+2025-10-26 17:24:37,087 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 17:24:37,089 | INFO | 🧾 Session Created | ID: 84d40273-f24d-4be8-83fa-ea36385a63d8 | User: 12345
+2025-10-26 17:26:40,373 | ERROR | ❌ ERROR: 'next_difficulty'
+2025-10-26 17:28:02,567 | INFO | ✅ Correct | Time Complexity Awareness: Difficulty changed easy → medium
+2025-10-26 17:28:02,567 | ERROR | ❌ ERROR: 'id'
+2025-10-26 17:46:56,913 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 17:46:56,916 | INFO | 🧾 Session Created | ID: 0ca1f6d6-f9eb-4c56-a555-12050cd040ac | User: 12345
+2025-10-26 17:49:34,833 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 17:49:34,836 | INFO | 🧾 Session Created | ID: 90f96bd4-0f64-4087-b23d-08e569978148 | User: 12345
+2025-10-26 17:52:08,698 | INFO | ✅ Correct | Debugging & Error Analysis: Difficulty changed medium → hard
+2025-10-26 17:52:08,700 | ERROR | ❌ ERROR: 'id'
+2025-10-26 17:57:07,481 | ERROR | ❌ ERROR: 'next_difficulty'
+2025-10-26 18:02:08,294 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 18:02:08,296 | INFO | 🧾 Session Created | ID: 22ed82f7-377f-4495-bea0-8f4b39c1a828 | User: 12345
+2025-10-26 18:02:14,977 | ERROR | ❌ ERROR: record_answer() did not return next_difficulty
+2025-10-26 18:14:12,947 | INFO | ❌ Incorrect | : Difficulty changed  → easy
+2025-10-26 18:14:12,947 | ERROR | ❌ ERROR: 'id'
+2025-10-26 18:14:28,388 | INFO | ❌ Incorrect | : Difficulty changed  → easy
+2025-10-26 18:14:28,389 | ERROR | ❌ ERROR: 'id'
+2025-10-26 18:18:46,874 | ERROR | ❌ ERROR: record_answer() did not return next_difficulty
+2025-10-26 18:21:05,257 | INFO | 🧠 Generating quiz for User: 12345 | Career: Software Engineer
+2025-10-26 18:21:05,260 | INFO | 🧾 Session Created | ID: 0dbf9b5c-1ca8-40fc-9b54-92d3b414eec5 | User: 12345
+2025-10-26 18:24:42,300 | INFO | ✅ Correct | Time Complexity Awareness: Difficulty changed easy → medium
+2025-10-26 18:24:42,301 | ERROR | ❌ ERROR: 'id'
+2025-10-26 18:46:11,164 | INFO | ✅ Correct | Time Complexity Awareness: Difficulty changed easy → medium
+2025-10-26 18:46:11,164 | ERROR | ❌ ERROR: 'id'
+2025-10-26 18:56:05,030 | INFO | 🚀 Problem-Solving Adaptive Engine initialized successfully.
+2025-10-26 18:57:25,382 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 18:57:25,385 | INFO | 🧾 Session Created | ID: c8de879c-81d2-43bb-a578-c3d84ef35e3b | User: U12345
+2025-10-26 19:00:34,932 | ERROR | ❌ ERROR: Session not found
+2025-10-26 19:01:01,277 | INFO | ❌ Incorrect | {Statistical Reasoning}: Difficulty changed {medium} → easy
+2025-10-26 19:01:01,278 | INFO | 📘 Selected Question DA_APS_6 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 19:02:32,127 | INFO | ❌ Incorrect | {Analytical Problem Solving}: Difficulty changed {medium} → easy
+2025-10-26 19:02:32,128 | INFO | 📘 Selected Question DA_PR_5 | Sub-skill: Pattern Recognition in Data | Difficulty: easy
+2025-10-26 19:06:07,920 | INFO | ❌ Incorrect | {Pattern Recognition in Data}: Difficulty changed {easy} → easy
+2025-10-26 19:06:07,921 | INFO | 📘 Selected Question DA_SR_10 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 19:19:17,896 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 19:19:17,899 | INFO | 🧾 Session Created | ID: edf96ac0-9da9-4137-9737-d5e7a3b60eed | User: U12345
+2025-10-26 19:42:09,136 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 19:42:09,141 | INFO | 🧾 Session Created | ID: 1e1e749a-332d-44d2-9d87-54162b0fe622 | User: U12345
+2025-10-26 19:52:14,096 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed easy → medium
+2025-10-26 19:52:14,097 | INFO | 📘 Selected Question DA_APS_4 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 20:07:41,755 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 20:07:41,758 | INFO | 🧾 Session Created | ID: f06d08b6-93d7-4a80-975c-53cd5b2668ea | User: U12345
+2025-10-26 20:07:43,409 | INFO | ❌ Incorrect | Data Interpretation: Difficulty changed medium → easy
+2025-10-26 20:07:43,409 | INFO | 📘 Selected Question DA_PR_8 | Sub-skill: Pattern Recognition in Data | Difficulty: medium
+2025-10-26 20:07:45,169 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed medium → easy
+2025-10-26 20:07:45,169 | INFO | 📘 Selected Question DA_SR_5 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 20:07:46,162 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed medium → easy
+2025-10-26 20:07:46,162 | INFO | 📘 Selected Question DA_APS_7 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 20:07:46,857 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed medium → easy
+2025-10-26 20:07:46,857 | INFO | 📘 Selected Question DA_DI_5 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 20:07:47,492 | INFO | ❌ Incorrect | Data Interpretation: Difficulty changed medium → easy
+2025-10-26 20:07:47,492 | INFO | 📘 Selected Question DA_PR_6 | Sub-skill: Pattern Recognition in Data | Difficulty: medium
+2025-10-26 20:07:48,213 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed medium → easy
+2025-10-26 20:07:48,235 | INFO | 📘 Selected Question DA_EBDM_3 | Sub-skill: Evidence-based Decision-Making | Difficulty: medium
+2025-10-26 20:07:48,783 | INFO | ❌ Incorrect | Evidence-based Decision-Making: Difficulty changed medium → easy
+2025-10-26 20:07:48,783 | INFO | 📘 Selected Question DA_APS_10 | Sub-skill: Analytical Problem Solving | Difficulty: hard
+2025-10-26 20:07:49,442 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed hard → medium
+2025-10-26 20:07:49,442 | INFO | 📘 Selected Question DA_SR_3 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 20:07:50,030 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed medium → easy
+2025-10-26 20:07:50,030 | INFO | 📘 Selected Question DA_SR_8 | Sub-skill: Statistical Reasoning | Difficulty: hard
+2025-10-26 20:07:50,665 | INFO | ✅ Correct | Statistical Reasoning: Difficulty changed hard → hard
+2025-10-26 20:07:50,665 | INFO | 📘 Selected Question DA_EBDM_2 | Sub-skill: Evidence-based Decision-Making | Difficulty: easy
+2025-10-26 20:07:51,538 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed easy → medium
+2025-10-26 20:07:51,539 | INFO | 📘 Selected Question DA_APS_6 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 20:07:52,168 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed medium → easy
+2025-10-26 20:07:52,169 | INFO | 📘 Selected Question DA_EBDM_9 | Sub-skill: Evidence-based Decision-Making | Difficulty: hard
+2025-10-26 20:07:53,048 | INFO | ❌ Incorrect | Evidence-based Decision-Making: Difficulty changed hard → medium
+2025-10-26 20:07:53,048 | INFO | 📘 Selected Question DA_DI_9 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 20:07:53,844 | INFO | ✅ Correct | Data Interpretation: Difficulty changed medium → hard
+2025-10-26 20:07:53,844 | INFO | 📘 Selected Question DA_PR_10 | Sub-skill: Pattern Recognition in Data | Difficulty: hard
+2025-10-26 20:07:54,599 | INFO | ✅ Correct | Pattern Recognition in Data: Difficulty changed hard → hard
+2025-10-26 20:07:54,601 | INFO | 📊 Session Closed | ID: f06d08b6-93d7-4a80-975c-53cd5b2668ea | Responses: 15
+2025-10-26 20:11:50,314 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 20:11:50,318 | INFO | 🧾 Session Created | ID: 0cbe0a86-204e-48a1-8bbe-3474a3e9fa8e | User: U12345
+2025-10-26 20:11:59,773 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed medium → hard
+2025-10-26 20:11:59,774 | INFO | 📘 Selected Question DA_DI_10 | Sub-skill: Data Interpretation | Difficulty: hard
+2025-10-26 20:12:00,253 | INFO | ✅ Correct | Data Interpretation: Difficulty changed hard → hard
+2025-10-26 20:12:00,253 | INFO | 📘 Selected Question DA_EBDM_4 | Sub-skill: Evidence-based Decision-Making | Difficulty: medium
+2025-10-26 20:12:00,722 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed medium → hard
+2025-10-26 20:12:00,722 | INFO | 📘 Selected Question DA_DI_9 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 20:12:01,169 | INFO | ✅ Correct | Data Interpretation: Difficulty changed medium → hard
+2025-10-26 20:12:01,169 | INFO | 📘 Selected Question DA_PR_7 | Sub-skill: Pattern Recognition in Data | Difficulty: hard
+2025-10-26 20:12:01,708 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed hard → medium
+2025-10-26 20:12:01,709 | INFO | 📘 Selected Question DA_SR_3 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 20:12:02,736 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed medium → easy
+2025-10-26 20:12:02,736 | INFO | 📘 Selected Question DA_SR_9 | Sub-skill: Statistical Reasoning | Difficulty: hard
+2025-10-26 20:12:03,203 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed hard → medium
+2025-10-26 20:12:03,203 | INFO | 📘 Selected Question DA_PR_9 | Sub-skill: Pattern Recognition in Data | Difficulty: hard
+2025-10-26 20:12:03,658 | INFO | ✅ Correct | Pattern Recognition in Data: Difficulty changed hard → hard
+2025-10-26 20:12:03,659 | INFO | 📘 Selected Question DA_EBDM_3 | Sub-skill: Evidence-based Decision-Making | Difficulty: medium
+2025-10-26 20:12:04,575 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed medium → hard
+2025-10-26 20:12:04,575 | INFO | 📘 Selected Question DA_APS_4 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 20:12:05,105 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed medium → easy
+2025-10-26 20:12:05,105 | INFO | 📘 Selected Question DA_SR_10 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 20:12:05,697 | INFO | ✅ Correct | Statistical Reasoning: Difficulty changed medium → hard
+2025-10-26 20:12:05,698 | INFO | 📘 Selected Question DA_APS_3 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 20:12:06,336 | INFO | ✅ Correct | Analytical Problem Solving: Difficulty changed medium → hard
+2025-10-26 20:12:06,336 | INFO | 📘 Selected Question DA_APS_9 | Sub-skill: Analytical Problem Solving | Difficulty: hard
+2025-10-26 20:12:06,858 | INFO | ✅ Correct | Analytical Problem Solving: Difficulty changed hard → hard
+2025-10-26 20:12:06,859 | INFO | 📘 Selected Question DA_PR_4 | Sub-skill: Pattern Recognition in Data | Difficulty: medium
+2025-10-26 20:12:07,952 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed medium → easy
+2025-10-26 20:12:07,952 | INFO | 📘 Selected Question DA_DI_2 | Sub-skill: Data Interpretation | Difficulty: easy
+2025-10-26 20:12:09,040 | INFO | ✅ Correct | Data Interpretation: Difficulty changed easy → medium
+2025-10-26 20:12:09,041 | INFO | 📊 Session Closed | ID: 0cbe0a86-204e-48a1-8bbe-3474a3e9fa8e | Responses: 15
+2025-10-26 20:33:59,039 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 20:33:59,043 | INFO | 🧾 Session Created | ID: e2656c62-5da8-4a0a-b0c2-8db60a8f7049 | User: U12345
+2025-10-26 20:47:45,353 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 20:47:45,359 | INFO | 🧾 Session Created | ID: 6cba6365-32aa-4369-9d05-887984781676 | User: U12345
+2025-10-26 21:09:13,166 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 21:09:13,170 | INFO | 🧾 Session Created | ID: daf069a8-70b0-4c9d-8bfe-0982a436c6d5 | User: U12345
+2025-10-26 21:17:15,653 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 21:17:15,657 | INFO | 🧾 Session Created | ID: 19daf545-a8f0-4cf2-aa2b-fb1ee25ed497 | User: U12345
+2025-10-26 21:21:58,542 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 21:21:58,544 | INFO | 🧾 Session Created | ID: 52ac7f88-c7ea-4ce4-a800-d0ec92ff51ed | User: U12345
+2025-10-26 21:23:07,224 | INFO | ✅ Correct | Pattern Recognition in Data: Difficulty changed easy → medium
+2025-10-26 21:23:07,225 | INFO | 📘 Selected Question DA_DI_5 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 21:24:02,658 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 21:24:02,663 | INFO | 🧾 Session Created | ID: ecfca1f1-9ca5-4257-8670-fa41d56b3012 | User: U12345
+2025-10-26 21:38:43,249 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 21:38:43,251 | INFO | 🧾 Session Created | ID: 3d74cefe-c1a7-470f-aaef-a313b654ed09 | User: U12345
+2025-10-26 21:39:47,543 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 21:39:47,544 | INFO | 🧾 Session Created | ID: 4c7480f1-5ee1-4e7d-a599-1f736cf9009a | User: U12345
+2025-10-26 21:42:23,929 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed hard → medium
+2025-10-26 21:42:23,931 | INFO | 📘 Selected Question DA_DI_9 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 21:42:24,568 | INFO | ✅ Correct | Data Interpretation: Difficulty changed medium → hard
+2025-10-26 21:42:24,569 | INFO | 📘 Selected Question DA_SR_4 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 21:42:25,492 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed medium → easy
+2025-10-26 21:42:25,492 | INFO | 📘 Selected Question DA_EBDM_6 | Sub-skill: Evidence-based Decision-Making | Difficulty: medium
+2025-10-26 21:42:26,046 | INFO | ❌ Incorrect | Evidence-based Decision-Making: Difficulty changed medium → easy
+2025-10-26 21:42:26,046 | INFO | 📘 Selected Question DA_APS_6 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 21:42:26,660 | INFO | ✅ Correct | Analytical Problem Solving: Difficulty changed medium → hard
+2025-10-26 21:42:26,660 | INFO | 📘 Selected Question DA_PR_4 | Sub-skill: Pattern Recognition in Data | Difficulty: medium
+2025-10-26 21:42:27,428 | INFO | ✅ Correct | Pattern Recognition in Data: Difficulty changed medium → hard
+2025-10-26 21:42:27,428 | INFO | 📘 Selected Question DA_APS_5 | Sub-skill: Analytical Problem Solving | Difficulty: easy
+2025-10-26 21:42:28,518 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed easy → easy
+2025-10-26 21:42:28,519 | INFO | 📘 Selected Question DA_DI_10 | Sub-skill: Data Interpretation | Difficulty: hard
+2025-10-26 21:42:29,742 | INFO | ✅ Correct | Data Interpretation: Difficulty changed hard → hard
+2025-10-26 21:42:29,742 | INFO | 📘 Selected Question DA_SR_3 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 21:42:30,866 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed medium → easy
+2025-10-26 21:42:30,866 | INFO | 📘 Selected Question DA_APS_1 | Sub-skill: Analytical Problem Solving | Difficulty: easy
+2025-10-26 21:42:31,471 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed easy → easy
+2025-10-26 21:42:31,471 | INFO | 📘 Selected Question DA_SR_2 | Sub-skill: Statistical Reasoning | Difficulty: easy
+2025-10-26 21:42:32,023 | INFO | ✅ Correct | Statistical Reasoning: Difficulty changed easy → medium
+2025-10-26 21:42:32,023 | INFO | 📘 Selected Question DA_DI_3 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 21:42:32,558 | INFO | ❌ Incorrect | Data Interpretation: Difficulty changed medium → easy
+2025-10-26 21:42:32,559 | INFO | 📘 Selected Question DA_PR_2 | Sub-skill: Pattern Recognition in Data | Difficulty: medium
+2025-10-26 21:42:33,504 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed medium → easy
+2025-10-26 21:42:33,504 | INFO | 📘 Selected Question DA_EBDM_2 | Sub-skill: Evidence-based Decision-Making | Difficulty: easy
+2025-10-26 21:42:34,316 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed easy → medium
+2025-10-26 21:42:34,316 | INFO | 📘 Selected Question DA_EBDM_7 | Sub-skill: Evidence-based Decision-Making | Difficulty: hard
+2025-10-26 21:42:35,170 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed hard → hard
+2025-10-26 21:42:35,171 | INFO | 📊 Session Closed | ID: 4c7480f1-5ee1-4e7d-a599-1f736cf9009a | Responses: 15
+2025-10-26 21:58:59,644 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: IT Support Specialist
+2025-10-26 21:58:59,646 | ERROR | ❌ ERROR: No valid category found for career: IT Support Specialist
+2025-10-26 21:59:12,414 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: IT Support Specialist
+2025-10-26 21:59:12,414 | ERROR | ❌ ERROR: No valid category found for career: IT Support Specialist
+2025-10-26 22:00:59,077 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Machine Learning Engineer
+2025-10-26 22:00:59,077 | ERROR | ❌ ERROR: No valid category found for career: Machine Learning Engineer
+2025-10-26 22:02:21,038 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Machine Learning Engineer
+2025-10-26 22:02:21,038 | ERROR | ❌ ERROR: No valid category found for career: Machine Learning Engineer
+2025-10-26 22:02:51,059 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: SOC Analyst
+2025-10-26 22:02:51,059 | ERROR | ❌ ERROR: No valid category found for career: SOC Analyst
+2025-10-26 22:13:05,024 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Machine Learning Engineer
+2025-10-26 22:13:05,024 | ERROR | ❌ ERROR: No valid category found for career: Machine Learning Engineer
+2025-10-26 22:13:50,922 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 22:13:50,925 | INFO | 🧾 Session Created | ID: c8b09696-c158-4008-97b8-9ca011460404 | User: U12345
+2025-10-26 22:13:55,714 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 22:13:55,716 | INFO | 🧾 Session Created | ID: 194542e1-f9f2-46e2-91e8-a593bebe0ebf | User: U12345
+2025-10-26 22:15:33,233 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 22:15:33,236 | INFO | 🧾 Session Created | ID: 22ac9aec-cb72-41db-a59c-8d7c04de4c92 | User: U12345
+2025-10-26 22:15:34,447 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed hard → medium
+2025-10-26 22:15:34,447 | INFO | 📘 Selected Question DA_EBDM_4 | Sub-skill: Evidence-based Decision-Making | Difficulty: medium
+2025-10-26 22:15:34,842 | INFO | ❌ Incorrect | Evidence-based Decision-Making: Difficulty changed medium → easy
+2025-10-26 22:15:34,843 | INFO | 📘 Selected Question DA_APS_9 | Sub-skill: Analytical Problem Solving | Difficulty: hard
+2025-10-26 22:15:35,061 | INFO | ✅ Correct | Analytical Problem Solving: Difficulty changed hard → hard
+2025-10-26 22:15:35,061 | INFO | 📘 Selected Question DA_EBDM_7 | Sub-skill: Evidence-based Decision-Making | Difficulty: hard
+2025-10-26 22:15:35,202 | INFO | ❌ Incorrect | Evidence-based Decision-Making: Difficulty changed hard → medium
+2025-10-26 22:15:35,202 | INFO | 📘 Selected Question DA_PR_5 | Sub-skill: Pattern Recognition in Data | Difficulty: easy
+2025-10-26 22:15:35,362 | INFO | ❌ Incorrect | Pattern Recognition in Data: Difficulty changed easy → easy
+2025-10-26 22:15:35,365 | INFO | 📘 Selected Question DA_SR_5 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 22:15:35,555 | INFO | ❌ Incorrect | Statistical Reasoning: Difficulty changed medium → easy
+2025-10-26 22:15:35,555 | INFO | 📘 Selected Question DA_APS_3 | Sub-skill: Analytical Problem Solving | Difficulty: medium
+2025-10-26 22:15:35,724 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed medium → easy
+2025-10-26 22:15:35,724 | INFO | 📘 Selected Question DA_EBDM_3 | Sub-skill: Evidence-based Decision-Making | Difficulty: medium
+2025-10-26 22:15:35,887 | INFO | ✅ Correct | Evidence-based Decision-Making: Difficulty changed medium → hard
+2025-10-26 22:15:35,887 | INFO | 📘 Selected Question DA_DI_4 | Sub-skill: Data Interpretation | Difficulty: medium
+2025-10-26 22:15:36,073 | INFO | ❌ Incorrect | Data Interpretation: Difficulty changed medium → easy
+2025-10-26 22:15:36,073 | INFO | 📘 Selected Question DA_APS_10 | Sub-skill: Analytical Problem Solving | Difficulty: hard
+2025-10-26 22:15:36,292 | INFO | ❌ Incorrect | Analytical Problem Solving: Difficulty changed hard → medium
+2025-10-26 22:15:36,292 | INFO | 📘 Selected Question DA_DI_6 | Sub-skill: Data Interpretation | Difficulty: hard
+2025-10-26 22:15:36,474 | INFO | ❌ Incorrect | Data Interpretation: Difficulty changed hard → medium
+2025-10-26 22:15:36,474 | INFO | 📘 Selected Question DA_PR_8 | Sub-skill: Pattern Recognition in Data | Difficulty: medium
+2025-10-26 22:15:36,697 | INFO | ✅ Correct | Pattern Recognition in Data: Difficulty changed medium → hard
+2025-10-26 22:15:36,698 | INFO | 📘 Selected Question DA_DI_8 | Sub-skill: Data Interpretation | Difficulty: hard
+2025-10-26 22:15:36,855 | INFO | ✅ Correct | Data Interpretation: Difficulty changed hard → hard
+2025-10-26 22:15:36,855 | INFO | 📘 Selected Question DA_SR_8 | Sub-skill: Statistical Reasoning | Difficulty: hard
+2025-10-26 22:15:37,400 | INFO | ✅ Correct | Statistical Reasoning: Difficulty changed hard → hard
+2025-10-26 22:15:37,401 | INFO | 📘 Selected Question DA_SR_7 | Sub-skill: Statistical Reasoning | Difficulty: medium
+2025-10-26 22:15:38,987 | INFO | ✅ Correct | Statistical Reasoning: Difficulty changed medium → hard
+2025-10-26 22:15:38,989 | INFO | 📊 Session Closed | ID: 22ac9aec-cb72-41db-a59c-8d7c04de4c92 | Responses: 15
+2025-10-26 22:30:36,238 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 22:30:36,244 | INFO | 🧾 Session Created | ID: b184ff88-22d2-45da-b4e9-cbe5f40ff533 | User: U12345
+2025-10-26 22:31:26,179 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 22:31:26,181 | INFO | 🧾 Session Created | ID: 42a57203-08dc-4c29-8280-a36fd7365168 | User: U12345
+2025-10-26 22:31:45,447 | INFO | 🧠 Generating quiz for User: U12345 | Career: Data Analyst
+2025-10-26 22:31:45,448 | INFO | 🧾 Session Created | ID: 93b5e523-4cfc-4070-9ac6-887cc288890b | User: U12345
+2025-10-26 23:03:58,880 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Machine Learning Engineer
+2025-10-26 23:03:58,881 | ERROR | ❌ ERROR: No valid category found for career: Machine Learning Engineer
+2025-10-26 23:05:45,920 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-26 23:05:45,921 | ERROR | ❌ ERROR: No valid category found for career: Security Engineer
+2025-10-26 23:06:06,798 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-26 23:06:06,800 | ERROR | ❌ ERROR: No valid category found for career: Security Engineer
+2025-10-26 23:11:11,457 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-26 23:11:11,459 | INFO | 🧾 Session Created | ID: f54595c8-46e7-4f97-876b-1ba963eb8092 | User: 68fe403b32653c1ddb3b01d6
+2025-10-26 23:11:45,128 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-26 23:11:45,130 | INFO | 🧾 Session Created | ID: f1f41825-9ef4-4f73-b61d-91f00c269722 | User: 68fe403b32653c1ddb3b01d6
+2025-10-26 23:12:06,371 | INFO | ✅ Correct | Security Awareness: Difficulty changed medium → hard
+2025-10-26 23:12:06,371 | INFO | 📘 Selected Question NI_ID_3 | Sub-skill: Infrastructure Design | Difficulty: medium
+2025-10-26 23:12:07,050 | INFO | ✅ Correct | Infrastructure Design: Difficulty changed medium → hard
+2025-10-26 23:12:07,050 | INFO | 📘 Selected Question NI_ST_4 | Sub-skill: System Thinking | Difficulty: medium
+2025-10-26 23:12:07,582 | INFO | ✅ Correct | System Thinking: Difficulty changed medium → hard
+2025-10-26 23:12:07,582 | INFO | 📘 Selected Question NI_ST_3 | Sub-skill: System Thinking | Difficulty: medium
+2025-10-26 23:12:08,503 | INFO | ✅ Correct | System Thinking: Difficulty changed medium → hard
+2025-10-26 23:12:08,504 | INFO | 📘 Selected Question NI_NF_7 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-26 23:12:09,133 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed medium → easy
+2025-10-26 23:12:09,133 | INFO | 📘 Selected Question NI_NF_4 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-26 23:12:09,731 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed medium → easy
+2025-10-26 23:12:09,731 | INFO | 📘 Selected Question NI_TL_3 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-26 23:12:10,447 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed medium → easy
+2025-10-26 23:12:10,448 | INFO | 📘 Selected Question NI_SA_10 | Sub-skill: Security Awareness | Difficulty: hard
+2025-10-26 23:12:11,036 | INFO | ❌ Incorrect | Security Awareness: Difficulty changed hard → medium
+2025-10-26 23:12:11,036 | INFO | 📘 Selected Question NI_TL_1 | Sub-skill: Troubleshooting Logic | Difficulty: easy
+2025-10-26 23:12:11,575 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed easy → easy
+2025-10-26 23:12:11,576 | INFO | 📘 Selected Question NI_ID_1 | Sub-skill: Infrastructure Design | Difficulty: easy
+2025-10-26 23:12:12,086 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed easy → easy
+2025-10-26 23:12:12,086 | INFO | 📘 Selected Question NI_SA_3 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-26 23:12:12,600 | INFO | ❌ Incorrect | Security Awareness: Difficulty changed medium → easy
+2025-10-26 23:12:12,601 | INFO | 📘 Selected Question NI_ID_8 | Sub-skill: Infrastructure Design | Difficulty: hard
+2025-10-26 23:12:13,933 | INFO | ✅ Correct | Infrastructure Design: Difficulty changed hard → hard
+2025-10-26 23:12:13,933 | INFO | 📘 Selected Question NI_NF_6 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-26 23:12:14,650 | INFO | ✅ Correct | Network Fundamentals: Difficulty changed medium → hard
+2025-10-26 23:12:14,650 | INFO | 📘 Selected Question NI_ST_8 | Sub-skill: System Thinking | Difficulty: hard
+2025-10-26 23:12:15,195 | INFO | ✅ Correct | System Thinking: Difficulty changed hard → hard
+2025-10-26 23:12:15,195 | INFO | 📘 Selected Question NI_TL_4 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-26 23:12:15,976 | INFO | ✅ Correct | Troubleshooting Logic: Difficulty changed medium → hard
+2025-10-26 23:12:15,976 | INFO | 📊 Session Closed | ID: f1f41825-9ef4-4f73-b61d-91f00c269722 | Responses: 15
