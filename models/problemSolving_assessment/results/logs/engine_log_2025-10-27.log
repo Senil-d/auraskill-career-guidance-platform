@@ -1,0 +1,100 @@
+2025-10-27 00:16:24,363 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-27 00:16:24,365 | INFO | 🧾 Session Created | ID: 51afdd58-63a5-4921-a2e5-2a753ea4c6e0 | User: 68fe403b32653c1ddb3b01d6
+2025-10-27 00:23:41,187 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-27 00:23:41,190 | INFO | 🧾 Session Created | ID: 051974fa-df13-4d0b-a05a-48657f155ee1 | User: 68fe403b32653c1ddb3b01d6
+2025-10-27 00:37:34,843 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-27 00:37:34,845 | INFO | 🧾 Session Created | ID: 58132ea3-5b27-4e5b-9f19-0440adbe13f1 | User: 68fe403b32653c1ddb3b01d6
+2025-10-27 00:37:37,004 | INFO | ❌ Incorrect | System Thinking: Difficulty changed medium → easy
+2025-10-27 00:37:37,005 | INFO | 📘 Selected Question NI_NF_7 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-27 00:37:37,721 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed medium → easy
+2025-10-27 00:37:37,721 | INFO | 📘 Selected Question NI_TL_10 | Sub-skill: Troubleshooting Logic | Difficulty: hard
+2025-10-27 00:37:38,344 | INFO | ✅ Correct | Troubleshooting Logic: Difficulty changed hard → hard
+2025-10-27 00:37:38,344 | INFO | 📘 Selected Question NI_SA_3 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-27 00:37:39,039 | INFO | ✅ Correct | Security Awareness: Difficulty changed medium → hard
+2025-10-27 00:37:39,040 | INFO | 📘 Selected Question NI_TL_7 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-27 00:37:39,612 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed medium → easy
+2025-10-27 00:37:39,613 | INFO | 📘 Selected Question NI_ID_1 | Sub-skill: Infrastructure Design | Difficulty: easy
+2025-10-27 00:37:40,380 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed easy → easy
+2025-10-27 00:37:40,381 | INFO | 📘 Selected Question NI_SA_4 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-27 00:37:40,947 | INFO | ❌ Incorrect | Security Awareness: Difficulty changed medium → easy
+2025-10-27 00:37:40,947 | INFO | 📘 Selected Question NI_ST_1 | Sub-skill: System Thinking | Difficulty: easy
+2025-10-27 00:37:41,647 | INFO | ✅ Correct | System Thinking: Difficulty changed easy → medium
+2025-10-27 00:37:41,648 | INFO | 📘 Selected Question NI_SA_8 | Sub-skill: Security Awareness | Difficulty: hard
+2025-10-27 00:37:42,326 | INFO | ❌ Incorrect | Security Awareness: Difficulty changed hard → medium
+2025-10-27 00:37:42,327 | INFO | 📘 Selected Question NI_NF_10 | Sub-skill: Network Fundamentals | Difficulty: hard
+2025-10-27 00:37:43,054 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed hard → medium
+2025-10-27 00:37:43,054 | INFO | 📘 Selected Question NI_TL_1 | Sub-skill: Troubleshooting Logic | Difficulty: easy
+2025-10-27 00:37:43,757 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed easy → easy
+2025-10-27 00:37:43,757 | INFO | 📘 Selected Question NI_NF_4 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-27 00:37:44,376 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed medium → easy
+2025-10-27 00:37:44,376 | INFO | 📘 Selected Question NI_ID_4 | Sub-skill: Infrastructure Design | Difficulty: medium
+2025-10-27 00:37:45,041 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed medium → easy
+2025-10-27 00:37:45,041 | INFO | 📘 Selected Question NI_ID_7 | Sub-skill: Infrastructure Design | Difficulty: medium
+2025-10-27 00:37:45,763 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed medium → easy
+2025-10-27 00:37:45,763 | INFO | 📘 Selected Question NI_ST_9 | Sub-skill: System Thinking | Difficulty: hard
+2025-10-27 00:37:46,567 | INFO | ❌ Incorrect | System Thinking: Difficulty changed hard → medium
+2025-10-27 00:37:46,569 | INFO | 📊 Session Closed | ID: 58132ea3-5b27-4e5b-9f19-0440adbe13f1 | Responses: 15
+2025-10-27 00:48:59,646 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-27 00:48:59,649 | INFO | 🧾 Session Created | ID: d8573e30-c692-496c-8125-cd1e4ca38974 | User: 68fe403b32653c1ddb3b01d6
+2025-10-27 00:49:00,351 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed medium → easy
+2025-10-27 00:49:00,351 | INFO | 📘 Selected Question NI_TL_4 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-27 00:49:00,511 | INFO | ✅ Correct | Troubleshooting Logic: Difficulty changed medium → hard
+2025-10-27 00:49:00,511 | INFO | 📘 Selected Question NI_ID_4 | Sub-skill: Infrastructure Design | Difficulty: medium
+2025-10-27 00:49:00,849 | INFO | ✅ Correct | Infrastructure Design: Difficulty changed medium → hard
+2025-10-27 00:49:00,849 | INFO | 📘 Selected Question NI_SA_3 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-27 00:49:01,051 | INFO | ✅ Correct | Security Awareness: Difficulty changed medium → hard
+2025-10-27 00:49:01,051 | INFO | 📘 Selected Question NI_SA_4 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-27 00:49:01,198 | INFO | ✅ Correct | Security Awareness: Difficulty changed medium → hard
+2025-10-27 00:49:01,199 | INFO | 📘 Selected Question NI_ID_3 | Sub-skill: Infrastructure Design | Difficulty: medium
+2025-10-27 00:49:01,382 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed medium → easy
+2025-10-27 00:49:01,382 | INFO | 📘 Selected Question NI_ST_7 | Sub-skill: System Thinking | Difficulty: hard
+2025-10-27 00:49:01,547 | INFO | ❌ Incorrect | System Thinking: Difficulty changed hard → medium
+2025-10-27 00:49:01,547 | INFO | 📘 Selected Question NI_SA_2 | Sub-skill: Security Awareness | Difficulty: easy
+2025-10-27 00:49:01,924 | INFO | ✅ Correct | Security Awareness: Difficulty changed easy → medium
+2025-10-27 00:49:01,924 | INFO | 📘 Selected Question NI_NF_4 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-27 00:49:02,084 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed medium → easy
+2025-10-27 00:49:02,085 | INFO | 📘 Selected Question NI_NF_5 | Sub-skill: Network Fundamentals | Difficulty: easy
+2025-10-27 00:49:02,276 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed easy → easy
+2025-10-27 00:49:02,276 | INFO | 📘 Selected Question NI_NF_9 | Sub-skill: Network Fundamentals | Difficulty: hard
+2025-10-27 00:49:02,442 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed hard → medium
+2025-10-27 00:49:02,443 | INFO | 📘 Selected Question NI_ST_4 | Sub-skill: System Thinking | Difficulty: medium
+2025-10-27 00:49:02,811 | INFO | ❌ Incorrect | System Thinking: Difficulty changed medium → easy
+2025-10-27 00:49:02,811 | INFO | 📘 Selected Question NI_TL_2 | Sub-skill: Troubleshooting Logic | Difficulty: easy
+2025-10-27 00:49:03,302 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed easy → easy
+2025-10-27 00:49:03,302 | INFO | 📘 Selected Question NI_ST_3 | Sub-skill: System Thinking | Difficulty: medium
+2025-10-27 00:49:03,708 | INFO | ❌ Incorrect | System Thinking: Difficulty changed medium → easy
+2025-10-27 00:49:03,708 | INFO | 📘 Selected Question NI_TL_6 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-27 00:49:04,774 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed medium → easy
+2025-10-27 00:49:04,775 | INFO | 📊 Session Closed | ID: d8573e30-c692-496c-8125-cd1e4ca38974 | Responses: 15
+2025-10-27 00:57:31,079 | INFO | 🧠 Generating quiz for User: 68fe403b32653c1ddb3b01d6 | Career: Security Engineer
+2025-10-27 00:57:31,082 | INFO | 🧾 Session Created | ID: e25783c9-3efc-466c-9e7a-6ac3792d936a | User: 68fe403b32653c1ddb3b01d6
+2025-10-27 00:57:31,876 | INFO | ❌ Incorrect | System Thinking: Difficulty changed medium → easy
+2025-10-27 00:57:31,876 | INFO | 📘 Selected Question NI_SA_5 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-27 00:57:32,101 | INFO | ✅ Correct | Security Awareness: Difficulty changed medium → hard
+2025-10-27 00:57:32,101 | INFO | 📘 Selected Question NI_TL_8 | Sub-skill: Troubleshooting Logic | Difficulty: hard
+2025-10-27 00:57:32,263 | INFO | ✅ Correct | Troubleshooting Logic: Difficulty changed hard → hard
+2025-10-27 00:57:32,263 | INFO | 📘 Selected Question NI_NF_3 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-27 00:57:32,449 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed medium → easy
+2025-10-27 00:57:32,449 | INFO | 📘 Selected Question NI_TL_6 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-27 00:57:32,616 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed medium → easy
+2025-10-27 00:57:32,616 | INFO | 📘 Selected Question NI_SA_2 | Sub-skill: Security Awareness | Difficulty: easy
+2025-10-27 00:57:32,782 | INFO | ✅ Correct | Security Awareness: Difficulty changed easy → medium
+2025-10-27 00:57:32,782 | INFO | 📘 Selected Question NI_ST_3 | Sub-skill: System Thinking | Difficulty: medium
+2025-10-27 00:57:32,954 | INFO | ❌ Incorrect | System Thinking: Difficulty changed medium → easy
+2025-10-27 00:57:32,954 | INFO | 📘 Selected Question NI_SA_4 | Sub-skill: Security Awareness | Difficulty: medium
+2025-10-27 00:57:33,168 | INFO | ✅ Correct | Security Awareness: Difficulty changed medium → hard
+2025-10-27 00:57:33,168 | INFO | 📘 Selected Question NI_NF_10 | Sub-skill: Network Fundamentals | Difficulty: hard
+2025-10-27 00:57:33,335 | INFO | ❌ Incorrect | Network Fundamentals: Difficulty changed hard → medium
+2025-10-27 00:57:33,335 | INFO | 📘 Selected Question NI_TL_3 | Sub-skill: Troubleshooting Logic | Difficulty: medium
+2025-10-27 00:57:33,721 | INFO | ❌ Incorrect | Troubleshooting Logic: Difficulty changed medium → easy
+2025-10-27 00:57:33,721 | INFO | 📘 Selected Question NI_ID_6 | Sub-skill: Infrastructure Design | Difficulty: medium
+2025-10-27 00:57:33,871 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed medium → easy
+2025-10-27 00:57:33,871 | INFO | 📘 Selected Question NI_ID_10 | Sub-skill: Infrastructure Design | Difficulty: hard
+2025-10-27 00:57:34,675 | INFO | ❌ Incorrect | Infrastructure Design: Difficulty changed hard → medium
+2025-10-27 00:57:34,675 | INFO | 📘 Selected Question NI_ST_5 | Sub-skill: System Thinking | Difficulty: easy
+2025-10-27 00:57:34,994 | INFO | ✅ Correct | System Thinking: Difficulty changed easy → medium
+2025-10-27 00:57:34,995 | INFO | 📘 Selected Question NI_ID_8 | Sub-skill: Infrastructure Design | Difficulty: hard
+2025-10-27 00:57:35,587 | INFO | ✅ Correct | Infrastructure Design: Difficulty changed hard → hard
+2025-10-27 00:57:35,587 | INFO | 📘 Selected Question NI_NF_6 | Sub-skill: Network Fundamentals | Difficulty: medium
+2025-10-27 00:57:36,216 | INFO | ✅ Correct | Network Fundamentals: Difficulty changed medium → hard
+2025-10-27 00:57:36,217 | INFO | 📊 Session Closed | ID: e25783c9-3efc-466c-9e7a-6ac3792d936a | Responses: 15

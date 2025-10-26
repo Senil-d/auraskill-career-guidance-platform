@@ -23,10 +23,7 @@ export default function ProblemSolvingQuizScreen() {
   useEffect(() => {
     startQuiz();
   }, []);
-
-  // ------------------------------------------------------------
-  // 🎯 Start Quiz (authenticated via JWT)
-  // ------------------------------------------------------------
+  
   const startQuiz = async () => {
     try {
       setLoading(true);

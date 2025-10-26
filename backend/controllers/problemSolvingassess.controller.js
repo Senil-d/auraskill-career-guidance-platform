@@ -66,55 +66,77 @@ exports.startQuiz = async (req, res) => {
   }
 };
 
-
 exports.saveQuizResult = async (req, res) => {
   try {
-    const user = req.user; // Provided by protect middleware
+    // 🧠 Authenticated user from protect middleware
+    const user = req.user;
     if (!user) {
       return res.status(401).json({ error: "Unauthorized: user not found" });
     }
 
     const { category, summary } = req.body;
-
-    // Validate request payload
     if (!category || !summary) {
-      return res.status(400).json({ error: "Missing category or summary" });
+      return res
+        .status(400)
+        .json({ error: "Missing required fields: category or summary" });
     }
 
-    console.log("🧩 [Controller] Saving result for:", {
-      user_id: user._id,
-      category,
-    });
+    console.log(`🧠 [Controller] Saving quiz result for ${user._id} - ${category}`);
 
-    // Find latest user record from DB
+    // 🔍 Find the latest user record
     const dbUser = await User.findById(user._id);
     if (!dbUser) {
       return res.status(404).json({ error: "User not found" });
     }
 
-    // Format the data according to resultSchema
+    // ------------------------------------------------------------
+    // 🧮 1️⃣ Extract numeric scores only from trait objects
+    // ------------------------------------------------------------
+    const numericTraits = Object.fromEntries(
+      Object.entries(summary.traits || summary.subskill_summary || {}).map(
+        ([key, value]) => [
+          key,
+          typeof value === "object" && value.score !== undefined
+            ? value.score
+            : typeof value === "number"
+            ? value
+            : 0,
+        ]
+      )
+    );
+
+    // ------------------------------------------------------------
+    // 🧩 2️⃣ Build data matching resultSchema
+    // ------------------------------------------------------------
     const resultData = {
-      traits: summary.traits || summary.subskill_summary || {},
+      traits: numericTraits,
       overall_score: summary.overall_score || 0,
       level: summary.level || "Intermediate",
       feedback:
         summary.feedback ||
-        "Continue improving in weaker sub-skills to reach the next level.",
+        "Continue improving weaker areas to reach the next level.",
     };
 
-    // Save it under the given category (e.g., "problem_solving")
+    // ------------------------------------------------------------
+    // 💾 3️⃣ Save under user.results[category]
+    // ------------------------------------------------------------
     dbUser.results.set(category, resultData);
     await dbUser.save();
 
-    console.log(`✅ [Controller] ${category} result saved for ${dbUser.username}`);
+    console.log(`✅ Result saved for ${dbUser.username} in category '${category}'`);
 
-    return res.status(200).json({
+    // ------------------------------------------------------------
+    // 📤 4️⃣ Respond with updated results
+    // ------------------------------------------------------------
+    res.status(200).json({
       message: `✅ ${category} result saved successfully`,
       results: dbUser.results,
     });
   } catch (error) {
     console.error("❌ [Controller] saveQuizResult error:", error.message);
-    res.status(500).json({ error: "Failed to save quiz result" });
+    res.status(500).json({
+      error: error.message || "Failed to save quiz result",
+    });
   }
 };
 
