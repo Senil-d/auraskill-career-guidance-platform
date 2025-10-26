@@ -4,7 +4,7 @@ const resultSchema = new mongoose.Schema(
   {
     traits: {
       type: Map,
-      of: Number, // e.g., { DM: 85, EC: 70, ... }
+      of: Number,
       default: {},
     },
     overall_score: {
@@ -71,7 +71,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: null,
     },
-    results: {
+    currentSkills: {
       type: Map,
       of: resultSchema,
       default: {},

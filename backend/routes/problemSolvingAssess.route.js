@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { generateQuiz, evaluateQuiz } = require("../controllers/problemSolvingassess.controller");
+const { protect } = require("../middlewares/authMiddleware");
+const problemSolvingController = require("../controllers/problemSolvingassess.controller");
 
-router.post("/quiz", generateQuiz);
-router.post("/evaluate", evaluateQuiz);
+router.post("/start", protect,problemSolvingController.startQuiz);
+router.post("/start/user", protect, problemSolvingController.startQuizByUser);
+router.post("/submit", problemSolvingController.submitAnswer);
+
+router.post('/save-result', protect, problemSolvingController.saveQuizResult);
+
 
 module.exports = router;
