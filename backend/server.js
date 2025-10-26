@@ -12,8 +12,12 @@ const problemSolvingAssessRoutes = require('./routes/problemSolvingAssess.route'
 // Leadership assessment routes
 const leadershipRoutes = require('./routes/leadership.route');
 
-// Leadership assessment routes
-const leadershipRoutes = require('./routes/leadership.route');
+// // Leadership assessment routes
+// const leadershipRoutes = require('./routes/leadership.route');
+
+
+// Analytical assessment routes
+const analyticalRoutes = require("./routes/analytical.route");
 
 // Load environment variables
 dotenv.config();
@@ -39,6 +43,9 @@ app.use('/api/career', careerRoutes);
 app.use('/api/problemsolving', problemSolvingAssessRoutes);
 // Leadership assessment routes
 app.use('/api/leadership', leadershipRoutes);
+
+// Analytical assessment routes
+app.use("/api/analytical", analyticalRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5005;

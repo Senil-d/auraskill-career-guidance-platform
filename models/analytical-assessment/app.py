@@ -10,9 +10,9 @@ from datetime import datetime
 from typing import Optional, Dict, Any
 from dotenv import load_dotenv
 
-# -----------------------------------------------------------
-# 🧠 FastAPI Initialization
-# -----------------------------------------------------------
+
+#  FastAPI Initialization
+
 app = FastAPI(
     title="Analytical Skill Assessment Model API",
     description="LLM-based analytical skill assessment system that pre-generates 12 validated questions.",
@@ -21,15 +21,15 @@ app = FastAPI(
 
 load_dotenv()
 
-# -----------------------------------------------------------
-# 🗂️ Temporary In-Memory Session Store
-# -----------------------------------------------------------
+
+#  Temporary In-Memory Session Store
+
 # This keeps per-user quiz state. In production, use Redis or MongoDB.
 sessions: Dict[str, Dict[str, Any]] = {}
 
-# -----------------------------------------------------------
-# 📦 Request Models
-# -----------------------------------------------------------
+
+# Request Models
+
 class GenerationRequest(BaseModel):
     user_id: str
     career: str
@@ -49,9 +49,9 @@ class EvaluationRequest(BaseModel):
     correct_answers: Dict[str, Any]
     question_metadata: Optional[Dict[str, Any]] = Field(default=None)
 
-# -----------------------------------------------------------
-# 🧩 Helper: Generate a single valid question
-# -----------------------------------------------------------
+
+#  Helper: Generate a single valid question
+
 def generate_single_valid_question(career: str, stream: str, category: Optional[str], difficulty: Optional[str]):
     """Generates and validates one analytical question, skipping invalid ones."""
     possible_categories = get_categories_for_career(career)
@@ -67,9 +67,9 @@ def generate_single_valid_question(career: str, stream: str, category: Optional[
             return validated
     raise ValueError("Failed to generate a valid analytical question after multiple attempts.")
 
-# -----------------------------------------------------------
-# 🚀 Step 1: Start Quiz — Pre-generate 12 validated questions
-# -----------------------------------------------------------
+
+#  Step 1: Start Quiz — Pre-generate 12 validated questions
+
 @app.post("/start-quiz")
 async def start_quiz(req: GenerationRequest):
     """
@@ -120,9 +120,9 @@ async def start_quiz(req: GenerationRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Quiz setup failed: {str(e)}")
 
-# -----------------------------------------------------------
-# 🚀 Step 2: Submit Answer and Get Next Question
-# -----------------------------------------------------------
+
+#  Step 2: Submit Answer and Get Next Question
+
 @app.post("/submit-answer")
 async def submit_answer(req: AnswerRequest):
     """
@@ -171,9 +171,9 @@ async def submit_answer(req: AnswerRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Answer submission failed: {str(e)}")
 
-# -----------------------------------------------------------
-# 🧮 Optional Direct Evaluation Endpoint (for batch tests)
-# -----------------------------------------------------------
+
+#  Optional Direct Evaluation Endpoint (for batch tests)
+
 @app.post("/evaluate")
 async def evaluate_user_answers(req: EvaluationRequest):
     """
@@ -185,9 +185,9 @@ async def evaluate_user_answers(req: EvaluationRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Evaluation failed: {str(e)}")
 
-# -----------------------------------------------------------
-# 🩺 Health Check
-# -----------------------------------------------------------
+
+#  Health Check
+
 @app.get("/")
 async def root():
     """Health check endpoint."""
