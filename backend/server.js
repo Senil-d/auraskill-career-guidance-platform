@@ -12,6 +12,8 @@ const problemSolvingAssessRoutes = require('./routes/problemSolvingAssess.route'
 // Leadership assessment routes
 const leadershipRoutes = require('./routes/leadership.route');
 
+//Roadmap routes
+const roadmapRoutes = require('./routes/roadmap.route');
 // // Leadership assessment routes
 // const leadershipRoutes = require('./routes/leadership.route');
 
@@ -20,7 +22,8 @@ const leadershipRoutes = require('./routes/leadership.route');
 const analyticalRoutes = require("./routes/analytical.route");
 
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: "./.env" });
+dotenv.config({ path: "./.env1" });
 
 // Connect to database
 connectDB();
@@ -41,9 +44,12 @@ app.use('/api/career', careerRoutes);
 
 //Problem-solving routes
 app.use('/api/problemsolving', problemSolvingAssessRoutes);
+
 // Leadership assessment routes
 app.use('/api/leadership', leadershipRoutes);
 
+//Roadmap routes
+app.use('/api/roadmap', roadmapRoutes);
 // Analytical assessment routes
 app.use("/api/analytical", analyticalRoutes);
 
