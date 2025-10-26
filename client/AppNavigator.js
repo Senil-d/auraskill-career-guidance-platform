@@ -15,6 +15,22 @@ import CareerSuggestionScreen from './screens/startScreens/CareerSuggestionScree
 import RequiredSkillScreen from './screens/startScreens/RequiredSkillScreen';
 import LeadershipQuizScreen from './screens/leadershipScreens/LeadershipQuizzScreen';
 import LeadershipResultScreen from './screens/leadershipScreens/LeadershipResultScreen';
+import LandingScreen from './screens/LandingScreen';
+import LoadingScreen from './screens/LandingScreen';
+import WelcomeGuideScreen from './screens/WelcomeGuideScreen';
+
+import CareerSkillChart from './screens/career/CareerSkillChart';
+import SuggestCareer from './screens/career/SuggestCareer';
+
+import PSskillAssesment from './screens/career/skills/PSskillAssesment';
+import ANskillAssesment from './screens/career/skills/ANskillAssesment';
+import ARskillAssesment from './screens/career/skills/ARskillAssesment';
+import LEskillAssesment from './screens/career/skills/LEskillAssesment';
+
+import Header from './screens/components/Header';
+import NavBar from './screens/components/NavBar';
+import UserProfile from './screens/components/UserProfile';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -22,11 +38,26 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="LogIn"
+        initialRouteName="Landing"
         screenOptions={{
           headerShown: false,
         }}
       >
+        <Stack.Screen name="Header" component={Header} />
+        <Stack.Screen name="NavBar" component={NavBar} />
+        <Stack.Screen name="UserProfile" component={UserProfile} />
+
+        <Stack.Screen name="SuggestCareer" component={SuggestCareer} />
+        <Stack.Screen name="CareerSkillChart" component={CareerSkillChart} />
+
+        <Stack.Screen name="PSskillAssesment" component={PSskillAssesment} />
+        <Stack.Screen name="LEskillAssesment" component={LEskillAssesment} />
+        <Stack.Screen name="ARskillAssesment" component={ARskillAssesment} />
+        <Stack.Screen name="ANskillAssesment" component={ANskillAssesment} />
+
+        <Stack.Screen name="Landing" component={LandingScreen} />
+        <Stack.Screen name="Loading" component={LoadingScreen} />
+        <Stack.Screen name="WelcomeGuideScreen" component={WelcomeGuideScreen} />
         <Stack.Screen name="LogIn" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Awareness" component={AwarenessScreen} />

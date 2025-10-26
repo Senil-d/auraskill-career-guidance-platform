@@ -1,57 +1,85 @@
-const path = require("path");
-const fs = require("fs");
-const csv = require("csv-parser");
 const User = require("../models/userModel");
+const fs = require("fs");
+const path = require("path");
+const csv = require("csv-parser");
 
-// Suggest careers based on A/L stream + specialization
 exports.suggestCareer = async (req, res) => {
   try {
-    // 1. Get user's AL_stream and specialization from DB
-    const user = await User.findById(req.user.id);
-    if (!user) return res.status(404).json({ message: "User not found" });
-
-    const AL_stream = user.AL_stream;
-    const specialization = user.specialization; 
+    const { AL_stream, specialization } = req.body;
 
     if (!AL_stream || !specialization) {
-      return res
-        .status(400)
-        .json({ message: "Please complete profile with A/L stream and specialization" });
+      return res.status(400).json({
+        message: "Please provide both A/L stream and specialization.",
+      });
     }
 
-    // Read CSV file
-    const filePath = path.join(
-      __dirname,
-      "../data/RIASECdata.csv"
-    );
+    const filePath = path.join(__dirname, "../data/career_suggestion_json_ready.csv");
     const results = [];
+
+    const normalize = (str) =>
+      str?.toLowerCase().replace(/\s+/g, "").trim() || "";
+
+    const userStream = normalize(AL_stream);
+    const userSpec = normalize(specialization);
 
     fs.createReadStream(filePath)
       .pipe(csv())
       .on("data", (row) => {
+        const stream = normalize(row["A/L Stream"]);
+        const spec = normalize(row["Specialization"]);
+
         if (
-          row.AL_stream.toLowerCase() === AL_stream.toLowerCase() &&
-          row.specialization.toLowerCase() === specialization.toLowerCase()
+          (stream.includes(userStream) || userStream.includes(stream)) &&
+          (spec.includes(userSpec) || userSpec.includes(spec))
         ) {
+          const rawCareers = row["Suggested Careers"];
+          let careerList = [];
+
+          try {
+            // 🧠 Handles both JSON arrays and Python-style lists
+            if (rawCareers.startsWith("[") && rawCareers.endsWith("]")) {
+              const cleaned = rawCareers
+                .replace(/'/g, '"')
+                .replace(/\s*,\s*/g, ",")
+                .trim();
+              careerList = JSON.parse(cleaned);
+            } else {
+              careerList = rawCareers
+                .split(",")
+                .map((c) => c.trim())
+                .filter(Boolean);
+            }
+          } catch (err) {
+            console.error("⚠️ Error parsing careers:", err.message);
+            careerList = rawCareers
+              ? rawCareers.split(",").map((c) => c.trim()).filter(Boolean)
+              : [];
+          }
+
           results.push({
-            careers: row.career.split(",").map((c) => c.trim()),
-            justification: row.Justification,
+            careers: careerList,
+            justification:
+              row["Justification"] ||
+              `Based on your A/L stream '${AL_stream}' and specialization '${specialization}', these career paths are recommended.`,
           });
         }
       })
       .on("end", () => {
         if (results.length === 0) {
           return res.status(404).json({
-            message: `No career match found for ${AL_stream} + ${specialization}`,
+            message: `No career match found for ${AL_stream} + ${specialization}.`,
           });
         }
-        res.json({ suggestions: results });
+
+        res.status(200).json({ suggestions: results });
       });
   } catch (error) {
     console.error("Career suggestion error:", error);
     res.status(500).json({ message: error.message });
   }
 };
+
+
 
 // Save chosen career under user profile
 exports.chooseCareer = async (req, res) => {
@@ -62,18 +90,20 @@ exports.chooseCareer = async (req, res) => {
     }
 
     const user = await User.findById(req.user.id);
-    if (!user) return res.status(404).json({ message: "User not found" });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
 
     const filePath = path.join(__dirname, "../data/career_skill_data.csv");
-
     let matchedRow = null;
 
-    // Read CSV to get skills
+    // 🔹 Read CSV and find career
     await new Promise((resolve, reject) => {
       fs.createReadStream(filePath)
         .pipe(csv())
         .on("data", (row) => {
-          if (row.career.toLowerCase() === chosenCareer.toLowerCase()) {
+          const careerName = (row.career || row.Career || "").trim().toLowerCase();
+          if (careerName === chosenCareer.trim().toLowerCase()) {
             matchedRow = row;
           }
         })
@@ -82,35 +112,42 @@ exports.chooseCareer = async (req, res) => {
     });
 
     if (!matchedRow) {
-      return res.status(404).json({ message: "Career not found in skill dataset" });
+      return res.status(404).json({
+        message: `Career '${chosenCareer}' not found in skill dataset`,
+      });
     }
 
-    // Prepare skills object
-    const skills = {};
-    if (matchedRow["Problem-Solving"])
-      skills["Problem-Solving"] = parseInt(matchedRow["Problem-Solving"]);
-    if (matchedRow["Analytical"])
-      skills["Analytical"] = parseInt(matchedRow["Analytical"]);
-    if (matchedRow["Artistic"])
-      skills["Artistic"] = parseInt(matchedRow["Artistic"]);
-    if (matchedRow["Leadership"])
-      skills["Leadership"] = parseInt(matchedRow["Leadership"]);
+    // 🔹 Build skills object safely
+    const parseSkill = (val) => {
+      const num = parseInt(val);
+      return isNaN(num) ? 0 : Math.max(0, Math.min(num, 100)); // clamp 0–100
+    };
 
-    // Update user
+    const skills = {
+      "Problem-Solving": parseSkill(matchedRow["Problem-Solving"]),
+      "Analytical": parseSkill(matchedRow["Analytical"]),
+      "Artistic": parseSkill(matchedRow["Artistic"]),
+      "Leadership": parseSkill(matchedRow["Leadership"]),
+    };
+
+    // 🔹 Update user
     user.career = chosenCareer;
     user.requiredSkills = skills;
-    user.skillJustification = matchedRow["Justification"] || null;
+    user.skillJustification =
+      matchedRow["Justification"] ||
+      `Based on the selected career '${chosenCareer}', these skills are recommended.`;
 
     await user.save();
 
-    res.json({
-      message: "Career choice saved successfully with skills",
+    // 🔹 Send clean response
+    return res.json({
+      message: "Career choice saved successfully with skill requirements ✅",
       career: user.career,
       requiredSkills: user.requiredSkills,
-      justification: user.careerJustification,
+      justification: user.skillJustification,
     });
   } catch (error) {
-    console.error("Error in chooseCareer:", error);
+    console.error("❌ Error in chooseCareer:", error);
     res.status(500).json({ message: error.message });
   }
 };

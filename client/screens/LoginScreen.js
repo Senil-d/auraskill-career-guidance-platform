@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   View,
   Text,
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  Alert,
+  Animated,
+  Easing,
   ScrollView,
   ActivityIndicator,
+  Alert,
 } from "react-native";
+import * as Animatable from "react-native-animatable";
+import LottieView from "lottie-react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
@@ -16,86 +21,174 @@ import BASE_URL from "../config/apiConfig";
 
 const LoginScreen = () => {
   const navigation = useNavigation();
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const translateAnim = useRef(new Animated.Value(30)).current;
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // 🔹 Animations for smooth intro
+  useEffect(() => {
+    Animated.parallel([
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 700,
+        useNativeDriver: true,
+      }),
+      Animated.timing(translateAnim, {
+        toValue: 0,
+        duration: 700,
+        easing: Easing.out(Easing.exp),
+        useNativeDriver: true,
+      }),
+    ]).start();
+  }, []);
+
+  // 🔹 Handle Login
   const handleLogin = async () => {
     if (!email || !password) {
-      Alert.alert("Error", "Please enter both email and password");
+      Alert.alert("Missing Fields", "Please enter both email and password.");
       return;
     }
 
     try {
       setLoading(true);
 
-      const response = await axios.post(
-        `${BASE_URL}/api/auth/login`,
-        { email, password }
-      );
+      // Ensure BASE_URL is correct (not localhost!)
+      console.log("🔗 Connecting to:", `${BASE_URL}/api/auth/login`);
 
-      if (response.data) {
+      const response = await axios.post(`${BASE_URL}/api/auth/login`, {
+        email,
+        password,
+      });
+
+      console.log("✅ Login Response:", response.data);
+
+      if (response.data?.token) {
         await AsyncStorage.setItem("token", response.data.token);
-        Alert.alert("Success", "Logged in successfully!");
-        navigation.navigate("Home"); // 🔑 Change to your app’s next screen
+        Alert.alert("Success", "Login successful!");
+        navigation.navigate("Home");
+      } else {
+        Alert.alert("Login Failed", response.data?.message || "Invalid response from server.");
       }
     } catch (error) {
-      console.error(error);
-      Alert.alert(
-        "Login Failed",
-        error.response?.data?.message || "Something went wrong"
-      );
+      console.log("❌ Login Error:", error.response?.data || error.message);
+      if (error.response?.status === 401) {
+        Alert.alert("Invalid Credentials", "Email or password is incorrect.");
+      } else if (error.response?.status === 404) {
+        Alert.alert("Account Not Found", "No account found with this email.");
+      } else {
+        Alert.alert("Error", error.response?.data?.message || "Network or server error occurred.");
+      }
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.card}>
-        <Text style={styles.title}>Welcome Back</Text>
-        <Text style={styles.subtitle}>Login to continue 🚀</Text>
-
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          placeholderTextColor="#666"
-          keyboardType="email-address"
-          autoCapitalize="none"
-          value={email}
-          onChangeText={setEmail}
-        />
-
-        <TextInput
-          style={styles.input}
-          placeholder="Password"
-          placeholderTextColor="#666"
-          secureTextEntry
-          value={password}
-          onChangeText={setPassword}
-        />
-
-        <TouchableOpacity
-          style={styles.loginButton}
-          onPress={handleLogin}
-          disabled={loading}
+    <LinearGradient
+      colors={["#6A5AE0", "#836FFF"]}
+      style={styles.container}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+    >
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <Animated.View
+          style={[
+            styles.inner,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: translateAnim }],
+            },
+          ]}
         >
-          {loading ? (
-            <ActivityIndicator color="#E1C16E" />
-          ) : (
-            <Text style={styles.loginButtonText}>Login</Text>
-          )}
-        </TouchableOpacity>
+          {/* 🎓 Logo + Animation */}
+          <View style={styles.logoContainer}>
+            <View style={styles.iconCircle}>
+              <Animatable.View animation="bounceIn" duration={1500}>
+                {LottieView ? (
+                  <LottieView
+                    source={require("../assets/Welcome.json")} // ⚠️ Must match your actual filename!
+                    autoPlay
+                    loop
+                    style={styles.lottie}
+                  />
+                ) : (
+                  <Text style={styles.fallbackEmoji}>🎓</Text>
+                )}
+              </Animatable.View>
+            </View>
 
-        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
-          <Text style={styles.link}>
-            Don’t have an account?{" "}
-            <Text style={styles.linkBold}>Sign Up</Text>
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+            <Text style={styles.appTitle}>StudyQuest</Text>
+            <Text style={styles.tagline}>Level up your learning journey</Text>
+          </View>
+
+          {/* 🧾 Login Card */}
+          <View style={styles.card}>
+            <Text style={styles.label}>Email</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter your email"
+              placeholderTextColor="#888"
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
+
+            <Text style={styles.label}>Password</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter your password"
+              placeholderTextColor="#888"
+              secureTextEntry
+              value={password}
+              onChangeText={setPassword}
+            />
+
+            <View style={styles.row}>
+              <TouchableOpacity onPress={() => setRemember(!remember)}>
+                <Text style={styles.remember}>
+                  {remember ? "☑" : "☐"} Remember me
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Text style={styles.forgot}>Forgot Password?</Text>
+              </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity
+              style={styles.loginButton}
+              onPress={handleLogin}
+              disabled={loading}
+            >
+              <LinearGradient
+                colors={["#6A5AE0", "#836FFF"]}
+                style={styles.gradientButton}
+              >
+                {loading ? (
+                  <ActivityIndicator color="#fff" />
+                ) : (
+                  <Text style={styles.loginText}>Start Learning</Text>
+                )}
+              </LinearGradient>
+            </TouchableOpacity>
+
+            <Text style={styles.signupText}>
+              New to StudyQuest?{" "}
+              <Text
+                style={styles.signupLink}
+                onPress={() => navigation.navigate("SignUp")}
+              >
+                Sign Up
+              </Text>
+            </Text>
+          </View>
+        </Animated.View>
+      </ScrollView>
+    </LinearGradient>
   );
 };
 
@@ -103,66 +196,101 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
+  },
+  inner: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
+  },
+  logoContainer: {
+    alignItems: "center",
+    marginBottom: 40,
+  },
+  iconCircle: {
+    width: 180,
+    height: 180,
+    borderRadius: 100,
+    backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-    padding: 20,
-    backgroundColor: "#000000", // Black background
+    marginBottom: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+  },
+  lottie: {
+    width: 170,
+    height: 170,
+  },
+  fallbackEmoji: {
+    fontSize: 48,
+  },
+  appTitle: {
+    fontSize: 26,
+    fontWeight: "bold",
+    color: "#fff",
+  },
+  tagline: {
+    color: "#EDEAFF",
+    fontSize: 14,
   },
   card: {
-    backgroundColor: "#000000",
-    padding: 30,
-    borderRadius: 24,
+    backgroundColor: "#fff",
+    borderRadius: 20,
     width: "100%",
-    maxWidth: 400,
-    alignItems: "center",
-    elevation: 6,
-    borderColor: "#E1C16E", // Gold accent
-    borderWidth: 2,
+    maxWidth: 370,
+    padding: 25,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 10,
+    elevation: 5,
   },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#E1C16E",
-    marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: "#eee",
-    marginBottom: 20,
+  label: {
+    fontWeight: "600",
+    marginBottom: 5,
+    color: "#333",
   },
   input: {
-    width: 280,
-    backgroundColor: "#fff",
+    backgroundColor: "#F7F7F7",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#E0E0E0",
     padding: 12,
-    borderRadius: 12,
-    fontSize: 16,
-    marginVertical: 10,
-    borderColor: "#E1C16E",
-    borderWidth: 2,
+    marginBottom: 15,
+    color: "#000",
   },
-  loginButton: {
-    backgroundColor: "#000000",
-    paddingVertical: 14,
-    paddingHorizontal: 50,
-    borderRadius: 30,
-    marginTop: 20,
-    elevation: 4,
-    borderColor: "#E1C16E",
-    borderWidth: 2,
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 20,
   },
-  loginButtonText: {
-    color: "#E1C16E",
-    fontSize: 18,
+  remember: {
+    color: "#444",
+    fontSize: 14,
+  },
+  forgot: {
+    color: "#6A5AE0",
     fontWeight: "600",
   },
-  link: {
-    marginTop: 15,
-    fontSize: 14,
-    color: "#eee",
+  gradientButton: {
+    paddingVertical: 14,
+    borderRadius: 10,
+    alignItems: "center",
   },
-  linkBold: {
+  loginText: {
+    color: "#fff",
     fontWeight: "bold",
-    color: "#E1C16E",
+    fontSize: 16,
+  },
+  signupText: {
+    marginTop: 20,
+    textAlign: "center",
+    color: "#333",
+  },
+  signupLink: {
+    color: "#6A5AE0",
+    fontWeight: "700",
   },
 });
