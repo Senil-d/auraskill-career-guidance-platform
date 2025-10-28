@@ -18,21 +18,21 @@ def normalize_category(cat: str) -> str:
     return ""
 
 def inverse_weight_probs(trait_scores):
-    """Compute inverse probabilities so weaker traits are more likely."""
     eps = 1e-6
     inv = [1.0 / (trait_scores[t] + eps) for t in TRAITS]
     total = sum(inv) or 1.0
     return [x / total for x in inv]
 
 def feedback(overall, results):
-    if overall >= 80:
-        level = "Strong"
+
+    if overall >= 8:
+        level = "Advanced"
         fb = "You exhibit strong leadership with excellent decision-making and empathy."
-    elif overall >= 60:
-        level = "Moderate"
+    elif overall >= 6:
+        level = "Intermediate"
         fb = "You have balanced leadership traits; consider improving strategic foresight."
     else:
-        level = "Developing"
+        level = "Beginner"
         fb = "Focus on conflict management and assertive communication."
     weak_trait = min(results, key=results.get)
     fb += f" Your weakest area appears to be {TRAIT_LABELS.get(weak_trait, weak_trait)}."

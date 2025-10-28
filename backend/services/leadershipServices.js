@@ -4,12 +4,11 @@ require('dotenv').config();
 const MODEL_BASE_URL = process.env.MODEL_BASE_URL || 'http://localhost:8004';
 
 // Start new session
-async function startSession(al_stream, career, decision_style) {
+async function startSession(al_stream, career) {
   try {
     const res = await axios.post(`${MODEL_BASE_URL}/start`, {
       al_stream,
       career,
-      decision_style,
     });
     return res.data;
   } catch (error) {

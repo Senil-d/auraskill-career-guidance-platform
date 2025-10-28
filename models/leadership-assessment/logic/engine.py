@@ -10,22 +10,20 @@ QUESTION_POOL_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "q
 class SBREEngine:
 
     def get_next_adaptive_question(self):
-        # If no questions asked yet, pick random trait
         if not self.asked_ids:
             trait = self.get_next_trait(first=True)
         else:
-            # Find the lowest scoring trait
             min_score = min(self.trait_scores.values())
             weakest_traits = [t for t, v in self.trait_scores.items() if v == min_score]
             trait = random.choice(weakest_traits)
         q = self.select_question(trait)
         if q:
-            q["scenario"] = personalize_scenario(q["scenario"], self.al_stream, self.career, self.decision_style)
+            q["scenario"] = personalize_scenario(q["scenario"], self.al_stream, self.career)
         return q
-    def __init__(self, al_stream, career, decision_style, total_questions=12):
+
+    def __init__(self, al_stream, career, total_questions=12):
         self.al_stream = al_stream
         self.career = career
-        self.decision_style = decision_style
         self.total_questions = total_questions
 
         print(f"Loading questions from: {QUESTION_POOL_FILE}")
@@ -61,7 +59,7 @@ class SBREEngine:
             trait = self.get_next_trait(first=(i == 0))
             q = self.select_question(trait)
             if not q: continue
-            q["scenario"] = personalize_scenario(q["scenario"], self.al_stream, self.career, self.decision_style)
+            q["scenario"] = personalize_scenario(q["scenario"], self.al_stream, self.career)
             quiz.append(q)
         return quiz
 
@@ -69,9 +67,9 @@ class SBREEngine:
         results = {}
         for t in TRAITS:
             max_t = self.per_trait_max.get(t, 10 * self.total_questions)
-            results[t] = round((self.trait_scores[t] / max_t) * 100, 2)
-        overall = round(sum(results.values()) / len(TRAITS), 2)
-        level, fb = feedback(overall, results)
+            results[t] = int(round((self.trait_scores[t] / max_t) * 10))
+        overall = int(round(sum(results.values()) / len(TRAITS)))
+        level, fb = feedback(overall * 10, {k: v * 10 for k, v in results.items()})  
         return {
             "decision_making": results["DM"],
             "empathy": results["EC"],
