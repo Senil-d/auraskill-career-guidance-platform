@@ -4,13 +4,13 @@ const leadershipService = require('../services/leadershipServices');
 // POST /api/leadership/start
 const startSession = async (req, res) => {
   try {
-    const { al_stream, career, decision_style } = req.body;
+    const { al_stream, career } = req.body;
 
-    if (!al_stream || !career || !decision_style) {
+    if (!al_stream || !career) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    const response = await leadershipService.startSession(al_stream, career, decision_style);
+    const response = await leadershipService.startSession(al_stream, career);
     return res.status(200).json(response);
   } catch (err) {
     console.error('StartSession Error:', err.message);

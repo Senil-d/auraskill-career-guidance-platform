@@ -16,8 +16,8 @@ STREAM_CONTEXTS = {
     "Other/Vocational": "community project"
 }
 
-STYLE_PREFIXES = {
-    "Analytical": "After analyzing the available data, ",
-    "Collaborative": "After discussing with your teammates, ",
-    "Intuitive": "Based on your instinct, "
-}
+# STYLE_PREFIXES = {
+#     "Analytical": "After analyzing the available data, ",
+#     "Collaborative": "After discussing with your teammates, ",
+#     "Intuitive": "Based on your instinct, "
+# }
